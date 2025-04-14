@@ -534,11 +534,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
       "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\obj\\",
+      "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -560,11 +560,11 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
-              "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
+            "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
+              "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
             }
           }
         }

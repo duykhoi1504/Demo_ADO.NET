@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
+      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
       "projectName": "TransferObject",
-      "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
+      "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
       "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\obj\\",
+      "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

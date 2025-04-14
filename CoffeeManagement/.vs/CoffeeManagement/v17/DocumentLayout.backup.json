@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\code project\\coffeemanagement\\coffeemanagement\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\code project\\coffeemanagement\\coffeemanagement\\addsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\addsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\code project\\coffeemanagement\\coffeemanagement\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Suppliers.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\Suppliers.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\Suppliers.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\Suppliers.cs [Design]",
-              "RelativeToolTip": "CoffeeManagement\\Suppliers.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Login.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\Login.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Login.cs [Design]*",
+              "RelativeToolTip": "CoffeeManagement\\Login.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:49:41.773Z",
+              "WhenOpened": "2025-04-14T07:27:14.765Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AddSupplier.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\AddSupplier.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\AddSupplier.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\AddSupplier.cs",
-              "RelativeToolTip": "CoffeeManagement\\AddSupplier.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBIAAAA1AAAAAAAAAA==",
+              "Title": "LoginDL.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\LoginDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\LoginDL.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\LoginDL.cs",
+              "RelativeToolTip": "DataLayer\\LoginDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T05:43:53.914Z",
+              "WhenOpened": "2025-04-14T07:27:10.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Suppliers.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\Suppliers.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\Suppliers.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\CoffeeManagement\\Suppliers.cs",
-              "RelativeToolTip": "CoffeeManagement\\Suppliers.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCUAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataProvider.cs",
+              "RelativeDocumentMoniker": "DataLayer\\DataProvider.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataProvider.cs",
+              "RelativeToolTip": "DataLayer\\DataProvider.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T04:40:45.648Z",
+              "WhenOpened": "2025-04-14T07:23:31.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Login.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\Login.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Login.cs*",
+              "RelativeToolTip": "CoffeeManagement\\Login.cs*",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAIwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:18:33.373Z",
               "EditorCaption": ""
             }
           ]

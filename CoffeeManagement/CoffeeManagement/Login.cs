@@ -83,26 +83,25 @@ namespace PresentationLayer
             //Console.WriteLine("123456:");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+    
+
+        private void ShowAccount_Click(object sender, EventArgs e)
         {
             string ConString = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(ConString);
-            try
+            string sql = "SELECT * FROM Users";
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            string accs = "";
+            while (reader.Read())
             {
-                cnn.Open();
-                MessageBox.Show("Connection is active!");
+                accs += reader["Username"].ToString() + " " + reader["Password"].ToString() + "\n";
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                if (cnn.State == ConnectionState.Open)
-                {
-                    cnn.Close();
-                }
-            }
+            MessageBox.Show(accs);
+
+
+            cnn.Close();
         }
     }
 }

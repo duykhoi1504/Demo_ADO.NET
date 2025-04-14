@@ -13,3 +13,19 @@ C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\DataLayer\obj\Debug\net
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\DataLayer\obj\Debug\net9.0\refint\DataLayer.dll
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.pdb
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\DataLayer\obj\Debug\net9.0\ref\DataLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.deps.json
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.pdb
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\TransferObject.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\TransferObject.pdb
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.AssemblyInfo.cs
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.sourcelink.json
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.Up2Date
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\refint\DataLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.pdb
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\ref\DataLayer.dll

@@ -11,3 +11,17 @@ C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\BusinessLayer\obj\Debug
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\ref\BusinessLayer.dll
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.csproj.AssemblyReference.cache
 C:\Users\MR KHOI\Documents\CODE PROJECT\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\Business.EA331CBA.Up2Date
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\bin\Debug\Debug\net9.0\BusinessLayer.deps.json
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\bin\Debug\Debug\net9.0\BusinessLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\bin\Debug\Debug\net9.0\BusinessLayer.pdb
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.sourcelink.json
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\Business.EA331CBA.Up2Date
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\refint\BusinessLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\BusinessLayer.pdb
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\BusinessLayer\obj\Debug\net9.0\ref\BusinessLayer.dll

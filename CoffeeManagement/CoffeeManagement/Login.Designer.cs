@@ -32,7 +32,7 @@
             Password_txt = new TextBox();
             Cancel_btn = new Button();
             Login_btn = new Button();
-            button1 = new Button();
+            ShowAccount = new Button();
             SuspendLayout();
             // 
             // Username_txt
@@ -69,22 +69,22 @@
             Login_btn.UseVisualStyleBackColor = true;
             Login_btn.Click += Login_btn_Click;
             // 
-            // button1
+            // ShowAccount
             // 
-            button1.Location = new Point(286, 289);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ShowAccount.Location = new Point(441, 289);
+            ShowAccount.Name = "ShowAccount";
+            ShowAccount.Size = new Size(191, 29);
+            ShowAccount.TabIndex = 5;
+            ShowAccount.Text = "ShowAccount";
+            ShowAccount.UseVisualStyleBackColor = true;
+            ShowAccount.Click += ShowAccount_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(ShowAccount);
             Controls.Add(Login_btn);
             Controls.Add(Cancel_btn);
             Controls.Add(Password_txt);
@@ -102,6 +102,6 @@
         private TextBox Password_txt;
         private Button Cancel_btn;
         private Button Login_btn;
-        private Button button1;
+        private Button ShowAccount;
     }
 }

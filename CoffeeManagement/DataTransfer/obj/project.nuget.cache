@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fkf2SODnnnw=",
+  "dgSpecHash": "hq0twgV+6y4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
+  "projectFilePath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MR KHOI\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\MR KHOI\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

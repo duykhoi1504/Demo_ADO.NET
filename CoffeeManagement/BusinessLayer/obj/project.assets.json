@@ -514,11 +514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -540,8 +540,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\CoffeeManagement\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj"
             }
           }
         }
