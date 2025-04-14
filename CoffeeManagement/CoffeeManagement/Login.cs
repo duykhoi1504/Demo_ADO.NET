@@ -18,7 +18,7 @@ namespace PresentationLayer
     {
         //private SqlConnection cn;
         private LoginBL loginBL;
-        public string User;
+        public string UserName;
 
 
 
@@ -53,6 +53,7 @@ namespace PresentationLayer
             Account ac = new Account(username, password);
             if (UserLogin(ac))
             {
+                UserName=username;
                 this.DialogResult = DialogResult.OK;
 
             }

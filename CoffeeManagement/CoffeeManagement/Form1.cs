@@ -23,9 +23,9 @@ namespace CoffeeManagement
             DialogResult result = login.ShowDialog();
             if (result == DialogResult.OK)
             {
-
+                lbName.Text ="xin chao: "+ login.UserName;
                 this.Enabled = true;
-                lbName.Text = "Xin Chao: ";
+               
             }
             else
             {

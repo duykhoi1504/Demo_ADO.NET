@@ -42,7 +42,7 @@ namespace DataLayer
         }
         public int AddSupplier(Supplier s)
         {
-            string sql = "insert into Supplier(id,name,address) values('"+s.id+"','"+s.name+"','"+s.address+"')";
+            string sql = "insert into Supplier(id,name,address) values('" + s.id + "','" + s.name + "','" + s.address + "')";
             try
             {
                 return MyExcuteNonQuery(sql, CommandType.Text);
@@ -52,7 +52,19 @@ namespace DataLayer
             {
                 throw ex;
             }
-            
+
+        }
+        public int DeleteSupplier(string id)
+        {
+            string sql = "delete from Supplier where id='" + id + "'";
+            try
+            {
+                return MyExcuteNonQuery(sql, CommandType.Text);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
         }
     }
 }
