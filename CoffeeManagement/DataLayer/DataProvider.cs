@@ -11,7 +11,18 @@ namespace DataLayer
     public class DataProvider
     {
         private SqlConnection cn;
-
+        private static DataProvider instance = null;
+        public static DataProvider Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DataProvider();
+                }
+                return instance;
+            }
+        }
         public DataProvider()
         {
             string cntr = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";

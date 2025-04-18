@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using TransferObject;
 namespace PresentationLayer
 {
-    public partial class Suppliers : Form
+    public partial class Suppliers : Form, IObserver
     {
 
         private SupplierBL supplierBL;
@@ -21,12 +21,14 @@ namespace PresentationLayer
         {
             InitializeComponent();
             supplierBL = new SupplierBL();
+            Observer.Register(this);
+
         }
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
-            //addSupplier1.SupplierAdded += AddSupplierControl_SupplierAdded;
-            AddSupplier.UpdateDataGridView += ResetDataGridView;
+ 
+            //AddSupplier.UpdateDataGridView += ResetDataGridView;
             try
             {
                 dataGridView1.DataSource = supplierBL.GetSuppliers();
@@ -38,17 +40,19 @@ namespace PresentationLayer
 
         }
 
-
-
-        //private void AddSupplierControl_SupplierAdded(object sender, EventArgs e)
-        //{
-        //    // Làm mới DataGridView
-        //    dataGridView1.DataSource = supplierBL.GetSuppliers();
-        //}
         private void ResetDataGridView()
         {
             // Làm mới DataGridView
             dataGridView1.DataSource = supplierBL.GetSuppliers();
+        }
+
+        public void OnNotify(string key)
+        {
+            if (key == "UpdateDataGridView1")
+            {
+                // Làm mới DataGridView
+                ResetDataGridView();
+            }
         }
         private void AddSupllier_Click(object sender, EventArgs e)
         {
@@ -85,5 +89,7 @@ namespace PresentationLayer
                 MessageBox.Show("Vui lòng chọn một hàng để xóa.");
             }
         }
+
+       
     }
 } 
