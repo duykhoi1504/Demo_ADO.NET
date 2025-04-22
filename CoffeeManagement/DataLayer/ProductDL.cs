@@ -20,7 +20,7 @@ namespace DataLayer
             try
             {
                 Connect();
-                SqlDataReader reader = MyExcureReader(sql, CommandType.Text);
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
                     id = reader[0].ToString();

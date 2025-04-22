@@ -18,7 +18,7 @@ namespace DataLayer
             try
             {
                 Connect();
-                SqlDataReader reader = MyExcureReader(sql, CommandType.Text);
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
                     id = reader[0].ToString();
@@ -45,7 +45,7 @@ namespace DataLayer
             string sql = "insert into Supplier(id,name,address) values('" + s.id + "','" + s.name + "','" + s.address + "')";
             try
             {
-                return MyExcuteNonQuery(sql, CommandType.Text);
+                return MyExecuteNonQuery(sql, CommandType.Text);
 
             }
             catch (SqlException ex)
@@ -59,7 +59,7 @@ namespace DataLayer
             string sql = "delete from Supplier where id='" + id + "'";
             try
             {
-                return MyExcuteNonQuery(sql, CommandType.Text);
+                return MyExecuteNonQuery(sql, CommandType.Text);
             }
             catch (SqlException ex)
             {
