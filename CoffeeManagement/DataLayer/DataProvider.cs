@@ -12,6 +12,7 @@ namespace DataLayer
     {
         private SqlConnection cn;
         private static DataProvider instance = null;
+        private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
         public static DataProvider Instance
         {
             get
@@ -23,9 +24,15 @@ namespace DataLayer
                 return instance;
             }
         }
+        public string GetCntr()
+        {
+            return cntr;
+        }
         public DataProvider()
         {
-            string cntr = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";
+            //string cntr = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";
+
+
             cn = new SqlConnection(cntr);
         }
         public void Connect()
@@ -115,30 +122,30 @@ namespace DataLayer
 
             }
         }
-        public int MyExcuteNonQuery(string sql, CommandType type, params SqlParameter[] parameters)
-        {
-            try
-            {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = type;
+        //public int MyExcuteNonQuery(string sql, CommandType type, params SqlParameter[] parameters)
+        //{
+        //    try
+        //    {
+        //        Connect();
+        //        SqlCommand cmd = new SqlCommand(sql, cn);
+        //        cmd.CommandType = type;
 
-                // Add parameters to the command if provided
-                if (parameters != null)
-                {
-                    cmd.Parameters.AddRange(parameters);
-                }
+        //        // Add parameters to the command if provided
+        //        if (parameters != null)
+        //        {
+        //            cmd.Parameters.AddRange(parameters);
+        //        }
 
-                return cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
+        //        return cmd.ExecuteNonQuery();
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        Disconnect();
+        //    }
+        //}
     }
 }

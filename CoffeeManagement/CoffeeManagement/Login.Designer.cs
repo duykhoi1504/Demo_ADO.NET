@@ -33,6 +33,7 @@
             Cancel_btn = new Button();
             Login_btn = new Button();
             ShowAccount = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // Username_txt
@@ -71,7 +72,7 @@
             // 
             // ShowAccount
             // 
-            ShowAccount.Location = new Point(441, 289);
+            ShowAccount.Location = new Point(233, 279);
             ShowAccount.Name = "ShowAccount";
             ShowAccount.Size = new Size(191, 29);
             ShowAccount.TabIndex = 5;
@@ -79,11 +80,21 @@
             ShowAccount.UseVisualStyleBackColor = true;
             ShowAccount.Click += ShowAccount_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(233, 256);
+            label1.Name = "label1";
+            label1.Size = new Size(249, 20);
+            label1.TabIndex = 6;
+            label1.Text = "Quên MK hả vậy thì click vào đây:))))";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(ShowAccount);
             Controls.Add(Login_btn);
             Controls.Add(Cancel_btn);
@@ -103,5 +114,6 @@
         private Button Cancel_btn;
         private Button Login_btn;
         private Button ShowAccount;
+        private Label label1;
     }
 }

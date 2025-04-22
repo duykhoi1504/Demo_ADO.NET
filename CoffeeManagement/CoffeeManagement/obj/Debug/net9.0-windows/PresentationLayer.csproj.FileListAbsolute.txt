@@ -65,3 +65,6 @@ C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.pdb
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\ref\PresentationLayer.dll
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmMenu.resources
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Properties.Resources.resources
+C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USProdItem.resources

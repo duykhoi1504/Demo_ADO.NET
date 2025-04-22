@@ -86,18 +86,21 @@ namespace PresentationLayer
 
     
 
+
+        //mẫu 
         private void ShowAccount_Click(object sender, EventArgs e)
         {
-            string ConString = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";
+            string ConString= DataProvider.Instance.GetCntr();
+            //string ConString = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(ConString);
-            string sql = "SELECT * FROM Users";
+            string sql = "SELECT * FROM Account";
             cnn.Open();
             SqlCommand cmd = new SqlCommand(sql, cnn);
             SqlDataReader reader = cmd.ExecuteReader();
             string accs = "";
             while (reader.Read())
             {
-                accs += reader["Username"].ToString() + " " + reader["Password"].ToString() + "\n";
+                accs += reader["username"].ToString() + " " + reader["password"].ToString() + "\n";
             }
             MessageBox.Show(accs);
 
