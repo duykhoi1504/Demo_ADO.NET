@@ -2,40 +2,35 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
-//using DataLayer;
-using System.Data.SqlClient;
 using BusinessLayer;
 using DataLayer;
+using CoffeeManagement;
+
 namespace PresentationLayer
 {
     public partial class Login : Form
     {
-        //private SqlConnection cn;
         private LoginBL loginBL;
         public string UserName;
-
-
 
         public Login()
         {
             InitializeComponent();
             loginBL = new LoginBL();
 
-
         }
+
         private bool UserLogin(Account a)
         {
-
-
             try
             {
-
                 return loginBL.Login(a);
             }
             catch (SqlException ex)
@@ -44,28 +39,32 @@ namespace PresentationLayer
                 return false;
             }
         }
-        private void Login_btn_Click(object sender, EventArgs e)
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //Console.WriteLine("123456:");
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string username, password;
-            username = Username_txt.Text.Trim();
-            password = Password_txt.Text;
+            username = txtUsername.Text.Trim();
+            password = txtPassword.Text;
 
             Account ac = new Account(username, password);
+
             if (UserLogin(ac))
             {
-                UserName=username;
+                UserName = username;
                 this.DialogResult = DialogResult.OK;
-
             }
             else
             {
-
-                DialogResult result = MessageBox.Show("Sai ten dang nhap hoac mat khau", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                DialogResult result = MessageBox.Show("The Username or Password is Incorrect!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Retry)
                 {
-                    Username_txt.Clear();
-                    Password_txt.Clear();
-                    Username_txt.Focus();
+                    txtPassword.Clear();
+                    txtPassword.Focus();
                 }
                 else
                 {
@@ -74,24 +73,10 @@ namespace PresentationLayer
             }
         }
 
-        private void Cancel_btn_Click(object sender, EventArgs e)
+        private void btnShowAccount_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+            string ConString = DataProvider.Instance.GetCntr();
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            //Console.WriteLine("123456:");
-        }
-
-    
-
-
-        //mẫu 
-        private void ShowAccount_Click(object sender, EventArgs e)
-        {
-            string ConString= DataProvider.Instance.GetCntr();
-            //string ConString = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(ConString);
             string sql = "SELECT * FROM Account";
             cnn.Open();
@@ -104,8 +89,12 @@ namespace PresentationLayer
             }
             MessageBox.Show(accs);
 
-
             cnn.Close();
+        }
+
+        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = cbShowPass.Checked ? '\0' : '*';
         }
     }
 }

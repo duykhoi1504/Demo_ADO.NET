@@ -11,10 +11,12 @@ namespace BusinessLayer
     public class LoginBL
     {
         private LoginDL loginDL;
+
         public LoginBL()
         {
             loginDL = new LoginDL();
         }
+
         public bool Login(Account a)
         {
             try

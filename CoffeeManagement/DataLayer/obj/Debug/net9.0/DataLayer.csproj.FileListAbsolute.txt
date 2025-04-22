@@ -29,3 +29,19 @@ C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\De
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\refint\DataLayer.dll
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.pdb
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\ref\DataLayer.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.AssemblyInfo.cs
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.sourcelink.json
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\refint\DataLayer.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.pdb
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.deps.json
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\DataLayer.pdb
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\TransferObject.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\bin\Debug\net9.0\TransferObject.pdb
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\DataLayer.csproj.Up2Date
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataLayer\obj\Debug\net9.0\ref\DataLayer.dll
