@@ -38,11 +38,14 @@
             // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.ButtonShadow;
             panel1.Controls.Add(picProd);
             panel1.Controls.Add(lbProdPrice);
             panel1.Controls.Add(lbProdName);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.MaximumSize = new Size(160, 140);
+            panel1.MinimumSize = new Size(160, 140);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(1);
             panel1.Size = new Size(160, 140);
@@ -51,6 +54,7 @@
             // 
             // picProd
             // 
+            picProd.BackColor = SystemColors.ActiveCaption;
             picProd.Location = new Point(6, 4);
             picProd.Name = "picProd";
             picProd.Size = new Size(148, 69);
@@ -77,8 +81,7 @@
             // 
             // USProdItem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             Controls.Add(panel1);
             Name = "USProdItem";
             Size = new Size(160, 140);

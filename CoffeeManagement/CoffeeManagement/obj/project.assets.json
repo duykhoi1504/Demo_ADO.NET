@@ -528,23 +528,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hoain\\.nuget\\packages\\": {},
+    "C:\\Users\\MR KHOI\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\hoain\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\obj\\",
+      "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hoain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MR KHOI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -553,17 +553,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
-              "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
+            "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
+              "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
             }
           }
         }
@@ -608,7 +609,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

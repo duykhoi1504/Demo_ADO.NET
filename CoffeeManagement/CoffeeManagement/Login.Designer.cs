@@ -52,10 +52,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(62, 618);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(38, 386);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(391, 31);
+            label2.Size = new Size(244, 20);
             label2.TabIndex = 1;
             label2.Text = "2151050296 - Trần Lê Hoài Nhân";
             // 
@@ -64,20 +64,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(27, 58);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(17, 36);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(465, 53);
+            label1.Size = new Size(286, 33);
             label1.TabIndex = 1;
             label1.Text = "Café Managament System";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.cat_barista;
-            pictureBox1.Location = new Point(75, 157);
-            pictureBox1.Margin = new Padding(4, 6, 4, 6);
+            pictureBox1.Location = new Point(46, 98);
+            pictureBox1.Margin = new Padding(2, 4, 2, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(358, 340);
+            pictureBox1.Size = new Size(220, 212);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -93,19 +93,20 @@
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label5);
-            panel2.Location = new Point(500, 2);
-            panel2.Margin = new Padding(4, 6, 4, 6);
+            panel2.Location = new Point(308, 1);
+            panel2.Margin = new Padding(2, 4, 2, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(500, 700);
+            panel2.Size = new Size(308, 438);
             panel2.TabIndex = 1;
             // 
             // cbShowPass
             // 
             cbShowPass.AutoSize = true;
             cbShowPass.Font = new Font("Segoe UI Semibold", 7.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cbShowPass.Location = new Point(45, 409);
+            cbShowPass.Location = new Point(28, 256);
+            cbShowPass.Margin = new Padding(2, 2, 2, 2);
             cbShowPass.Name = "cbShowPass";
-            cbShowPass.Size = new Size(204, 34);
+            cbShowPass.Size = new Size(135, 23);
             cbShowPass.TabIndex = 9;
             cbShowPass.Text = "Show password?";
             cbShowPass.UseVisualStyleBackColor = true;
@@ -116,10 +117,10 @@
             btnShowAccount.BackColor = Color.DarkSeaGreen;
             btnShowAccount.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnShowAccount.ForeColor = Color.White;
-            btnShowAccount.Location = new Point(78, 484);
-            btnShowAccount.Margin = new Padding(4, 6, 4, 6);
+            btnShowAccount.Location = new Point(48, 302);
+            btnShowAccount.Margin = new Padding(2, 4, 2, 4);
             btnShowAccount.Name = "btnShowAccount";
-            btnShowAccount.Size = new Size(165, 68);
+            btnShowAccount.Size = new Size(102, 42);
             btnShowAccount.TabIndex = 8;
             btnShowAccount.Text = "ACCOUNT";
             btnShowAccount.UseVisualStyleBackColor = false;
@@ -130,10 +131,10 @@
             btnLogin.BackColor = Color.SeaGreen;
             btnLogin.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(263, 484);
-            btnLogin.Margin = new Padding(4, 6, 4, 6);
+            btnLogin.Location = new Point(162, 302);
+            btnLogin.Margin = new Padding(2, 4, 2, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(165, 68);
+            btnLogin.Size = new Size(102, 42);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -142,30 +143,32 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(45, 345);
-            txtPassword.Margin = new Padding(4, 6, 4, 6);
+            txtPassword.Location = new Point(28, 216);
+            txtPassword.Margin = new Padding(2, 4, 2, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(411, 38);
+            txtPassword.Size = new Size(254, 27);
             txtPassword.TabIndex = 6;
+            txtPassword.Text = "123";
             // 
             // txtUsername
             // 
             txtUsername.Font = new Font("Microsoft PhagsPa", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(45, 247);
-            txtUsername.Margin = new Padding(4, 6, 4, 6);
+            txtUsername.Location = new Point(28, 154);
+            txtUsername.Margin = new Padding(2, 4, 2, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(411, 38);
+            txtUsername.Size = new Size(254, 27);
             txtUsername.TabIndex = 7;
+            txtUsername.Text = "admin";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 7.875F, FontStyle.Bold);
-            label4.Location = new Point(40, 303);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(25, 189);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(105, 30);
+            label4.Size = new Size(73, 19);
             label4.TabIndex = 4;
             label4.Text = "Password";
             // 
@@ -173,10 +176,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 7.875F, FontStyle.Bold);
-            label3.Location = new Point(40, 205);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(25, 128);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(116, 30);
+            label3.Size = new Size(80, 19);
             label3.TabIndex = 5;
             label3.Text = "Username:";
             // 
@@ -184,10 +187,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(40, 125);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(25, 78);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(140, 45);
+            label5.Size = new Size(87, 28);
             label5.TabIndex = 1;
             label5.Text = "SIGN IN";
             // 
@@ -198,10 +201,10 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 2);
-            panel1.Margin = new Padding(4, 6, 4, 6);
+            panel1.Location = new Point(0, 1);
+            panel1.Margin = new Padding(2, 4, 2, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(500, 700);
+            panel1.Size = new Size(308, 438);
             panel1.TabIndex = 2;
             // 
             // label6
@@ -209,21 +212,20 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(91, 560);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(56, 350);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(321, 31);
+            label6.Size = new Size(200, 20);
             label6.TabIndex = 1;
             label6.Text = "2151050209 - Võ Duy Khôi";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 700);
+            ClientSize = new Size(615, 438);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(5);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

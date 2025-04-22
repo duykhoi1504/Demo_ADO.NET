@@ -16,6 +16,9 @@
     <Compile Update="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="USCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="USProdItem.cs">
       <SubType>UserControl</SubType>
     </Compile>

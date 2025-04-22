@@ -16,7 +16,7 @@ namespace PresentationLayer
     public partial class AddSupplier : UserControl
     {
         public event EventHandler SupplierAdded;
-        public static event Action UpdateDataGridView;
+        //public static event Action UpdateDataGridView;
         public SupplierBL supplierBL;
         public AddSupplier()
         {

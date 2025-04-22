@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace PresentationLayer
 {
@@ -26,10 +27,22 @@ namespace PresentationLayer
             }
         }
 
+
+
+
         private void panel1_Click(object sender, EventArgs e)
         {
-            //do something
-            MessageBox.Show("You clicked on " + lbProdName.Text);
+            MessageBox.Show("Item clicked: " + lbProdName.Text);
+            FrmMenu frmMenu = (FrmMenu)this.ParentForm;
+            Item item = new Item(lbProdName.Text, lbProdPrice.Text, "1", "1", "1");
+            frmMenu.AddItem(item);
+            Observer.Notify("UpdateProdItems");
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
