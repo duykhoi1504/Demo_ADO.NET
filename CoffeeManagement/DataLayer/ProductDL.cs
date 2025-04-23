@@ -15,7 +15,9 @@ namespace DataLayer
         public List<Product> GetProducts()
         {
             string sql = "SELECT * FROM Product";
-            string id, name, price, discount, categoryID;
+            string id, name;
+            float price, discount;
+            int categoryID;
             List<Product> Prods = new List<Product>();
             try
             {
@@ -25,9 +27,9 @@ namespace DataLayer
                 {
                     id = reader[0].ToString();
                     name = reader["name"].ToString();
-                    price = reader["price"].ToString();
-                    discount = reader["discount"].ToString();
-                    categoryID = reader["categoryID"].ToString();
+                    price = reader.GetInt32("price");
+                    discount = reader.GetInt32("discount");
+                    categoryID = reader.GetInt32("categoryID");
                     Product s = new Product(id, name, price, discount, categoryID);
                     Prods.Add(s);
                 }

@@ -9,12 +9,11 @@ namespace TransferObject
     public class Product
     {
         public string id { get; set; }
-
         public string name { get; set; }
-        public string price { get; set; }
-        public string discount { get; set; }
-        public string categoryID { get; set; }
-        public Product(string id, string name, string price, string discount, string categoryID)
+        public float price { get; set; }
+        public float discount { get; set; }
+        public int categoryID { get; set; }
+        public Product(string id, string name, float price, float discount, int categoryID)
         {
             this.id = id;
             this.name = name;
@@ -22,11 +21,5 @@ namespace TransferObject
             this.discount = discount;
             this.categoryID = categoryID;
         }
-        //public string supplierId { get; set; }
-        //public Product(string name, string supplierId)
-        //{
-        //    this.name = name;
-        //    this.supplierId = supplierId;
-        //}
     }
 }
