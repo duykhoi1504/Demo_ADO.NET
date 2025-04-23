@@ -29,6 +29,7 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
         public int AddSupplier(Supplier s)
         {
             try
@@ -40,6 +41,7 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
         public int deleteSupplier(string id)
         {
             try

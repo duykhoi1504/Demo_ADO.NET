@@ -75,7 +75,7 @@ namespace PresentationLayer
             foreach (var product in prods)
             {
                 USProdItem us = new USProdItem();
-                us.SetProdInfo(product.name, product.price, null);
+                us.SetProdInfo(product.name, product.price.ToString(), null);
                 //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
                 pnProduct.Controls.Add(us);
 
