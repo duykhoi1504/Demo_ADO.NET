@@ -118,6 +118,7 @@
             Controls.Add(panel1);
             Name = "USCartItem";
             Size = new Size(385, 77);
+            Load += USCartItem_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -1,10 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\coffeemanagement\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\uscartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\uscartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\uscartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\uscartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\usproditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\usproditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\usproditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\usproditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\datatransfer\\cartslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\cartslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,27 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartSlot.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\CartSlot.cs",
+              "RelativeDocumentMoniker": "DataTransfer\\CartSlot.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\CartSlot.cs",
+              "RelativeToolTip": "DataTransfer\\CartSlot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:26:23.322Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "USProdItem.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USProdItem.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\USProdItem.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USProdItem.cs",
+              "RelativeToolTip": "CoffeeManagement\\USProdItem.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwC0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:25:11.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "USProdItem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USProdItem.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\USProdItem.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USProdItem.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\USProdItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:25:09.371Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "USCartItem.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USCartItem.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\USCartItem.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USCartItem.cs",
+              "RelativeToolTip": "CoffeeManagement\\USCartItem.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:20:11.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "USCartItem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USCartItem.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\USCartItem.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USCartItem.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\USCartItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T05:06:51.68Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Products.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Products.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\Products.cs",
-              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Products.cs [Design]",
-              "RelativeToolTip": "CoffeeManagement\\Products.cs [Design]",
+              "Title": "FrmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs",
+              "RelativeToolTip": "CoffeeManagement\\FrmMenu.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwEcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T09:03:48.202Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-24T04:45:09.22Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -11,7 +11,7 @@ namespace TransferObject
     {
         public string id { get; set; }
         public string createdDate { get; set; }
-        public string totalPrice { get; set; }
+        public float totalPrice { get; set; }
         public string paymentMethod { get; set; }
 
 
@@ -19,13 +19,14 @@ namespace TransferObject
         public string accountID { get; set; }
         //if item[?] == order.ID
         public List<Item> Items { get; set; }
-        public Order(string id, string createdDate, string totalPrice, string paymentMethod, string accountID,List<Item>items)
+        public Order(string id, string createdDate, float totalPrice, string paymentMethod, string accountID,List<Item>items)
         {
             this.id = id;
             this.createdDate = createdDate;
             this.totalPrice = totalPrice;
             this.paymentMethod = paymentMethod;
             this.accountID = accountID;
+            if (items == null) return;
             foreach(Item item in items)
             {
                 if (item.orderID == id)

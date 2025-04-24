@@ -27,9 +27,10 @@ namespace DataLayer
                 {
                     id = reader[0].ToString();
                     name = reader["name"].ToString();
-                    price = reader.GetInt32("price");
-                    discount = reader.GetInt32("discount");
-                    categoryID = reader.GetInt32("categoryID");
+                    price = float.Parse(reader["price"].ToString());
+                    discount = float.Parse(reader["discount"].ToString());
+
+                    categoryID = int.Parse(reader["categoryID"].ToString());
                     Product s = new Product(id, name, price, discount, categoryID);
                     Prods.Add(s);
                 }

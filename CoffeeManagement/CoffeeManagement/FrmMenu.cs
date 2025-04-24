@@ -11,21 +11,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
 
+
+
 namespace PresentationLayer
 {
+
     public partial class FrmMenu : Form, IObserver
     {
         CategoryBL categoryBL;
         ProductBL productBL;
-        List<Item> items = new List<Item>();
-        public void AddItem(Item item)
+        //List<Item> items = new List<Item>();
+        List<CartSlot> items = new List<CartSlot>();
+
+        public void AddItem(Product product)
         {
-            items.Add(item);
-            // Add item to cart or perform any other action
+            if (items != null)
+            {
+                // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+                var existingItem = items.FirstOrDefault(i => i.product.id == product.id);
+                if (existingItem != null)
+                {
+                    // Nếu sản phẩm đã tồn tại, tăng số lượng
+                    existingItem.quantity++;
+                }
+                else
+                {
+                    // Nếu sản phẩm chưa tồn tại, thêm mới vào giỏ hàng
+                    items.Add(new CartSlot(product, 1));
+                }
+            }
+            else
+            {
+                items.Add(new CartSlot(product, 1));
+                //items.Add(item);
+                // Add item to cart or perform any other action
+            }
         }
         public FrmMenu()
         {
-
             InitializeComponent();
             categoryBL = new CategoryBL();
             productBL = new ProductBL();
@@ -46,7 +69,7 @@ namespace PresentationLayer
             foreach (var item in items)
             {
                 USCartItem us = new USCartItem();
-                us.SetCartInfo(item.id, item.orderID);
+                us.CartSlotInit(item);
                 us.Dock = DockStyle.Top; // Căn chỉnh control sản phẩm theo chiều dọc
                
 
@@ -62,12 +85,18 @@ namespace PresentationLayer
             {
                 Button button = new Button();
                 button.Text = category.name;
-                button.Dock = DockStyle.Left; // Căn chỉnh button theo chiều dọc
-
-
-
+                button.Dock = DockStyle.Left; // Că n chỉnh button theo chiều dọc
                 pnFilter.Controls.Add(button);
+
+                ////button event
+                button.Click += ((s, e) =>
+                {
+                    // Xử lý sự kiện khi nhấn nút category
+                    // Ví dụ: lọc sản phẩm theo category
+                    MessageBox.Show("Category clicked: " + category.name);
+                });
             }
+            //////////////////////////////////////////////////////////////////////////////////////
             //load product
             List<Product> prods = new List<Product>();
             prods = productBL.GetProducts();
@@ -75,7 +104,7 @@ namespace PresentationLayer
             foreach (var product in prods)
             {
                 USProdItem us = new USProdItem();
-                us.SetProdInfo(product.name, product.price.ToString(), null);
+                us.ProductInit(product);      
                 //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
                 pnProduct.Controls.Add(us);
 
@@ -85,7 +114,13 @@ namespace PresentationLayer
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Total: " + items.Count);
+            string message = "Items:\n";
+
+            foreach(CartSlot item in items)
+            {
+                message += item.product.name + " - " + item.quantity+ "\n";
+            }
+            MessageBox.Show(message);
         }
     }
 }

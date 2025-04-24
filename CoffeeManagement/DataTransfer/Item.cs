@@ -12,11 +12,11 @@ namespace TransferObject
         public string orderID { get; set; }
         public string productID { get; set; }
 
-        public string quantity { get; set; }
+        public int quantity { get; set; }
 
         //public Product product { get; set; }
-        public string price { get; set; }
-        public Item(string id, string orderID, string productID, string quantity, string price)
+        public float price { get; set; }
+        public Item(string id, string orderID, string productID, int quantity, float price)
         {
             this.id = id;
             this.orderID = orderID;

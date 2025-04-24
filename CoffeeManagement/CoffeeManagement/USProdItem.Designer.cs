@@ -85,6 +85,7 @@
             Controls.Add(panel1);
             Name = "USProdItem";
             Size = new Size(160, 140);
+            Load += USProdItem_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picProd).EndInit();
