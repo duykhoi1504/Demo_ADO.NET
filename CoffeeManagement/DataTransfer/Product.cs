@@ -13,13 +13,15 @@ namespace TransferObject
         public float price { get; set; }
         public float discount { get; set; }
         public int categoryID { get; set; }
-        public Product(string id, string name, float price, float discount, int categoryID)
+        public string image { get; set; }
+        public Product(string id, string name, float price, float discount, int categoryID, string image)
         {
             this.id = id;
             this.name = name;
             this.price = price;
             this.discount = discount;
             this.categoryID = categoryID;
+            this.image = image;
         }
     }
 }
