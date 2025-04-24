@@ -10,11 +10,30 @@ namespace TransferObject
     {
 
         public Product product { get; set; }
-        public int quantity { get; set; }
-        public CartSlot(Product product, int quantity)
+        private  int quantity;
+        public int Quantity
+        {
+            get { return quantity; }
+            set
+            {
+                quantity = value;
+                UpdateTotalPrice(); // Gọi để cập nhật totalPrice khi quantity thay đổi
+            }
+        }
+
+        public float totalPrice { get; set; }
+        public CartSlot(Product product, int quantity )
         {
             this.product = product;
-            this.quantity = quantity;
+            Quantity = quantity;
+            //this.totalPrice = totalPrice;
+
+
+
+        }
+        public void UpdateTotalPrice()
+        {
+            totalPrice = product.price * Quantity;
         }
     }
 }

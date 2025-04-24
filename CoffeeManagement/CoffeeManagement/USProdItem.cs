@@ -47,7 +47,7 @@ namespace PresentationLayer
             //frmMenu.AddItem(item);
 
             frmMenu.AddItem(product);
-            Observer.Notify("UpdateProdItems");
+            Observer.Notify("UpdateProdCart");
 
         }
 

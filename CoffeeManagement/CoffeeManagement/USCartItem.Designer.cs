@@ -50,7 +50,7 @@
             // lbPrice
             // 
             lbPrice.AutoSize = true;
-            lbPrice.Location = new Point(86, 25);
+            lbPrice.Location = new Point(106, 25);
             lbPrice.Name = "lbPrice";
             lbPrice.Size = new Size(42, 20);
             lbPrice.TabIndex = 0;
@@ -74,6 +74,7 @@
             btnPlus.TabIndex = 1;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
+            btnPlus.Click += btnPlus_Click;
             // 
             // btnMinus
             // 
@@ -83,6 +84,7 @@
             btnMinus.TabIndex = 1;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += btnMinus_Click;
             // 
             // lbTotalPrice
             // 

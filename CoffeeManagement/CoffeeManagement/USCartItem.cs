@@ -35,11 +35,36 @@ namespace PresentationLayer
 
             lbPrice.Text = cartSlot.product.price.ToString();
 
-            lbQuantity.Text = cartSlot.quantity.ToString();
+            lbQuantity.Text = cartSlot.Quantity.ToString();
+            lbTotalPrice.Text = (cartSlot.product.price * cartSlot.Quantity).ToString();
+            Observer.Notify("UpdateTotalPriceButton");
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            cartSlot.Quantity++;
+            SetCartLabel();
+
+            //Observer.Notify("UpdateProdItems");
 
         }
 
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            cartSlot.Quantity--;
+            //lbQuantity.Text = cartSlot.quantity.ToString();
+            SetCartLabel();
+                
+            if (cartSlot.Quantity <= 0)
+            {
+                FrmMenu frmMenu = (FrmMenu)this.ParentForm;
+                frmMenu.RemoveItem(cartSlot.product);
+                //this.Dispose();
+            }
+       
 
+            //Observer.Notify("UpdateProdItems");
 
+        }
     }
 }

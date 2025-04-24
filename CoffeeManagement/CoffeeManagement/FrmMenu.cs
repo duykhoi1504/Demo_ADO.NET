@@ -20,33 +20,9 @@ namespace PresentationLayer
     {
         CategoryBL categoryBL;
         ProductBL productBL;
-        //List<Item> items = new List<Item>();
-        List<CartSlot> items = new List<CartSlot>();
+        float totalPrice = 0;
 
-        public void AddItem(Product product)
-        {
-            if (items != null)
-            {
-                // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
-                var existingItem = items.FirstOrDefault(i => i.product.id == product.id);
-                if (existingItem != null)
-                {
-                    // Nếu sản phẩm đã tồn tại, tăng số lượng
-                    existingItem.quantity++;
-                }
-                else
-                {
-                    // Nếu sản phẩm chưa tồn tại, thêm mới vào giỏ hàng
-                    items.Add(new CartSlot(product, 1));
-                }
-            }
-            else
-            {
-                items.Add(new CartSlot(product, 1));
-                //items.Add(item);
-                // Add item to cart or perform any other action
-            }
-        }
+        public List<CartSlot> cartSlots = new List<CartSlot>();
         public FrmMenu()
         {
             InitializeComponent();
@@ -55,28 +31,68 @@ namespace PresentationLayer
             Observer.Register(this);
         }
 
-        public void OnNotify(string key)
+        public void AddItem(Product product)
         {
-            if (key == "UpdateProdItems")
+            // Kiểm tra và khởi tạo cartSlots nếu cần
+            if (cartSlots == null)
             {
-                UpdateProdItems();
+                cartSlots = new List<CartSlot>();
             }
+
+            // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+            foreach (var slot in cartSlots)
+            {
+                if (slot.product.id == product.id)
+                {
+                    // Nếu sản phẩm đã tồn tại, tăng số lượng
+                    slot.Quantity++;
+                    return;
+                }
+            }
+
+            // Nếu sản phẩm chưa tồn tại, thêm mới vào giỏ hàng
+            cartSlots.Add(new CartSlot(product, 1));
         }
 
-        private void UpdateProdItems()
+        public void RemoveItem(Product product)
+        {
+            // Kiểm tra xem sản phẩm có trong giỏ hàng không
+            foreach (var slot in cartSlots)
+            {
+                if (slot.product.id == product.id)
+                {
+
+                    // Nếu số lượng bằng 0, xóa sản phẩm khỏi giỏ hàng
+                    cartSlots.Remove(slot);
+                    UpdateProdCart();
+                    return;
+                }
+            }
+
+        }
+
+        private void UpdateProdCart()
         {
             pnProdItems.Controls.Clear(); // Xóa các sản phẩm cũ trong panel
-            foreach (var item in items)
+            foreach (var slot in cartSlots)
             {
                 USCartItem us = new USCartItem();
-                us.CartSlotInit(item);
+                us.CartSlotInit(slot);
                 us.Dock = DockStyle.Top; // Căn chỉnh control sản phẩm theo chiều dọc
-               
+
 
                 pnProdItems.Controls.Add(us);
             }
         }
         private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            LoadCatogery();
+            //LoadProduct();
+
+        }
+
+
+        private void LoadCatogery()
         {
             //load category
             List<Category> cats = new List<Category>();
@@ -93,34 +109,91 @@ namespace PresentationLayer
                 {
                     // Xử lý sự kiện khi nhấn nút category
                     // Ví dụ: lọc sản phẩm theo category
+                    LoadProduct(category.id.ToString());
                     MessageBox.Show("Category clicked: " + category.name);
                 });
             }
             //////////////////////////////////////////////////////////////////////////////////////
+        }
+        private void LoadProduct(string key = null)
+        {
+
             //load product
+
+
             List<Product> prods = new List<Product>();
             prods = productBL.GetProducts();
-            pnProduct.Controls.Clear(); 
+            pnProduct.Controls.Clear();
             foreach (var product in prods)
             {
-                USProdItem us = new USProdItem();
-                us.ProductInit(product);      
-                //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
-                pnProduct.Controls.Add(us);
+                if (key != null)
+                {
 
+                    if (key == product.categoryID.ToString())
+                    {
+                        //if (product.categoryId == category.id)
+                        USProdItem us = new USProdItem();
+                        us.ProductInit(product);
+                        //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
+                        pnProduct.Controls.Add(us);
+                    }
+                }
+                else
+                {
+                    USProdItem us = new USProdItem();
+                    us.ProductInit(product);
+                    //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
+                    pnProduct.Controls.Add(us);
+                }
             }
 
         }
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            string message = "Items:\n";
+            //float totalPrice = 0;   
+            UpdateProdCart();
+            //string message = "Items:\n";
 
-            foreach(CartSlot item in items)
+            //foreach (CartSlot slot in cartSlots)
+            //{
+
+            //    message += slot.product.name + " - " + slot.Quantity + " - " + slot.totalPrice + "\n";
+            //    //totalPrice += slot.totalPrice;
+            //}
+            //MessageBox.Show(message);
+            FrmCartInfo frmCartInfo = new FrmCartInfo(cartSlots, totalPrice);
+            frmCartInfo.Show();
+
+        }
+        private void UpdateTotalPrice()
+        {
+            totalPrice = 0;
+            foreach (CartSlot slot in cartSlots)
             {
-                message += item.product.name + " - " + item.quantity+ "\n";
+                totalPrice += slot.totalPrice;
             }
-            MessageBox.Show(message);
+            btnTotal.Text = "Total Price: " + totalPrice.ToString();
+        }
+
+        public void OnNotify(string key)
+        {
+            if (key == "UpdateProdCart")
+            {
+                UpdateProdCart();
+            }
+            if (key == "UpdateTotalPriceButton")
+            {
+                // Xử lý khi có thông báo xóa sản phẩm
+                // Ví dụ: cập nhật giỏ hàng
+                UpdateTotalPrice();
+            }
+        }
+
+        private void btnShowAllProduct_Click(object sender, EventArgs e)
+        {
+            LoadProduct();
         }
     }
+
 }
