@@ -10,21 +10,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
 using BusinessLayer;
+using System.Data.SqlClient;
 
 namespace PresentationLayer
 {
     public partial class Products : Form
     {
         private CategoryBL categoryBL;
+        private ProductBL productBL;
 
         public Products()
         {
             InitializeComponent();
             categoryBL = new CategoryBL();
+            productBL = new ProductBL();
         }
 
         private void Products_Load(object sender, EventArgs e)
         {
+            //Load danh mục sản phẩm
             List<Category> cats = new List<Category>();
             cats = categoryBL.GetCategories();
 
@@ -36,6 +40,26 @@ namespace PresentationLayer
 
                 pnlLoadCats.Controls.Add(btnCat);
             }
+
+            //Load danh sách sản phẩm
+            try
+            {
+                dgvProducts.DataSource = productBL.GetProducts();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ResetDataGridView()
+        {
+            dgvProducts.DataSource = productBL.GetProducts();
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
