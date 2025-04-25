@@ -88,7 +88,6 @@ C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-w
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.AddSupplier.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\CoffeeManagement.Form1.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmMenu.resources
-C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Login.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Properties.Resources.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Suppliers.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USProdItem.resources
@@ -143,12 +142,17 @@ C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\CoffeeMana
 C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\ref\PresentationLayer.dll
 C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USCartItem.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USCartItem.resources
-C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Products.resources
-C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.CategoryButton.resources
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.CategoryButton.resources
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Products.resources
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USCartItem.resources
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmMenu.resources
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCartInfo.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCartInfo.resources
-C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.AddProduct.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmLogin.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmProducts.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USAddProduct.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USCategoryButton.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\System.Drawing.Common.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\System.Private.Windows.Core.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll

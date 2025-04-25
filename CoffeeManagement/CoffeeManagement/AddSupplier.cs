@@ -18,6 +18,7 @@ namespace PresentationLayer
         public event EventHandler SupplierAdded;
         //public static event Action UpdateDataGridView;
         public SupplierBL supplierBL;
+
         public AddSupplier()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace PresentationLayer
             id = txtId.Text;
             name = txtName.Text;
             address = txtAdress.Text;
+
             Supplier s = new Supplier(id, name, address);
             try
             {

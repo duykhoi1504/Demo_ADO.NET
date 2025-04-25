@@ -10,13 +10,13 @@ namespace DataLayer
 {
     public class DataProvider
     {
-        private SqlConnection cn;
+        //private SqlConnection cn;
+        public SqlConnection cn;
         private SqlCommand cmd;
 
         private static DataProvider instance = null;
         private string cntr = "Data Source=.\\SQLEXPRESS01;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
         //private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
-
 
         public static DataProvider Instance
         {
@@ -93,10 +93,18 @@ namespace DataLayer
             }
         }
 
-        public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        public SqlDataReader MyExecuteReader(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
             cmd.CommandType = type;
+
+            if (parameters != null)
+            {
+                foreach (SqlParameter parameter in parameters)
+                {
+                    cmd.Parameters.Add(parameter);
+                }
+            }
 
             try
             {
@@ -129,7 +137,6 @@ namespace DataLayer
             }
             catch (SqlException ex)
             {
-
                 throw ex;
             }
             finally

@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer
 {
-    partial class CategoryButton
+    partial class USCategoryButton
     {
         /// <summary> 
         /// Required designer variable.
@@ -43,15 +43,16 @@
             btnCategory.Size = new Size(6, 6);
             btnCategory.TabIndex = 0;
             btnCategory.UseVisualStyleBackColor = false;
+            btnCategory.Click += btnCategory_Click;
             // 
-            // CategoryButton
+            // USCategoryButton
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Controls.Add(btnCategory);
-            Name = "CategoryButton";
+            Name = "USCategoryButton";
             Size = new Size(9, 9);
             ResumeLayout(false);
             PerformLayout();
