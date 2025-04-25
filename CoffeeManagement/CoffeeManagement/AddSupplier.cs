@@ -47,7 +47,7 @@ namespace PresentationLayer
             {
                 supplierBL.AddSupplier(s);
                 //SupplierAdded?.Invoke(this, EventArgs.Empty);
-                Observer.Notify("UpdateDataGridView1");
+                Observer.Notify(CONSTANT.UpdateDataGridView1);
                 //UpdateDataGridView?.Invoke();
             }
             catch (SqlException ex)
