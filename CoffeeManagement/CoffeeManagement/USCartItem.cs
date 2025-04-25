@@ -37,7 +37,7 @@ namespace PresentationLayer
 
             lbQuantity.Text = cartSlot.Quantity.ToString();
             lbTotalPrice.Text = (cartSlot.product.price * cartSlot.Quantity).ToString();
-            Observer.Notify("UpdateTotalPriceButton");
+            Observer.Notify(CONSTANT.UpdateTotalPriceButton);
         }
 
         private void btnPlus_Click(object sender, EventArgs e)

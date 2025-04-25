@@ -17,7 +17,6 @@ namespace DataLayer
         //private string cntr = "Data Source=.\\SQLEXPRESS01;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
         private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
 
-
         public static DataProvider Instance
         {
             get
@@ -29,6 +28,7 @@ namespace DataLayer
                 return instance;
             }
         }
+
 
         public string GetCntr()
         {
@@ -72,13 +72,21 @@ namespace DataLayer
             }
         }
 
-        public object MyExecuteScalar(string sql, CommandType type)
+        public object MyExecuteScalar(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             try
             {
                 Connect();
                 cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
+
+                if (parameters != null)
+                {
+                    foreach (SqlParameter parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter);
+                    }
+                }
 
                 return (cmd.ExecuteScalar());
             }
@@ -111,25 +119,24 @@ namespace DataLayer
 
         public int MyExecuteNonQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
-            SqlCommand cmd = new SqlCommand(sql, cn);
-            cmd.CommandType = type;
-
-            if (parameters != null)
-            {
-                foreach (SqlParameter parameter in parameters)
-                {
-                    cmd.Parameters.Add(parameter);
-                }
-            }
-
             try
             {
                 Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+
+                if (parameters != null)
+                {
+                    foreach (SqlParameter parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter);
+                    }
+                }
+
                 return (cmd.ExecuteNonQuery());
             }
             catch (SqlException ex)
             {
-
                 throw ex;
             }
             finally

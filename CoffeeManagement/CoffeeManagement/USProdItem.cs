@@ -45,9 +45,11 @@ namespace PresentationLayer
             FrmMenu frmMenu = (FrmMenu)this.ParentForm;
             //Item item = new Item(lbProdName.Text, lbProdPrice.Text, "1", "1", "1");
             //frmMenu.AddItem(item);
-
-            frmMenu.AddItem(product);
-            Observer.Notify("UpdateProdCart");
+            if (frmMenu != null)
+            {
+                frmMenu.AddItem(product);
+                Observer.Notify(CONSTANT.UpdateProdCart);
+            }
 
         }
 

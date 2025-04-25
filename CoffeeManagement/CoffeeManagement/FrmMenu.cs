@@ -178,11 +178,11 @@ namespace PresentationLayer
 
         public void OnNotify(string key)
         {
-            if (key == "UpdateProdCart")
+            if (key == CONSTANT.UpdateProdCart)
             {
                 UpdateProdCart();
             }
-            if (key == "UpdateTotalPriceButton")
+            if (key == CONSTANT.UpdateTotalPriceButton)
             {
                 // Xử lý khi có thông báo xóa sản phẩm
                 // Ví dụ: cập nhật giỏ hàng
