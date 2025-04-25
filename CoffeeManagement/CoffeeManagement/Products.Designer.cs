@@ -34,11 +34,11 @@
             txtSearch = new TextBox();
             pictureBox1 = new PictureBox();
             btnAddProduct = new Button();
-            dataGridView1 = new DataGridView();
+            dgvProducts = new DataGridView();
             pnlLoadCats = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -103,15 +103,18 @@
             btnAddProduct.TabIndex = 3;
             btnAddProduct.Text = "Add";
             btnAddProduct.UseVisualStyleBackColor = false;
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
-            // dataGridView1
+            // dgvProducts
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(26, 195);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(1493, 752);
-            dataGridView1.TabIndex = 4;
+            dgvProducts.BackgroundColor = Color.SeaGreen;
+            dgvProducts.BorderStyle = BorderStyle.None;
+            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProducts.Location = new Point(26, 195);
+            dgvProducts.Name = "dgvProducts";
+            dgvProducts.RowHeadersWidth = 82;
+            dgvProducts.Size = new Size(1493, 752);
+            dgvProducts.TabIndex = 4;
             // 
             // pnlLoadCats
             // 
@@ -127,7 +130,7 @@
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1548, 959);
             Controls.Add(pnlLoadCats);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvProducts);
             Controls.Add(btnAddProduct);
             Controls.Add(panel1);
             Controls.Add(label1);
@@ -137,7 +140,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,7 +153,7 @@
         private Panel panel2;
         private TextBox txtSearch;
         private Button btnAddProduct;
-        private DataGridView dataGridView1;
+        private DataGridView dgvProducts;
         private Panel pnlLoadCats;
     }
 }

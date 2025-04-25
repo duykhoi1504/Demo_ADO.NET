@@ -46,7 +46,6 @@ namespace DataLayer
             try
             {
                 return MyExecuteNonQuery(sql, CommandType.Text);
-
             }
             catch (SqlException ex)
             {
