@@ -1,15 +1,18 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\",
+<<<<<<< HEAD
+  "Documents": [],
+=======
   "Documents": [
     {
 <<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmcartinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmcartinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\datalayer\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmcartinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmcartinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\demo_ado.net\\coffeemanagement\\datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,6 +47,7 @@
 >>>>>>> 3c55520d4e8d5c11a6fd4dbef57a0e6e030f2423
     }
   ],
+>>>>>>> 3c602a4b824151213093c69c1a5bf68167e012f8
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -54,8 +58,12 @@
           "DockedWidth": 184,
 =======
           "DockedWidth": 229,
+<<<<<<< HEAD
+          "SelectedChildIndex": -1,
+=======
 >>>>>>> 3c55520d4e8d5c11a6fd4dbef57a0e6e030f2423
           "SelectedChildIndex": 2,
+>>>>>>> 3c602a4b824151213093c69c1a5bf68167e012f8
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,6 +72,8 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+<<<<<<< HEAD
+=======
             },
             {
               "$type": "Document",
@@ -93,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FrmCartInfo.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCartInfo.cs",
               "RelativeDocumentMoniker": "CoffeeManagement\\FrmCartInfo.cs",
@@ -176,13 +186,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OrderDL.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\OrderDL.cs",
               "RelativeDocumentMoniker": "DataLayer\\OrderDL.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\OrderDL.cs",
               "RelativeToolTip": "DataLayer\\OrderDL.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAD0AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T08:17:04.371Z",
 =======
@@ -197,6 +207,7 @@
               "WhenOpened": "2025-04-24T11:26:48.727Z",
 >>>>>>> 3c55520d4e8d5c11a6fd4dbef57a0e6e030f2423
               "EditorCaption": ""
+>>>>>>> 3c602a4b824151213093c69c1a5bf68167e012f8
             }
           ]
         }

@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer
 {
-    partial class AddProduct
+    partial class USAddProduct
     {
         /// <summary> 
         /// Required designer variable.
@@ -49,6 +49,8 @@
             btnCancel = new Button();
             panel5 = new Panel();
             pictProduct = new PictureBox();
+            label8 = new Label();
+            cboCategory = new ComboBox();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictProduct).BeginInit();
             SuspendLayout();
@@ -211,7 +213,7 @@
             btnSelectImage.BackColor = Color.White;
             btnSelectImage.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelectImage.ForeColor = Color.SeaGreen;
-            btnSelectImage.Location = new Point(743, 308);
+            btnSelectImage.Location = new Point(726, 334);
             btnSelectImage.Name = "btnSelectImage";
             btnSelectImage.Size = new Size(236, 45);
             btnSelectImage.TabIndex = 11;
@@ -224,7 +226,7 @@
             btnConfirm.BackColor = Color.White;
             btnConfirm.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConfirm.ForeColor = Color.SeaGreen;
-            btnConfirm.Location = new Point(186, 400);
+            btnConfirm.Location = new Point(183, 444);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(166, 59);
             btnConfirm.TabIndex = 13;
@@ -237,7 +239,7 @@
             btnClear.BackColor = Color.White;
             btnClear.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClear.ForeColor = Color.SeaGreen;
-            btnClear.Location = new Point(431, 400);
+            btnClear.Location = new Point(428, 444);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(166, 59);
             btnClear.TabIndex = 14;
@@ -250,7 +252,7 @@
             btnCancel.BackColor = Color.White;
             btnCancel.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.SeaGreen;
-            btnCancel.Location = new Point(680, 400);
+            btnCancel.Location = new Point(677, 444);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(166, 59);
             btnCancel.TabIndex = 14;
@@ -261,24 +263,46 @@
             // panel5
             // 
             panel5.Controls.Add(pictProduct);
-            panel5.Location = new Point(743, 74);
+            panel5.Location = new Point(726, 100);
             panel5.Name = "panel5";
-            panel5.Size = new Size(236, 216);
+            panel5.Size = new Size(240, 220);
             panel5.TabIndex = 15;
             // 
             // pictProduct
             // 
-            pictProduct.Location = new Point(0, 0);
+            pictProduct.Location = new Point(16, 5);
             pictProduct.Name = "pictProduct";
-            pictProduct.Size = new Size(233, 213);
+            pictProduct.Size = new Size(210, 210);
+            pictProduct.SizeMode = PictureBoxSizeMode.Zoom;
             pictProduct.TabIndex = 0;
             pictProduct.TabStop = false;
             // 
-            // AddProduct
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(48, 351);
+            label8.Name = "label8";
+            label8.Size = new Size(129, 37);
+            label8.TabIndex = 16;
+            label8.Text = "Category";
+            // 
+            // cboCategory
+            // 
+            cboCategory.FormattingEnabled = true;
+            cboCategory.Location = new Point(192, 352);
+            cboCategory.Name = "cboCategory";
+            cboCategory.Size = new Size(390, 40);
+            cboCategory.TabIndex = 17;
+            // 
+            // USAddProduct
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
+            Controls.Add(cboCategory);
+            Controls.Add(label8);
             Controls.Add(panel5);
             Controls.Add(btnCancel);
             Controls.Add(btnClear);
@@ -299,8 +323,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "AddProduct";
-            Size = new Size(1032, 499);
+            Name = "USAddProduct";
+            Size = new Size(1020, 537);
             Load += AddProduct_Load;
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictProduct).EndInit();
@@ -330,6 +354,8 @@
         private Button btnClear;
         private Button btnCancel;
         private Panel panel5;
+        private Label label8;
+        private ComboBox cboCategory;
         private PictureBox pictProduct;
     }
 }

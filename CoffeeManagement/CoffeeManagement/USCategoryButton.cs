@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class CategoryButton : UserControl
+    public partial class USCategoryButton : UserControl
     {
-        public CategoryButton()
+        public event EventHandler CategoryClicked;
+
+        public USCategoryButton()
         {
             InitializeComponent();
         }
@@ -20,6 +22,11 @@ namespace PresentationLayer
         public void SetCategoryName(string name)
         {
             btnCategory.Text = name;
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            CategoryClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

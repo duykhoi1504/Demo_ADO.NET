@@ -41,5 +41,17 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public List<Product> GetProductsByCategory(int categoryID)
+        {
+            try
+            {
+                return productDL.GetProductsByCategory(categoryID);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

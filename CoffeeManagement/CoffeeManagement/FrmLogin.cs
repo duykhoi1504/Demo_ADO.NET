@@ -15,12 +15,12 @@ using CoffeeManagement;
 
 namespace PresentationLayer
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
         private LoginBL loginBL;
         public string UserName;
 
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
             loginBL = new LoginBL();
