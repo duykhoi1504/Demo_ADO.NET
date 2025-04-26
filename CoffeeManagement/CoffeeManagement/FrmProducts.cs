@@ -105,8 +105,10 @@ namespace PresentationLayer
             dgv.Columns.Add(deleteColumn);
 
             //Custom cao, rộng các cột
-            dgv.RowTemplate.Height = 100;
+            dgv.RowTemplate.Height = 200;
+            dgv.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgv.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv.Columns["Image"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
             return dgv;
@@ -120,16 +122,78 @@ namespace PresentationLayer
             //Load danh sách sản phẩm
             dgvProducts = CustomDataGridView(dgvProducts);
             LoadProduct();
-        }
 
-        private void ResetDataGridView()
-        {
-            dgvProducts.DataSource = productBL.GetProducts();
+            // Tải danh mục vào USAddProduct
+            var cats = categoryBL.GetCategories();
+            usAddProduct1.LoadCategories(cats);
+
+            usAddProduct1.AddProduct += (p) =>
+            {
+                LoadProduct();
+            };
+
+            usAddProduct1.UpdateProduct += (p) =>
+            {
+                LoadProduct();
+            };
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            usAddProduct1.Reset();
             usAddProduct1.Visible = true;
+        }
+
+        private void btnAllProds_Click(object sender, EventArgs e)
+        {
+            LoadProduct();
+        }
+
+        private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+            if (dgvProducts.Columns[col] is DataGridViewImageColumn)
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0 && col == dgvProducts.Columns["Update"].Index)
+                {
+                    var p = (Product)dgvProducts.Rows[row].DataBoundItem; // Lấy sản phẩm từ hàng
+                    usAddProduct1.SetProduct(p);
+                    usAddProduct1.Visible = true;
+                }
+                else if (e.ColumnIndex == dgvProducts.Columns["Delete"].Index)
+                {
+                    var idCol = dgvProducts.Columns["Id"].Index;
+                    var id = dgvProducts.Rows[row].Cells[idCol].Value.ToString();
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            productBL.DeleteProduct(id);
+                            MessageBox.Show("Product has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadProduct();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show($"Error deleting product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.ToLower();
+
+            var allProducts = productBL.GetProducts();
+            var filteredProducts = allProducts.Where(p => p.name.ToLower().Contains(searchTerm)).ToList();
+
+            dgvProducts.DataSource = filteredProducts;
         }
     }
 }
