@@ -139,5 +139,48 @@ namespace DataLayer
                 Disconnect();
             }
         }
+
+        public int UpdateProduct(Product p)
+        {
+            string sql = "uspUpdateProduct";
+
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@name", p.name));
+            parameters.Add(new SqlParameter("@price", p.price));
+            parameters.Add(new SqlParameter("@discount", p.discount));
+            parameters.Add(new SqlParameter("@categoryID", p.categoryID));
+
+            SqlParameter imgParam = new SqlParameter("@image", SqlDbType.VarBinary);
+            if (p.image != null)
+                imgParam.Value = p.image;
+            else
+                imgParam.Value = DBNull.Value;
+            parameters.Add(imgParam);
+
+            parameters.Add(new SqlParameter("@id", p.id));
+
+            try
+            {
+                return (MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters));
+            }
+            catch (SqlException ex)
+            {             
+                throw ex;
+            }
+        }
+
+        public int DeleteProduct(string id)
+        {
+            string sql = "DELETE FROM Product WHERE id = '" + id + "'";
+
+            try
+            {
+                return (MyExecuteNonQuery(sql, CommandType.Text));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lbTitle = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -55,16 +55,16 @@
             ((System.ComponentModel.ISupportInitialize)pictProduct).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lbTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(385, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(225, 45);
-            label1.TabIndex = 0;
-            label1.Text = "New Product";
+            lbTitle.AutoSize = true;
+            lbTitle.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbTitle.ForeColor = Color.White;
+            lbTitle.Location = new Point(385, 24);
+            lbTitle.Name = "lbTitle";
+            lbTitle.Size = new Size(220, 45);
+            lbTitle.TabIndex = 0;
+            lbTitle.Text = "Add Product";
             // 
             // label2
             // 
@@ -262,6 +262,7 @@
             // 
             // panel5
             // 
+            panel5.BorderStyle = BorderStyle.FixedSingle;
             panel5.Controls.Add(pictProduct);
             panel5.Location = new Point(726, 100);
             panel5.Name = "panel5";
@@ -322,7 +323,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lbTitle);
             Name = "USAddProduct";
             Size = new Size(1020, 537);
             Load += AddProduct_Load;
@@ -334,7 +335,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbTitle;
         private Label label2;
         private Label label3;
         private Label label4;

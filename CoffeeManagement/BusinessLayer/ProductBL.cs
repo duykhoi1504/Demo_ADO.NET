@@ -53,5 +53,35 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+
+        public int UpdateProduct(Product p)
+        {
+            try
+            {
+                return productDL.UpdateProduct(p);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool IsProductIdExists(string productId)
+        {
+            var products = GetProducts();
+            return products.Any(p => p.id == productId);
+        }
+
+        public int DeleteProduct(string id)
+        {
+            try
+            {
+                return productDL.DeleteProduct(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

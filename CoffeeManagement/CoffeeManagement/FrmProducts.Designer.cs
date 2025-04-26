@@ -35,14 +35,15 @@
             pictureBox1 = new PictureBox();
             btnAddProduct = new Button();
             dgvProducts = new DataGridView();
-            pnlLoadCats = new Panel();
-            usAddProduct1 = new USAddProduct();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewImageColumn();
+            pnlLoadCats = new Panel();
+            btnAllProds = new Button();
+            usAddProduct1 = new USAddProduct();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
@@ -64,7 +65,7 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(279, 23);
+            panel1.Location = new Point(309, 23);
             panel1.Name = "panel1";
             panel1.Size = new Size(550, 83);
             panel1.TabIndex = 2;
@@ -88,6 +89,7 @@
             txtSearch.PlaceholderText = "Search here ...";
             txtSearch.Size = new Size(456, 36);
             txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // pictureBox1
             // 
@@ -104,7 +106,7 @@
             btnAddProduct.BackColor = Color.White;
             btnAddProduct.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddProduct.ForeColor = Color.SeaGreen;
-            btnAddProduct.Location = new Point(1346, 39);
+            btnAddProduct.Location = new Point(1457, 36);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(158, 65);
             btnAddProduct.TabIndex = 3;
@@ -121,23 +123,9 @@
             dgvProducts.Location = new Point(26, 195);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(1493, 752);
+            dgvProducts.Size = new Size(1596, 752);
             dgvProducts.TabIndex = 4;
-            // 
-            // pnlLoadCats
-            // 
-            pnlLoadCats.Location = new Point(26, 125);
-            pnlLoadCats.Name = "pnlLoadCats";
-            pnlLoadCats.Size = new Size(1493, 64);
-            pnlLoadCats.TabIndex = 5;
-            // 
-            // usAddProduct1
-            // 
-            usAddProduct1.BackColor = Color.SeaGreen;
-            usAddProduct1.Location = new Point(250, 200);
-            usAddProduct1.Name = "usAddProduct1";
-            usAddProduct1.Size = new Size(1020, 537);
-            usAddProduct1.TabIndex = 6;
+            dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
             // Column1
             // 
@@ -183,16 +171,46 @@
             // 
             Column6.DataPropertyName = "image";
             Column6.HeaderText = "Image";
+            Column6.ImageLayout = DataGridViewImageCellLayout.Stretch;
             Column6.MinimumWidth = 10;
             Column6.Name = "Column6";
             Column6.Width = 200;
+            // 
+            // pnlLoadCats
+            // 
+            pnlLoadCats.Location = new Point(26, 125);
+            pnlLoadCats.Name = "pnlLoadCats";
+            pnlLoadCats.Size = new Size(1596, 64);
+            pnlLoadCats.TabIndex = 5;
+            // 
+            // btnAllProds
+            // 
+            btnAllProds.BackColor = Color.White;
+            btnAllProds.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAllProds.ForeColor = Color.SeaGreen;
+            btnAllProds.Location = new Point(1208, 36);
+            btnAllProds.Name = "btnAllProds";
+            btnAllProds.Size = new Size(229, 65);
+            btnAllProds.TabIndex = 7;
+            btnAllProds.Text = "All Products";
+            btnAllProds.UseVisualStyleBackColor = false;
+            btnAllProds.Click += btnAllProds_Click;
+            // 
+            // usAddProduct1
+            // 
+            usAddProduct1.BackColor = Color.SeaGreen;
+            usAddProduct1.Location = new Point(250, 200);
+            usAddProduct1.Name = "usAddProduct1";
+            usAddProduct1.Size = new Size(1020, 537);
+            usAddProduct1.TabIndex = 6;
             // 
             // FrmProducts
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(1548, 959);
+            ClientSize = new Size(1655, 959);
+            Controls.Add(btnAllProds);
             Controls.Add(usAddProduct1);
             Controls.Add(pnlLoadCats);
             Controls.Add(dgvProducts);
@@ -200,6 +218,7 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "FrmProducts";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Products";
             Load += Products_Load;
             panel1.ResumeLayout(false);
@@ -221,6 +240,7 @@
         private DataGridView dgvProducts;
         private Panel pnlLoadCats;
         private USAddProduct usAddProduct1;
+        private Button btnAllProds;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
