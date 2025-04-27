@@ -23,3 +23,29 @@ C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\refint\TransferObject.dll
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.pdb
 C:\Users\MR KHOI\Documents\GitHub\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\ref\TransferObject.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.deps.json
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.pdb
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.csproj.AssemblyReference.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.AssemblyInfoInputs.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.AssemblyInfo.cs
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.csproj.CoreCompileInputs.cache
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.sourcelink.json
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\refint\TransferObject.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.pdb
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\ref\TransferObject.dll
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.deps.json
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.dll
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\bin\Debug\net9.0\TransferObject.pdb
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.csproj.AssemblyReference.cache
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.AssemblyInfoInputs.cache
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.AssemblyInfo.cs
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.csproj.CoreCompileInputs.cache
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.sourcelink.json
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.dll
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\refint\TransferObject.dll
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\TransferObject.pdb
+C:\Users\MR KHOI\Documents\CODE PROJECT\Demo_ADO.NET\CoffeeManagement\DataTransfer\obj\Debug\net9.0\ref\TransferObject.dll

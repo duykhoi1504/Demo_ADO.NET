@@ -10,9 +10,14 @@ namespace DataLayer
 {
     public class DataProvider
     {
-        private SqlConnection cn;
+        //private SqlConnection cn;
+        public SqlConnection cn;
+        private SqlCommand cmd;
+
         private static DataProvider instance = null;
+        //private string cntr = "Data Source=.\\SQLEXPRESS01;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
         private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
+
         public static DataProvider Instance
         {
             get
@@ -24,17 +29,18 @@ namespace DataLayer
                 return instance;
             }
         }
+
+
         public string GetCntr()
         {
             return cntr;
         }
+
         public DataProvider()
         {
-            //string cntr = "Data Source=.;Initial Catalog=CoffeeShop;Integrated Security=True";
-
-
             cn = new SqlConnection(cntr);
         }
+
         public void Connect()
         {
             try
@@ -43,10 +49,10 @@ namespace DataLayer
                 {
                     cn.Open();
                 }
-
             }
             catch (SqlException ex)
             {
+
                 throw ex;
             }
         }
@@ -62,21 +68,32 @@ namespace DataLayer
             }
             catch (SqlException ex)
             {
+
                 throw ex;
             }
         }
 
-        public object MyExecureScalar(string sql, CommandType type)
+        public object MyExecuteScalar(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
             try
             {
                 Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
+
+                if (parameters != null)
+                {
+                    foreach (SqlParameter parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter);
+                    }
+                }
+
                 return (cmd.ExecuteScalar());
             }
             catch (SqlException ex)
             {
+
                 throw ex;
             }
             finally
@@ -84,33 +101,48 @@ namespace DataLayer
                 Disconnect();
             }
         }
-        public SqlDataReader MyExcureReader(string sql, CommandType type)
+
+        public SqlDataReader MyExecuteReader(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = type;
+
+            if (parameters != null)
+            {
+                foreach (SqlParameter parameter in parameters)
+                {
+                    cmd.Parameters.Add(parameter);
+                }
+            }
+
             try
             {
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = type;
-                return cmd.ExecuteReader();
+                return (cmd.ExecuteReader());
             }
             catch (SqlException ex)
             {
+
                 throw ex;
             }
-            //finally
-            //{
-            //    Disconnect();
-            //}
         }
 
-        public int MyExcuteNonQuery(string sql, CommandType type)
+        public int MyExecuteNonQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
         {
-
             try
             {
                 Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
-                return cmd.ExecuteNonQuery();
+
+                if (parameters != null)
+                {
+                    foreach (SqlParameter parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter);
+                    }
+                }
+
+                return (cmd.ExecuteNonQuery());
             }
             catch (SqlException ex)
             {
@@ -119,33 +151,7 @@ namespace DataLayer
             finally
             {
                 Disconnect();
-
             }
         }
-        //public int MyExcuteNonQuery(string sql, CommandType type, params SqlParameter[] parameters)
-        //{
-        //    try
-        //    {
-        //        Connect();
-        //        SqlCommand cmd = new SqlCommand(sql, cn);
-        //        cmd.CommandType = type;
-
-        //        // Add parameters to the command if provided
-        //        if (parameters != null)
-        //        {
-        //            cmd.Parameters.AddRange(parameters);
-        //        }
-
-        //        return cmd.ExecuteNonQuery();
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Disconnect();
-        //    }
-        //}
     }
 }

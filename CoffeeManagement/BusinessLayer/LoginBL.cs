@@ -11,10 +11,12 @@ namespace BusinessLayer
     public class LoginBL
     {
         private LoginDL loginDL;
+
         public LoginBL()
         {
             loginDL = new LoginDL();
         }
+
         public bool Login(Account a)
         {
             try
@@ -27,5 +29,27 @@ namespace BusinessLayer
             }
 
         }
+        public Account GetAccount(string username, string password)
+        {
+            try
+            {
+                return loginDL.GetAccount(username, password);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        //public int GetAccountId(string username)
+        //{
+        //    try
+        //    {
+        //        return loginDL.GetAccountId(username);
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
     }
 }

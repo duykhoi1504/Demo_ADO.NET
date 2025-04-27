@@ -14,15 +14,16 @@ namespace DataLayer
         public List<Category> GetCategories()
         {
             string sql = "SELECT * FROM Category";
-            string id, name;
+            int id;
+            string name;
             List<Category> cats = new List<Category>();
             try
             {
                 Connect();
-                SqlDataReader reader = MyExcureReader(sql, CommandType.Text);
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
-                    id = reader[0].ToString();
+                    id = reader.GetInt32(0);
                     name = reader["name"].ToString();
 
                     Category s = new Category(id, name);

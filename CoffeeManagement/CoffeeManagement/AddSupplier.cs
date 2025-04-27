@@ -16,8 +16,9 @@ namespace PresentationLayer
     public partial class AddSupplier : UserControl
     {
         public event EventHandler SupplierAdded;
-        public static event Action UpdateDataGridView;
+        //public static event Action UpdateDataGridView;
         public SupplierBL supplierBL;
+
         public AddSupplier()
         {
             InitializeComponent();
@@ -40,12 +41,13 @@ namespace PresentationLayer
             id = txtId.Text;
             name = txtName.Text;
             address = txtAdress.Text;
+
             Supplier s = new Supplier(id, name, address);
             try
             {
                 supplierBL.AddSupplier(s);
                 //SupplierAdded?.Invoke(this, EventArgs.Empty);
-                Observer.Notify("UpdateDataGridView1");
+                Observer.Notify(CONSTANT.UpdateDataGridView1);
                 //UpdateDataGridView?.Invoke();
             }
             catch (SqlException ex)

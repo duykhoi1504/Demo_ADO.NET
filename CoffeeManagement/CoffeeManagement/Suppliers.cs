@@ -54,6 +54,7 @@ namespace PresentationLayer
                 ResetDataGridView();
             }
         }
+
         private void AddSupllier_Click(object sender, EventArgs e)
         {
             addSupplier1.Visible = true;

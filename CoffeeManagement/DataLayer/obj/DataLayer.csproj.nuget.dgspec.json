@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {}
+    "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
-                "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
+              "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
+                "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
               }
             }
           }
@@ -58,6 +58,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -80,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
+    "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
+        "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
         "projectName": "TransferObject",
-        "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
+        "projectPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj",
         "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\obj\\",
+        "outputPath": "C:\\Users\\MR KHOI\\Documents\\CODE PROJECT\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -130,6 +134,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [

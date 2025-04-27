@@ -7,29 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace PresentationLayer
 {
     public partial class USProdItem : UserControl
     {
+        Product product;
         public USProdItem()
         {
             InitializeComponent();
+
         }
-        public void SetProdInfo(string name, string price, Image img)
+        private void USProdItem_Load(object sender, EventArgs e)
         {
-            lbProdName.Text = name;
-            lbProdPrice.Text = price;
-            if (img != null)
-            {
-                picProd.Image = img;
-            }
+            SetProdLabel(product);
         }
+        public void SetProdLabel(Product prod)
+        {
+            if (prod == null)
+                return;
+            lbProdName.Text = prod.name;
+            lbProdPrice.Text = prod.price.ToString();
+
+        }
+        public void ProductInit(Product prod)
+        {
+            if (prod != null)
+                product = prod;
+        }
+
+
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            //do something
-            MessageBox.Show("You clicked on " + lbProdName.Text);
+            MessageBox.Show("Item clicked: " + lbProdName.Text);
+            FrmMenu frmMenu = (FrmMenu)this.ParentForm;
+            //Item item = new Item(lbProdName.Text, lbProdPrice.Text, "1", "1", "1");
+            //frmMenu.AddItem(item);
+            if (frmMenu != null)
+            {
+                frmMenu.AddItem(product);
+                Observer.Notify(CONSTANT.UpdateProdCart);
+            }
+
         }
+
+  
     }
 }
