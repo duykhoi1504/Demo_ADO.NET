@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BusinessLayer;
 using TransferObject;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace PresentationLayer
 {
@@ -19,7 +20,9 @@ namespace PresentationLayer
         public event Action<Product> AddProduct;
         public event Action<Product> UpdateProduct;
 
-        private Product currentProduct;
+        private bool isUpdateProduct = false;
+        private Product currentProduct = null;
+
         public ProductBL productBL;
 
         public USAddProduct()
@@ -54,8 +57,10 @@ namespace PresentationLayer
             cboCategory.ValueMember = "id";
         }
 
-        public void SetProduct(Product p)
+        public void LoadProductForUpdate (Product p)
         {
+            isUpdateProduct = true;
+
             currentProduct = p;
             txtPID.Text = p.id;
             txtPName.Text = p.name;
@@ -72,20 +77,25 @@ namespace PresentationLayer
             }
 
             lbTitle.Text = "Update Product";
-            btnConfirm.Text = "Update";
+            txtPID.Enabled = false;
+
+            this.Visible = true;
         }
 
         public void Reset()
         {
-            currentProduct = null;
             txtPID.Clear();
             txtPName.Clear();
             txtPPrice.Clear();
             txtPDiscount.Clear();
-            cboCategory.SelectedValue = 1;
+            if (cboCategory.Items.Count > 0) cboCategory.SelectedIndex = 0;
             pictProduct.Image = null;
             lbTitle.Text = "Add Product";
-            btnConfirm.Text = "Add";
+
+            isUpdateProduct = false;
+            currentProduct = null;
+            txtPID.Enabled = true;
+            this.Visible = false;
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
@@ -100,7 +110,18 @@ namespace PresentationLayer
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                pictProduct.Image = Image.FromFile(ofd.FileName);
+                try
+                {
+                    byte[] imgBytes = File.ReadAllBytes(ofd.FileName); // Đọc file thành byte array
+                    using (MemoryStream ms = new MemoryStream(imgBytes))
+                    {
+                        pictProduct.Image = Image.FromStream(ms); // Load từ memory stream
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to load image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -111,14 +132,23 @@ namespace PresentationLayer
                 return;
             }
 
-            string id, name, image;
+            string id = txtPID.Text.Trim();
+            string name = txtPName.Text.Trim();
             float price, discount;
             int categoryID;
 
-            id = txtPID.Text;
-            name = txtPName.Text;
-            price = float.Parse(txtPPrice.Text);
-            discount = float.Parse(txtPDiscount.Text);
+            if (!float.TryParse(txtPPrice.Text, out price) || !float.TryParse(txtPDiscount.Text, out discount))
+            {
+                MessageBox.Show("Price and Discount must be valid numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cboCategory.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             categoryID = (int)cboCategory.SelectedValue;
 
             byte[] imageData = null;
@@ -126,25 +156,37 @@ namespace PresentationLayer
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    pictProduct.Image.Save(ms, pictProduct.Image.RawFormat);
-                    imageData = ms.ToArray();
+                    try
+                    {
+                        // Dùng Bitmap tạo bản copy sạch từ hình gốc, tránh lỗi locking file
+                        using (Bitmap bmp = new Bitmap(pictProduct.Image))
+                        {
+                            bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Luôn save dưới dạng PNG hoặc JPEG
+                        }
+                        imageData = ms.ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to process image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
             }
 
             Product p = new Product(id, name, price, discount, categoryID, imageData);
             try
             {
-                if (currentProduct == null)
-                {
-                    productBL.AddProduct(p);
-                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AddProduct?.Invoke(p);
-                }
-                else
+                if (isUpdateProduct)
                 {
                     productBL.UpdateProduct(p);
                     MessageBox.Show("Product updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateProduct?.Invoke(p);
+                }
+                else
+                {
+                    productBL.AddProduct(p);
+                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AddProduct?.Invoke(p);
                 }
             }
             catch (SqlException ex)
@@ -152,6 +194,7 @@ namespace PresentationLayer
                 MessageBox.Show(ex.Message);
             }
 
+            Reset();
             this.Visible = false;
         }
 
@@ -161,7 +204,7 @@ namespace PresentationLayer
             txtPName.Clear();
             txtPPrice.Clear();
             txtPDiscount.Clear();
-            cboCategory.SelectedValue = 0;
+            if (cboCategory.Items.Count > 0) cboCategory.SelectedIndex = 0;
             pictProduct.Image = null;
         }
 
