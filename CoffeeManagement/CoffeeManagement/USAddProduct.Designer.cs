@@ -291,6 +291,7 @@
             // 
             // cboCategory
             // 
+            cboCategory.BackColor = Color.SeaGreen;
             cboCategory.FormattingEnabled = true;
             cboCategory.Location = new Point(192, 352);
             cboCategory.Name = "cboCategory";

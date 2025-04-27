@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmcoupons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmcoupons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmcoupons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmcoupons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\coffeemanagement\\usupdatecoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\usupdatecoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +31,44 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCoupons.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCoupons.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmCoupons.cs",
+              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCoupons.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\FrmCoupons.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:20:46.826Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "USUpdateCoupon.cs",
+              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USUpdateCoupon.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\USUpdateCoupon.cs",
+              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\USUpdateCoupon.cs",
+              "RelativeToolTip": "CoffeeManagement\\USUpdateCoupon.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:02:03.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmCoupons.cs",
+              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCoupons.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmCoupons.cs",
+              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCoupons.cs",
+              "RelativeToolTip": "CoffeeManagement\\FrmCoupons.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAYwJcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:14:25.149Z",
+              "EditorCaption": ""
             }
           ]
         }
