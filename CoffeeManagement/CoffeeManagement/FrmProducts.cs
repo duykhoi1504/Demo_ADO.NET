@@ -127,20 +127,13 @@ namespace PresentationLayer
             var cats = categoryBL.GetCategories();
             usAddProduct1.LoadCategories(cats);
 
-            usAddProduct1.AddProduct += (p) =>
-            {
-                LoadProduct();
-            };
-
-            usAddProduct1.UpdateProduct += (p) =>
-            {
-                LoadProduct();
-            };
+            //Cập nhật danh sách sau khi thêm/sửa sản phẩm
+            usAddProduct1.AddProduct += (p) => LoadProduct();
+            usAddProduct1.UpdateProduct += (p) => LoadProduct();
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            usAddProduct1.Reset();
             usAddProduct1.Visible = true;
         }
 
@@ -159,8 +152,7 @@ namespace PresentationLayer
                 if (row >= 0 && col == dgvProducts.Columns["Update"].Index)
                 {
                     var p = (Product)dgvProducts.Rows[row].DataBoundItem; // Lấy sản phẩm từ hàng
-                    usAddProduct1.SetProduct(p);
-                    usAddProduct1.Visible = true;
+                    usAddProduct1.LoadProductForUpdate(p);
                 }
                 else if (e.ColumnIndex == dgvProducts.Columns["Delete"].Index)
                 {
@@ -188,12 +180,12 @@ namespace PresentationLayer
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Text.ToLower();
+            string s = txtSearch.Text.ToLower();
 
             var allProducts = productBL.GetProducts();
-            var filteredProducts = allProducts.Where(p => p.name.ToLower().Contains(searchTerm)).ToList();
+            var sProducts = allProducts.Where(p => p.name.ToLower().Contains(s)).ToList();
 
-            dgvProducts.DataSource = filteredProducts;
+            dgvProducts.DataSource = sProducts;
         }
     }
 }

@@ -123,7 +123,7 @@
             dgvProducts.Location = new Point(26, 195);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(1596, 752);
+            dgvProducts.Size = new Size(1596, 825);
             dgvProducts.TabIndex = 4;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
@@ -209,7 +209,7 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(1655, 959);
+            ClientSize = new Size(1655, 1045);
             Controls.Add(btnAllProds);
             Controls.Add(usAddProduct1);
             Controls.Add(pnlLoadCats);
