@@ -156,3 +156,5 @@ C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-w
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\System.Drawing.Common.dll
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\System.Private.Windows.Core.dll
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCoupons.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USUpdateCoupon.resources
