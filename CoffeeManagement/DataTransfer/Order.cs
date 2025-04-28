@@ -27,9 +27,9 @@ namespace TransferObject
             this.id = id;
             //this.createdDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             this.counterfeit = counterfeit;
-            this.change = UpdateChange();
             this.totalPrice = totalPrice;
             this.paymentMethod = paymentMethod;
+            this.change = UpdateChange();
             this.accountID = accountID;
             this.Items = new List<Item>(); // Khởi tạo danh sách Items
             //if (items == null) return;

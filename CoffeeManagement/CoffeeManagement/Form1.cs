@@ -24,7 +24,7 @@ namespace CoffeeManagement
         }
 
 
-        public Account account =new Account();
+        public Account account = new Account();
         private SqlConnection cn;
         DataProvider dataProvider = new DataProvider();
 
@@ -46,7 +46,7 @@ namespace CoffeeManagement
                 account = login.account;
                 lbName.Text = "xin chao: " + account.Username;
                 this.Enabled = true;
-                
+
             }
             else
             {
@@ -54,7 +54,7 @@ namespace CoffeeManagement
             }
         }
 
-       
+
         private void Supplier_Click(object sender, EventArgs e)
         {
             AddForm(new Suppliers());

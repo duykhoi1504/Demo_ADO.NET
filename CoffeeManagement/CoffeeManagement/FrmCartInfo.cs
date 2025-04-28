@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using CoffeeManagement;
 using DataLayer;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,13 +22,13 @@ namespace PresentationLayer
         OrderBL orderBL;
         ItemBL ItemBL;
         float totalPrice = 0;
-        
+
 
 
         public FrmCartInfo(List<CartSlot> cartSlots, float totalPrice)
         {
             InitializeComponent();
-            orderBL=new OrderBL();
+            orderBL = new OrderBL();
             ItemBL = new ItemBL();
             this.cartSlots = cartSlots;
             this.totalPrice = totalPrice;
@@ -35,9 +37,9 @@ namespace PresentationLayer
         private void PoadPaymentMethod()
         {
             cbPaymentMethod.Items.Clear();
-      
-            Array payment= Enum.GetValues(typeof(CONSTANT.paymentMethod));
-            foreach(var a in payment)
+
+            Array payment = Enum.GetValues(typeof(CONSTANT.paymentMethod));
+            foreach (var a in payment)
             {
                 cbPaymentMethod.Items.Add(a.ToString());
             }
@@ -70,38 +72,77 @@ namespace PresentationLayer
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(CONSTANT.paymentMethod.Cash.ToString());
-            //float Counterfeit = float.Parse(txtCounterfeit.Text);
+            float Counterfeit = 0;
 
-            //List<Item> items = new List<Item>();
-            //Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, "1", items);
-            //foreach( var slot in cartSlots)
-            //{
-            //    Item item = new Item(null,order.id,slot.product.id, slot.Quantity, slot.totalPrice);
-            //    items.Add(item);
-            //}
-            //orderBL.InsertOrderWithItems(order);
-            /////////
-            float Counterfeit = float.Parse(txtCounterfeit.Text);
+            DialogResult checkout = MessageBox.Show("Bạn có chắc chắn thanh toán?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (checkout != DialogResult.Yes) return;
 
-            Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, 1);
-           
-            int newOrderId = orderBL.AddOrder(order);
-            foreach (var slot in cartSlots)
+
+
+            // Kiểm tra xem txtCounterfeit có rỗng hay không
+            if (string.IsNullOrWhiteSpace(txtCounterfeit.Text))
             {
-                Item item = new Item(1, newOrderId, slot.product.id, slot.Quantity, slot.totalPrice);
-                ItemBL.AddItem(item);
+                MessageBox.Show("Vui lòng nhập một số hợp lệ.");
+                return; // Kết thúc hàm nếu rỗng
+            }
+
+            try
+            {
+                Counterfeit = float.Parse(txtCounterfeit.Text);
+                // Tiến hành xử lý với Counterfeit
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Định dạng số không hợp lệ. Vui lòng nhập lại.");
+            }
+            /////////////////////
+            if (Counterfeit < totalPrice)
+            {
+                DialogResult result = MessageBox.Show("so tien thanh toan khong du", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                txtCounterfeit.Clear();
+                txtCounterfeit.Focus();
+                return;
+            }
+            try
+            {
+                Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, Form1.Instance.account.id);
+
+                int newOrderId = orderBL.AddOrder(order);
+                foreach (var slot in cartSlots)
+                {
+                    Item item = new Item(1, newOrderId, slot.product.id, slot.Quantity, slot.totalPrice);
+                    ItemBL.AddItem(item);
+                }
+                Observer.Notify(CONSTANT.ActionAfterCheckout);
+                MessageBox.Show("Thanh toán thành công!");
+                this.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi khi thanh toán: " + ex.Message);
+
             }
             //orderBL.UpdateOrder(order);
-
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
+
+        private void txtCounterfeit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự nhập vào có phải là số hoặc phím Backspace không
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn chặn nhập ký tự không hợp lệ
+            }
+
+        }
+
     }
 }

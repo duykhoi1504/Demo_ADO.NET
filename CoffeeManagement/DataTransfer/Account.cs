@@ -15,7 +15,7 @@ namespace TransferObject
 
         public string fullName { get; set; }
         public string sex { get; set; }
-        public string dateOfBirth { get; set; } 
+        public string dateOfBirth { get; set; }
         public string address { get; set; }
         public string phoneNumber { get; set; }
         public string dateOfRegistration { get; set; }
@@ -24,7 +24,7 @@ namespace TransferObject
             this.Username = Username;
             this.Password = Password;
         }
-        public Account() {}
+        public Account() { }
         //public Account(int id, string username, string password, string fullName, string sex, string dateOfBirth, string address, string phoneNumber, string dateOfRegistration)
         //{
         //    this.id = id;

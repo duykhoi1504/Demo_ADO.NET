@@ -164,6 +164,7 @@
             btnAddCustomer.TabIndex = 1;
             btnAddCustomer.Text = "Check";
             btnAddCustomer.UseVisualStyleBackColor = true;
+            btnAddCustomer.Click += btnAddCustomer_Click_1;
             // 
             // txtCustomePhone
             // 

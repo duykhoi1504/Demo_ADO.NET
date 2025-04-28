@@ -19,7 +19,7 @@ namespace PresentationLayer
     {
         private LoginBL loginBL;
         public string UserName;
-
+        public Account account;
         public FrmLogin()
         {
             InitializeComponent();
@@ -56,6 +56,9 @@ namespace PresentationLayer
             if (UserLogin(ac))
             {
                 UserName = username;
+
+                account = loginBL.GetAccount(username, password);
+
                 this.DialogResult = DialogResult.OK;
             }
             else
