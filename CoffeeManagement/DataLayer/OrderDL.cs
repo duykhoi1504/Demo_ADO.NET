@@ -11,22 +11,43 @@ namespace DataLayer
 {
     public class OrderDL : DataProvider
     {
-        public void GetOrder(Order order)
+        public List<Order> GetOrders()
         {
-       
-            //string sql = "SELECT * FROM Account WHERE username = '" + order.id + "' AND password = '" + a.Password + "'";
 
-            //try
-            //{
-               
-            //    return ((int)(MyExecuteScalar(sql, CommandType.Text))>0);
-            //}
-            //catch (SqlException ex)
-            //{
-            //    throw ex;
-            //}
-          
-        
+            string sql = "SELECT * FROM [Order]";
+            List<Order> orders = new List<Order>();
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
+                while (reader.Read())
+                {
+                    Order order = new Order();
+                    order.id = int.Parse(reader[0].ToString());
+                    order.createdDate = reader["createdDate"].ToString();
+                    order.totalPrice = float.Parse(reader["totalPrice"].ToString());
+                    order.counterfeit = float.Parse(reader["counterfeit"].ToString());
+
+                    order.change = float.Parse(reader["change"].ToString());
+                    order.paymentMethod =reader["paymentMethod"].ToString();
+                    order.couponID = reader["couponID"].ToString();
+                    order.accountID = int.Parse(reader["accountID"].ToString());
+                    
+                    orders.Add(order);
+                }
+                reader.Close();
+                return orders;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
         }
         public int AddOrder(Order order)
         {

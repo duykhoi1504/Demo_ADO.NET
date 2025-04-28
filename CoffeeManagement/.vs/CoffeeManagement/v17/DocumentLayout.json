@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datalayer\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\constant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\constant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\businesslayer\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datalayer\\productdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\productdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Program.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\Program.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Program.cs",
-              "RelativeToolTip": "CoffeeManagement\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FrmMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\FrmMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T02:30:59.271Z",
+              "WhenOpened": "2025-04-28T07:01:23.484Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderBL.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\OrderBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\OrderBL.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\OrderBL.cs",
+              "RelativeToolTip": "BusinessLayer\\OrderBL.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAEwBYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T06:59:09.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Order.cs",
               "RelativeDocumentMoniker": "DataTransfer\\Order.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Order.cs",
               "RelativeToolTip": "DataTransfer\\Order.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowB8AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T02:29:14.594Z",
+              "WhenOpened": "2025-04-28T06:50:57.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Category.cs",
-              "RelativeDocumentMoniker": "DataTransfer\\Category.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Category.cs",
-              "RelativeToolTip": "DataTransfer\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ProductDL.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\ProductDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\ProductDL.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\ProductDL.cs",
+              "RelativeToolTip": "DataLayer\\ProductDL.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T02:29:09.163Z",
+              "WhenOpened": "2025-04-28T06:50:18.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CONSTANT.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\CONSTANT.cs",
-              "RelativeDocumentMoniker": "DataTransfer\\CONSTANT.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\CONSTANT.cs",
-              "RelativeToolTip": "DataTransfer\\CONSTANT.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FrmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmMenu.cs",
+              "RelativeToolTip": "CoffeeManagement\\FrmMenu.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAAAOEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T02:29:08.261Z",
+              "WhenOpened": "2025-04-28T06:47:54.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderDL.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\OrderDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\OrderDL.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\OrderDL.cs",
+              "RelativeToolTip": "DataLayer\\OrderDL.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAawBwAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T06:46:40.366Z",
               "EditorCaption": ""
             }
           ]

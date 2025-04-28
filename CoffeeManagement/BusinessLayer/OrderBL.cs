@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,39 @@ namespace BusinessLayer
         {
             orderDL = new OrderDL();
         }
+
+        public List<Order> GetOrders()
+        {
+            try
+            {
+                return orderDL.GetOrders();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
         public int AddOrder(Order order)
         {
-            return orderDL.AddOrder(order);
+            try
+            {
+                return orderDL.AddOrder(order);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
         }
         public int UpdateOrder(Order order)
         {
-            return orderDL.UpdateOrder(order);
+            try
+            {
+                return orderDL.UpdateOrder(order);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
         }
     }
 }
