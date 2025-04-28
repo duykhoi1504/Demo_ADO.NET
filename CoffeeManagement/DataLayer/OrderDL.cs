@@ -70,6 +70,32 @@ namespace DataLayer
             }
 
 
+            //// Insert Items
+
+            //string insertItemQuery = @"
+            //INSERT INTO Item (orderID, productID, quantity, price)
+            //VALUES (@OrderID, @ProductID, @Quantity, @Price);";
+
+            //foreach (var item in order.Items)
+            //{
+            //    List<SqlParameter> itemParameters = new List<SqlParameter>
+            //    {
+            //        new SqlParameter("@OrderID", item.orderID),
+            //        new SqlParameter("@ProductID", item.productID),
+            //        new SqlParameter("@Quantity", item.quantity),
+            //        new SqlParameter("@Price", item.price)
+            //    };
+
+            //    try
+            //    {
+            //       MyExecuteNonQuery(insertItemQuery, CommandType.Text, itemParameters);
+            //    }
+            //    catch (SqlException ex)
+            //    {
+            //        throw ex;
+
+            //    }
+            //}
         }
         public int UpdateOrder(Order order)
         {

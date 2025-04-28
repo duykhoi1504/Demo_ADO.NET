@@ -29,8 +29,6 @@ namespace PresentationLayer
             InitializeComponent();
             categoryBL = new CategoryBL();
             productBL = new ProductBL();
-
-     // Đăng ký observer cho FrmMenu
             Observer.Register(this);
         }
 
@@ -127,7 +125,6 @@ namespace PresentationLayer
             List<Product> prods = new List<Product>();
             prods = productBL.GetProducts();
             pnProduct.Controls.Clear();
-
             foreach (var product in prods)
             {
                 if (key != null)
@@ -188,33 +185,15 @@ namespace PresentationLayer
             }
             if (key == CONSTANT.UpdateTotalPriceButton)
             {
-
+                // Xử lý khi có thông báo xóa sản phẩm
+                // Ví dụ: cập nhật giỏ hàng
                 UpdateTotalPrice();
-            }
-            if (key == CONSTANT.ActionAfterCheckout)
-            {
-                ActionAfterCheckout();
             }
         }
 
         private void btnShowAllProduct_Click(object sender, EventArgs e)
         {
             LoadProduct();
-        }
-        private void ActionAfterCheckout()
-        {
-            pnProdItems.Controls.Clear(); // Xóa các sản phẩm cũ trong panel
-        }
-
-        private void btnAddCustomer_Click(object sender, EventArgs e)
-        {
-            Form1 mainForm = Form1.Instance;
-
-            //Form1.Instance.Show();
-
-            string m = $"{mainForm.account.id} + {Form1.Instance.account.id}";
-            MessageBox.Show(m);
-
         }
     }
 

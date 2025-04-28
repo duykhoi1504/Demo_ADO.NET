@@ -30,23 +30,8 @@ namespace DataLayer
             string sql = "SELECT * FROM Account WHERE username = '" + username + "' AND password = '" + password + "'";
             try
             {
-                Connect();
-                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
-                while (reader.Read())
-                {
-                    acc.id = int.Parse(reader[0].ToString());
-                   acc.Username= reader["username"].ToString();
-                    acc.Password = reader["password"].ToString();
-                    //acc.role = reader["username"].ToString();
-                    //acc.fullName = reader["fullName"].ToString();
-                    //acc.sex = reader["sex"].ToString();
-                    //acc.dateOfBirth = reader["dateOfBirth"].ToString();
-                    //acc.address = reader["address"].ToString();
-                    //acc.phoneNumber = reader["phoneNumber"].ToString();
-                    //acc.dateOfRegistration = reader["dateOfRegistration"].ToString();
-                }
-                reader.Close();
-                return acc;
+               
+                return ((int)(MyExecuteScalar(sql, CommandType.Text))>0);
             }
             catch (SqlException ex)
             {

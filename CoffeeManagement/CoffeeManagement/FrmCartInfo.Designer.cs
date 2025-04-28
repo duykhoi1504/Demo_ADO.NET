@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            cbPaymentMethod = new ComboBox();
             txtCounterfeit = new TextBox();
             btnClose = new Button();
             btnCheckout = new Button();
@@ -37,7 +36,6 @@
             label6 = new Label();
             lbLastTotalPrice = new Label();
             lbTotalPrice = new Label();
-            label8 = new Label();
             label7 = new Label();
             label5 = new Label();
             panel1 = new Panel();
@@ -45,6 +43,8 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            cbPaymentMethod = new ComboBox();
+            label8 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
             panel1.SuspendLayout();
@@ -71,21 +71,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin thanh toán";
             // 
-            // cbPaymentMethod
-            // 
-            cbPaymentMethod.FormattingEnabled = true;
-            cbPaymentMethod.Location = new Point(347, 529);
-            cbPaymentMethod.Name = "cbPaymentMethod";
-            cbPaymentMethod.Size = new Size(151, 28);
-            cbPaymentMethod.TabIndex = 6;
-            // 
             // txtCounterfeit
             // 
             txtCounterfeit.Location = new Point(565, 472);
             txtCounterfeit.Name = "txtCounterfeit";
             txtCounterfeit.Size = new Size(125, 27);
             txtCounterfeit.TabIndex = 5;
-            txtCounterfeit.KeyPress += txtCounterfeit_KeyPress;
             // 
             // btnClose
             // 
@@ -143,15 +134,6 @@
             lbTotalPrice.Size = new Size(95, 20);
             lbTotalPrice.TabIndex = 0;
             lbTotalPrice.Text = "000.000 VND";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(38, 532);
-            label8.Name = "label8";
-            label8.Size = new Size(168, 20);
-            label8.TabIndex = 0;
-            label8.Text = "Phương thức thanh toán";
             // 
             // label7
             // 
@@ -217,6 +199,23 @@
             label1.Size = new Size(100, 20);
             label1.TabIndex = 0;
             label1.Text = "Tên sản phẩm";
+            // 
+            // cbPaymentMethod
+            // 
+            cbPaymentMethod.FormattingEnabled = true;
+            cbPaymentMethod.Location = new Point(347, 529);
+            cbPaymentMethod.Name = "cbPaymentMethod";
+            cbPaymentMethod.Size = new Size(151, 28);
+            cbPaymentMethod.TabIndex = 6;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(38, 532);
+            label8.Name = "label8";
+            label8.Size = new Size(168, 20);
+            label8.TabIndex = 0;
+            label8.Text = "Phương thức thanh toán";
             // 
             // FrmCartInfo
             // 

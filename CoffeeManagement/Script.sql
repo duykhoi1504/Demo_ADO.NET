@@ -28,3 +28,15 @@ BEGIN
 	WHERE id = @id;
 END
 GO
+
+CREATE PROC uspUpdateCoupon
+	@id VARCHAR(10),
+	@description NVARCHAR(100),
+	@value FLOAT
+AS
+BEGIN
+	UPDATE Coupon
+	SET id = @id, [description] = @description, [value] = @value
+	WHERE id = @id;
+END
+GO

@@ -70,7 +70,6 @@ namespace DataLayer
             parameters.Add(new SqlParameter("@price", p.price));
             parameters.Add(new SqlParameter("@discount", p.discount));
             parameters.Add(new SqlParameter("@categoryID", p.categoryID));
-            //parameters.Add(new SqlParameter("@image", p.image ?? (object)DBNull.Value));
 
             SqlParameter imgParam = new SqlParameter("@image", SqlDbType.VarBinary);
             if (p.image != null)

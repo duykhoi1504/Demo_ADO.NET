@@ -68,7 +68,6 @@
             // 
             // pnProduct
             // 
-            pnProduct.AutoScroll = true;
             pnProduct.BackColor = SystemColors.Control;
             pnProduct.Location = new Point(12, 180);
             pnProduct.Name = "pnProduct";
@@ -165,7 +164,6 @@
             btnAddCustomer.TabIndex = 1;
             btnAddCustomer.Text = "Check";
             btnAddCustomer.UseVisualStyleBackColor = true;
-            btnAddCustomer.Click += btnAddCustomer_Click;
             // 
             // txtCustomePhone
             // 

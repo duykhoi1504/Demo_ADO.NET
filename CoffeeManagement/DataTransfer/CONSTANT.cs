@@ -31,6 +31,5 @@ public class CONSTANT
     public static string UpdateDataGridView1 = "UpdateDataGridView1";
     public static string UpdateProdCart = "UpdateProdCart";
     public static string UpdateTotalPriceButton = "UpdateTotalPriceButton";
-    public static string ActionAfterCheckout = "ActionAfterCheckout";
 }
 //}

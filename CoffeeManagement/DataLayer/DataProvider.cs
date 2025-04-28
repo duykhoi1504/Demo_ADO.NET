@@ -15,8 +15,8 @@ namespace DataLayer
         private SqlCommand cmd;
 
         private static DataProvider instance = null;
-        //private string cntr = "Data Source=.\\SQLEXPRESS01;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
-        private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
+        private string cntr = "Data Source=.\\SQLEXPRESS01;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
+        //private string cntr = "Data Source=.;Initial Catalog=CoffeeShopManagement;Integrated Security=True";
 
         public static DataProvider Instance
         {
