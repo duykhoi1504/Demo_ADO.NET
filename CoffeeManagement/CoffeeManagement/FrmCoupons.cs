@@ -102,33 +102,6 @@ namespace PresentationLayer
             LoadCoupon();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (!InvalidFields()) { return; }
-
-            string id = txtID.Text.Trim();
-            string description = txtDes.Text.Trim();
-            float value;
-
-            if (!float.TryParse(txtValue.Text, out value))
-            {
-                MessageBox.Show("Value must be valid numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            Coupon c = new Coupon(id, description, value);
-            try
-            {
-                couponBL.AddCoupon(c);
-                MessageBox.Show("Coupon added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadCoupon();
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtID.Clear();
@@ -166,6 +139,7 @@ namespace PresentationLayer
                         {
                             couponBL.DeleteCoupon(id);
                             MessageBox.Show("Coupon has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadCoupon();
                         }
                         catch (SqlException ex)
                         {
@@ -173,6 +147,33 @@ namespace PresentationLayer
                         }
                     }
                 }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (!InvalidFields()) { return; }
+
+            string id = txtID.Text.Trim();
+            string description = txtDes.Text.Trim();
+            float value;
+
+            if (!float.TryParse(txtValue.Text, out value))
+            {
+                MessageBox.Show("Value must be valid numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Coupon c = new Coupon(id, description, value);
+            try
+            {
+                couponBL.AddCoupon(c);
+                MessageBox.Show("Coupon added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadCoupon();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
             }
         }
     }

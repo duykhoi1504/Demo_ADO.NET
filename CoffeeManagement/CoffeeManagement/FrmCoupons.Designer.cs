@@ -33,22 +33,22 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            pnAddCoupon = new Panel();
-            pictureBox1 = new PictureBox();
-            panel4 = new Panel();
-            txtID = new TextBox();
-            label4 = new Label();
-            txtDes = new TextBox();
-            label3 = new Label();
-            panel2 = new Panel();
-            txtValue = new TextBox();
-            label2 = new Label();
-            btnClear = new Button();
-            btnAdd = new Button();
             usUpdateCoupon1 = new USUpdateCoupon();
+            groupBox1 = new GroupBox();
+            btnAdd = new Button();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            txtID = new TextBox();
+            label5 = new Label();
+            txtDes = new TextBox();
+            label6 = new Label();
+            panel3 = new Panel();
+            txtValue = new TextBox();
+            label7 = new Label();
+            btnClear = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCoupons).BeginInit();
-            pnAddCoupon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -98,142 +98,6 @@
             Column3.Name = "Column3";
             Column3.Width = 200;
             // 
-            // pnAddCoupon
-            // 
-            pnAddCoupon.Controls.Add(pictureBox1);
-            pnAddCoupon.Controls.Add(panel4);
-            pnAddCoupon.Controls.Add(txtID);
-            pnAddCoupon.Controls.Add(label4);
-            pnAddCoupon.Controls.Add(txtDes);
-            pnAddCoupon.Controls.Add(label3);
-            pnAddCoupon.Controls.Add(panel2);
-            pnAddCoupon.Controls.Add(txtValue);
-            pnAddCoupon.Controls.Add(label2);
-            pnAddCoupon.Controls.Add(btnClear);
-            pnAddCoupon.Controls.Add(btnAdd);
-            pnAddCoupon.Location = new Point(24, 639);
-            pnAddCoupon.Name = "pnAddCoupon";
-            pnAddCoupon.Size = new Size(1425, 263);
-            pnAddCoupon.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.cat_coupon;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(286, 257);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 20;
-            pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Location = new Point(425, 102);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(228, 3);
-            panel4.TabIndex = 19;
-            // 
-            // txtID
-            // 
-            txtID.BackColor = Color.SeaGreen;
-            txtID.BorderStyle = BorderStyle.None;
-            txtID.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtID.ForeColor = Color.White;
-            txtID.Location = new Point(427, 63);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(228, 36);
-            txtID.TabIndex = 18;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(306, 63);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 37);
-            label4.TabIndex = 17;
-            label4.Text = "ID";
-            // 
-            // txtDes
-            // 
-            txtDes.BackColor = Color.SeaGreen;
-            txtDes.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDes.ForeColor = Color.White;
-            txtDes.Location = new Point(857, 60);
-            txtDes.Multiline = true;
-            txtDes.Name = "txtDes";
-            txtDes.Size = new Size(356, 132);
-            txtDes.TabIndex = 15;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(675, 60);
-            label3.Name = "label3";
-            label3.Size = new Size(157, 37);
-            label3.TabIndex = 14;
-            label3.Text = "Description";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.Location = new Point(425, 192);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(228, 3);
-            panel2.TabIndex = 13;
-            // 
-            // txtValue
-            // 
-            txtValue.BackColor = Color.SeaGreen;
-            txtValue.BorderStyle = BorderStyle.None;
-            txtValue.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtValue.ForeColor = Color.White;
-            txtValue.Location = new Point(427, 152);
-            txtValue.Name = "txtValue";
-            txtValue.Size = new Size(228, 36);
-            txtValue.TabIndex = 12;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(306, 152);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 37);
-            label2.TabIndex = 11;
-            label2.Text = "Value";
-            // 
-            // btnClear
-            // 
-            btnClear.BackColor = Color.White;
-            btnClear.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClear.ForeColor = Color.SeaGreen;
-            btnClear.Location = new Point(1244, 150);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(147, 64);
-            btnClear.TabIndex = 1;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = false;
-            btnClear.Click += btnClear_Click;
-            // 
-            // btnAdd
-            // 
-            btnAdd.BackColor = Color.White;
-            btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.ForeColor = Color.SeaGreen;
-            btnAdd.Location = new Point(1244, 44);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(147, 64);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click;
-            // 
             // usUpdateCoupon1
             // 
             usUpdateCoupon1.BackColor = Color.SeaGreen;
@@ -243,14 +107,153 @@
             usUpdateCoupon1.Size = new Size(1020, 537);
             usUpdateCoupon1.TabIndex = 4;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnAdd);
+            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(panel1);
+            groupBox1.Controls.Add(txtID);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(txtDes);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(panel3);
+            groupBox1.Controls.Add(txtValue);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(btnClear);
+            groupBox1.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(24, 629);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1425, 288);
+            groupBox1.TabIndex = 5;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Add Coupon";
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.White;
+            btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = Color.SeaGreen;
+            btnAdd.Location = new Point(1259, 70);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(147, 64);
+            btnAdd.TabIndex = 32;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.cat_coupon;
+            pictureBox2.Location = new Point(22, 35);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(268, 247);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 31;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Location = new Point(440, 128);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(228, 3);
+            panel1.TabIndex = 30;
+            // 
+            // txtID
+            // 
+            txtID.BackColor = Color.SeaGreen;
+            txtID.BorderStyle = BorderStyle.None;
+            txtID.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtID.ForeColor = Color.White;
+            txtID.Location = new Point(442, 89);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(228, 36);
+            txtID.TabIndex = 29;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(321, 89);
+            label5.Name = "label5";
+            label5.Size = new Size(44, 37);
+            label5.TabIndex = 28;
+            label5.Text = "ID";
+            // 
+            // txtDes
+            // 
+            txtDes.BackColor = Color.SeaGreen;
+            txtDes.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtDes.ForeColor = Color.White;
+            txtDes.Location = new Point(872, 86);
+            txtDes.Multiline = true;
+            txtDes.Name = "txtDes";
+            txtDes.Size = new Size(356, 132);
+            txtDes.TabIndex = 27;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(690, 86);
+            label6.Name = "label6";
+            label6.Size = new Size(157, 37);
+            label6.TabIndex = 26;
+            label6.Text = "Description";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Location = new Point(440, 218);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(228, 3);
+            panel3.TabIndex = 25;
+            // 
+            // txtValue
+            // 
+            txtValue.BackColor = Color.SeaGreen;
+            txtValue.BorderStyle = BorderStyle.None;
+            txtValue.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtValue.ForeColor = Color.White;
+            txtValue.Location = new Point(442, 178);
+            txtValue.Name = "txtValue";
+            txtValue.Size = new Size(228, 36);
+            txtValue.TabIndex = 24;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(321, 178);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 37);
+            label7.TabIndex = 23;
+            label7.Text = "Value";
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.White;
+            btnClear.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.SeaGreen;
+            btnClear.Location = new Point(1259, 176);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(147, 64);
+            btnClear.TabIndex = 22;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            // 
             // FrmCoupons
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1474, 929);
+            Controls.Add(groupBox1);
             Controls.Add(usUpdateCoupon1);
-            Controls.Add(pnAddCoupon);
             Controls.Add(dgvCoupons);
             Controls.Add(label1);
             Name = "FrmCoupons";
@@ -258,9 +261,9 @@
             Text = "Coupons";
             Load += FrmCoupons_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCoupons).EndInit();
-            pnAddCoupon.ResumeLayout(false);
-            pnAddCoupon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,21 +272,32 @@
 
         private Label label1;
         private DataGridView dgvCoupons;
-        private Panel pnAddCoupon;
-        private Button btnAdd;
-        private Button btnClear;
-        private Panel panel4;
-        private TextBox txtID;
-        private Label label4;
-        private TextBox txtDes;
-        private Label label3;
-        private Panel panel2;
-        private TextBox txtValue;
-        private Label label2;
-        private PictureBox pictureBox1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private USUpdateCoupon usUpdateCoupon1;
+        private Button btnAdd;
+        private Button btnClear;
+        private Label label2;
+        private TextBox txtValue;
+        private Panel panel2;
+        private Label label3;
+        private TextBox txtDes;
+        private Label label4;
+        private TextBox txtID;
+        private Panel panel4;
+        private PictureBox pictureBox1;
+        private Panel pnAddCoupon;
+        private GroupBox groupBox1;
+        private PictureBox pictureBox2;
+        private Panel panel1;
+        private TextBox textBox1;
+        private Label label5;
+        private TextBox textBox2;
+        private Label label6;
+        private Panel panel3;
+        private TextBox textBox3;
+        private Label label7;
+        private Button button1;
     }
 }

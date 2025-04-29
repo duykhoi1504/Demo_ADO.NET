@@ -205,3 +205,5 @@ C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\Co
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\Presenta.9C561136.Up2Date
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\ref\PresentationLayer.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmAccount.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USUpdateAccount.resources
