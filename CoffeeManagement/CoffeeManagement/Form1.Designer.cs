@@ -122,6 +122,7 @@
             btnReceipt.TabIndex = 2;
             btnReceipt.Text = "Receipt";
             btnReceipt.UseVisualStyleBackColor = true;
+            btnReceipt.Click += btnReceipt_Click;
             // 
             // btnProduct
             // 

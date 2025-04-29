@@ -23,6 +23,8 @@ namespace PresentationLayer
         CategoryBL categoryBL;
         ProductBL productBL;
         OrderBL orderBL;
+        ItemBL itemBL;
+
         float totalPrice = 0;
 
         public List<CartSlot> cartSlots = new List<CartSlot>();
@@ -31,7 +33,8 @@ namespace PresentationLayer
             InitializeComponent();
             categoryBL = new CategoryBL();
             productBL = new ProductBL();
-            orderBL=new OrderBL();
+            itemBL= new ItemBL();
+            orderBL =new OrderBL();
 
             // Đăng ký observer cho FrmMenu
             Observer.Register(this);
@@ -216,12 +219,21 @@ namespace PresentationLayer
             //Form1 mainForm = Form1.Instance;
             //string m = $"{mainForm.account.id} + {Form1.Instance.account.id}";
             //MessageBox.Show(m);
+            //////////////
+            //string m = "";
+            //List<Order> ors=new List<Order>();
+            //ors = orderBL.GetOrders();
+            //foreach (var order in ors)
+            //{
+            //    m += $"{order.id} + {order.accountID} + {order.totalPrice}\n";
+            //}
+            //MessageBox.Show(m);
             string m = "";
-            List<Order> ors=new List<Order>();
-            ors = orderBL.GetOrders();
+            List<Item> ors = new List<Item>();
+            ors = itemBL.GetItemByOrderID(1);
             foreach (var order in ors)
             {
-                m += $"{order.id} + {order.accountID} + {order.totalPrice}\n";
+                m += $"{order.id} + {order.productID} + {order.productName}\n";
             }
             MessageBox.Show(m);
 

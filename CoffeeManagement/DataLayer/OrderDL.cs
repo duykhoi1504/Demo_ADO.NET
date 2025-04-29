@@ -11,6 +11,39 @@ namespace DataLayer
 {
     public class OrderDL : DataProvider
     {
+        public Order GetOrderByID(int id)
+        {
+                string sql = "SELECT * FROM [Order] where id='"+id+"'";
+               Order order = new Order();
+        
+
+       
+                try
+                {
+                    Connect();
+                    SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
+                    while (reader.Read())
+                    {
+                     
+                        order.id = int.Parse(reader[0].ToString());
+                        order.createdDate = reader["createdDate"].ToString();
+                        order.totalPrice = float.Parse(reader["totalPrice"].ToString());
+                        order.counterfeit = float.Parse(reader["counterfeit"].ToString());
+                        order.change = float.Parse(reader["change"].ToString());
+                        order.paymentMethod = reader["paymentMethod"].ToString();
+                        order.couponID = reader["couponID"].ToString();
+                        order.accountID = int.Parse(reader["accountID"].ToString());
+
+                
+                    }
+                    reader.Close();
+                    return order;
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+        }
         public List<Order> GetOrders()
         {
 

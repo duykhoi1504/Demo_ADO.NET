@@ -12,6 +12,50 @@ namespace DataLayer
 {
     public class ItemDL : DataProvider
     {
+        public List<Item> GetItemByOrderID(int id) {
+       
+
+            string sql = @"
+                SELECT *, p.name AS productName 
+                FROM [Item] i 
+                JOIN [Product] p ON i.productID = p.id 
+                WHERE i.orderID = @orderID";
+            List<Item> items = new List<Item>();
+            List<SqlParameter> orderParameters = new List<SqlParameter>
+            {
+                new SqlParameter("@orderID", id)
+            };
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, orderParameters);
+                while (reader.Read())
+                {
+                    Item item = new Item();
+                    item.id = int.Parse(reader[0].ToString());
+                    item.orderID = reader.GetInt32(1);
+                    item.productID = reader["productID"].ToString();
+                    item.quantity = reader.GetInt32(3);
+                    item.price = float.Parse(reader["price"].ToString());
+                    item.productName = reader["productName"].ToString();
+
+                    items.Add(item);
+                }
+                reader.Close();
+                return items;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+        }
+
+
         public int AddItem(Item item)
         {
             // Câu lệnh SQL để thêm mục

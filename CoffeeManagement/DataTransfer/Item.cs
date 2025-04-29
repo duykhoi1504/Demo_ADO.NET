@@ -16,6 +16,8 @@ namespace TransferObject
 
         //public Product product { get; set; }
         public float price { get; set; }
+        public string productName { get; set; }
+        public Item() { }
         public Item(int id, int orderID, string productID, int quantity, float price)
         {
             this.id = id;

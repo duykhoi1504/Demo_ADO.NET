@@ -113,6 +113,8 @@ namespace PresentationLayer
                 Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, Form1.Instance.account.id);
 
                 int newOrderId = orderBL.AddOrder(order);
+                //gắn id mới vào order
+                
                 foreach (var slot in cartSlots)
                 {
                     Item item = new Item(1, newOrderId, slot.product.id, slot.Quantity, slot.totalPrice);
@@ -120,6 +122,8 @@ namespace PresentationLayer
                 }
                 Observer.Notify(CONSTANT.ActionAfterCheckout);
                 MessageBox.Show("Thanh toán thành công!");
+                FrmOrderInfo orderInfo = new FrmOrderInfo(newOrderId);
+                orderInfo.Show();
                 this.Close();
             }
             catch (SqlException ex)

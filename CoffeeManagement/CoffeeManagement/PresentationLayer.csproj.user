@@ -4,6 +4,12 @@
     <Compile Update="FrmCoupons.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmOrderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="USAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>

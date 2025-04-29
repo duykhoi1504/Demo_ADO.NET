@@ -65,6 +65,10 @@ namespace CoffeeManagement
             AddForm(new FrmMenu());
 
         }
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmReceipt());
+        }
         private void AddForm(Form form)
         {
             form.TopLevel = false;
@@ -74,6 +78,7 @@ namespace CoffeeManagement
             form.FormBorderStyle = FormBorderStyle.None;
             form.Show();
         }
+
 
         //private void OpenChildForm(Form childForm)
         //{

@@ -15,7 +15,17 @@ namespace BusinessLayer
         {
             orderDL = new OrderDL();
         }
-
+        public Order GetOrderByID(int id)
+        {
+            try
+            {
+                return orderDL.GetOrderByID(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
         public List<Order> GetOrders()
         {
             try
