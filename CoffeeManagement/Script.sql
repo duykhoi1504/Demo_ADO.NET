@@ -40,3 +40,37 @@ BEGIN
 	WHERE id = @id;
 END
 GO
+
+CREATE PROC uspAddAccount
+	@username VARCHAR(50),
+	@password VARCHAR(50),
+	@role VARCHAR(10),
+	@fullName NVARCHAR(100),
+	@sex NVARCHAR(10),
+	@dateOfBirth DATE,
+	@address NVARCHAR(255),
+	@phoneNumber VARCHAR(10)
+AS
+BEGIN
+	INSERT INTO Account (username, [password], [role], fullName, sex, dateOfBirth, [address], phoneNumber) 
+	VALUES(@username, @password, @role, @fullName, @sex, @dateOfBirth, @address, @phoneNumber);
+END
+GO
+
+CREATE PROC uspUpdateAccount
+	@id INT,
+	@username VARCHAR(50),
+	@password VARCHAR(50),
+	@role VARCHAR(10),
+	@fullName NVARCHAR(100),
+	@sex NVARCHAR(10),
+	@dateOfBirth DATE,
+	@address NVARCHAR(255),
+	@phoneNumber VARCHAR(10)
+AS
+BEGIN
+	UPDATE Account
+	SET username = @username, [password] = @password, [role] = @role, fullName = @fullName, sex = @sex, dateOfBirth = @dateOfBirth, [address] = @address, phoneNumber = @phoneNumber
+	WHERE id = @id;
+END
+GO
