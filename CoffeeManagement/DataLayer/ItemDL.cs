@@ -21,14 +21,14 @@ namespace DataLayer
                 JOIN [Product] p ON i.productID = p.id 
                 WHERE i.orderID = @orderID";
             List<Item> items = new List<Item>();
-            List<SqlParameter> orderParameters = new List<SqlParameter>
+            List<SqlParameter> itemParams = new List<SqlParameter>
             {
                 new SqlParameter("@orderID", id)
             };
             try
             {
                 Connect();
-                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, orderParameters);
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, itemParams);
                 while (reader.Read())
                 {
                     Item item = new Item();

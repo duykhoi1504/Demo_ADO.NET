@@ -11,7 +11,8 @@
           "BusinessLayer": "1.0.0",
           "System.Data.SqlClient": "4.8.6",
           "System.Drawing.Common": "9.0.4",
-          "TransferObject": "1.0.0"
+          "TransferObject": "1.0.0",
+          "WinForms.DataVisualization": "1.10.0"
         },
         "runtime": {
           "PresentationLayer.dll": {}
@@ -123,6 +124,18 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
+      "WinForms.DataVisualization/1.10.0": {
+        "runtime": {
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
+          },
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
+          }
+        }
+      },
       "BusinessLayer/1.0.0": {
         "dependencies": {
           "DataLayer": "1.0.0",
@@ -245,6 +258,13 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "WinForms.DataVisualization/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
+      "path": "winforms.datavisualization/1.10.0",
+      "hashPath": "winforms.datavisualization.1.10.0.nupkg.sha512"
     },
     "BusinessLayer/1.0.0": {
       "type": "project",

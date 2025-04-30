@@ -113,6 +113,7 @@
             btnStatistic.TabIndex = 2;
             btnStatistic.Text = "Statistic";
             btnStatistic.UseVisualStyleBackColor = true;
+            btnStatistic.Click += btnStatistic_Click;
             // 
             // btnReceipt
             // 

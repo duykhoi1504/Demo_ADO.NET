@@ -79,6 +79,11 @@ namespace CoffeeManagement
             form.Show();
         }
 
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmChart());
+        }
+
 
         //private void OpenChildForm(Form childForm)
         //{

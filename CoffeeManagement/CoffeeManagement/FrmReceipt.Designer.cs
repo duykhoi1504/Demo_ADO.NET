@@ -69,6 +69,7 @@
             dgvReceipt.RowHeadersWidth = 51;
             dgvReceipt.Size = new Size(776, 382);
             dgvReceipt.TabIndex = 2;
+            dgvReceipt.CellContentClick += dgvReceipt_CellContentClick;
             // 
             // FrmReceipt
             // 
