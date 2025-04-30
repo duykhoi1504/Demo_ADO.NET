@@ -1,6 +1,7 @@
 ﻿USE CoffeeShopManagement
 GO
 
+--==================PRODUCT==================--
 CREATE PROC uspAddProduct
 	@id VARCHAR(10),
 	@name NVARCHAR(100),
@@ -29,6 +30,7 @@ BEGIN
 END
 GO
 
+--==================COUPON==================--
 CREATE PROC uspUpdateCoupon
 	@id VARCHAR(10),
 	@description NVARCHAR(100),
@@ -41,6 +43,7 @@ BEGIN
 END
 GO
 
+--==================ACCOUNT==================--
 CREATE PROC uspAddAccount
 	@username VARCHAR(50),
 	@password VARCHAR(50),
@@ -71,6 +74,23 @@ AS
 BEGIN
 	UPDATE Account
 	SET username = @username, [password] = @password, [role] = @role, fullName = @fullName, sex = @sex, dateOfBirth = @dateOfBirth, [address] = @address, phoneNumber = @phoneNumber
+	WHERE id = @id;
+END
+GO
+
+--==================INGREDIENT==================--
+CREATE PROC uspUpdateIngredient
+	@id VARCHAR(10),
+	@name NVARCHAR(100),
+	@unit NVARCHAR(20),
+	@quantity INT,
+	@expirationDate DATE,
+	@status NVARCHAR(20),
+	@supplierID VARCHAR(20)
+AS
+BEGIN
+	UPDATE Ingredient
+	SET id = @id, [name] = @name, unit = @unit, quantity = @quantity, expirationDate = @expirationDate, [status] = @status, supplierID = @supplierID
 	WHERE id = @id;
 END
 GO
