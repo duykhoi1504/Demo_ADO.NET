@@ -49,6 +49,9 @@
     <Compile Update="USCartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="USIngredientDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="USProdItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
