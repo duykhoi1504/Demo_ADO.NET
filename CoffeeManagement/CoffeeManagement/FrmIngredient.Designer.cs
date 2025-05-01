@@ -38,7 +38,7 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
-            txtCancel = new Button();
+            btnClear = new Button();
             btnAdd = new Button();
             cbStatus = new ComboBox();
             label7 = new Label();
@@ -60,10 +60,10 @@
             label4 = new Label();
             groupBox2 = new GroupBox();
             btnFilterbySupp = new Button();
-            comboBox1 = new ComboBox();
+            cbFilterbySup = new ComboBox();
             groupBox3 = new GroupBox();
             btnFilterbyStatus = new Button();
-            comboBox2 = new ComboBox();
+            cbFilterbyStatus = new ComboBox();
             groupBox4 = new GroupBox();
             btnTransaction = new Button();
             btnExport = new Button();
@@ -73,6 +73,7 @@
             txtSearch = new TextBox();
             pictureBox1 = new PictureBox();
             btnAllProds = new Button();
+            usIngredientDetail1 = new USIngredientDetail();
             ((System.ComponentModel.ISupportInitialize)dgvIngredients).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             // dgvIngredients
             // 
+            dgvIngredients.BackgroundColor = Color.SeaGreen;
             dgvIngredients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvIngredients.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             dgvIngredients.Location = new Point(12, 96);
@@ -102,6 +104,7 @@
             dgvIngredients.RowHeadersWidth = 82;
             dgvIngredients.Size = new Size(1450, 521);
             dgvIngredients.TabIndex = 3;
+            dgvIngredients.CellContentClick += dgvIngredients_CellContentClick;
             // 
             // Column1
             // 
@@ -161,7 +164,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtCancel);
+            groupBox1.Controls.Add(btnClear);
             groupBox1.Controls.Add(btnAdd);
             groupBox1.Controls.Add(cbStatus);
             groupBox1.Controls.Add(label7);
@@ -190,18 +193,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Ingredient";
             // 
-            // txtCancel
+            // btnClear
             // 
-            txtCancel.BackColor = Color.White;
-            txtCancel.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCancel.ForeColor = Color.SeaGreen;
-            txtCancel.Location = new Point(1283, 109);
-            txtCancel.Name = "txtCancel";
-            txtCancel.Size = new Size(130, 49);
-            txtCancel.TabIndex = 70;
-            txtCancel.Text = "Cancel";
-            txtCancel.UseVisualStyleBackColor = false;
-            txtCancel.Click += txtCancel_Click;
+            btnClear.BackColor = Color.White;
+            btnClear.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.SeaGreen;
+            btnClear.Location = new Point(1283, 109);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(130, 49);
+            btnClear.TabIndex = 70;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnAdd
             // 
@@ -218,11 +221,12 @@
             // 
             // cbStatus
             // 
+            cbStatus.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbStatus.FormattingEnabled = true;
             cbStatus.Items.AddRange(new object[] { "STOCK", "OUT_OF_STOCK", "LOW_STOCK", "EXPIRED" });
             cbStatus.Location = new Point(1216, 52);
             cbStatus.Name = "cbStatus";
-            cbStatus.Size = new Size(197, 45);
+            cbStatus.Size = new Size(197, 40);
             cbStatus.TabIndex = 68;
             // 
             // label7
@@ -254,6 +258,7 @@
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(169, 36);
             txtQuantity.TabIndex = 65;
+            txtQuantity.TextChanged += txtQuantity_TextChanged;
             // 
             // label3
             // 
@@ -306,13 +311,14 @@
             // 
             // dtpEXP
             // 
-            dtpEXP.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpEXP.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpEXP.Format = DateTimePickerFormat.Short;
             dtpEXP.Location = new Point(420, 117);
             dtpEXP.MinDate = new DateTime(1890, 1, 1, 0, 0, 0, 0);
             dtpEXP.Name = "dtpEXP";
-            dtpEXP.Size = new Size(339, 43);
+            dtpEXP.Size = new Size(339, 39);
             dtpEXP.TabIndex = 57;
+            dtpEXP.ValueChanged += dtpEXP_ValueChanged;
             // 
             // txtName
             // 
@@ -338,10 +344,11 @@
             // 
             // cbSupplier
             // 
+            cbSupplier.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbSupplier.FormattingEnabled = true;
-            cbSupplier.Location = new Point(916, 113);
+            cbSupplier.Location = new Point(919, 118);
             cbSupplier.Name = "cbSupplier";
-            cbSupplier.Size = new Size(168, 45);
+            cbSupplier.Size = new Size(168, 40);
             cbSupplier.TabIndex = 56;
             // 
             // label9
@@ -399,7 +406,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(btnFilterbySupp);
-            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(cbFilterbySup);
             groupBox2.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = Color.White;
             groupBox2.Location = new Point(12, 623);
@@ -422,18 +429,19 @@
             btnFilterbySupp.UseVisualStyleBackColor = false;
             btnFilterbySupp.Click += btnFilterbySupp_Click;
             // 
-            // comboBox1
+            // cbFilterbySup
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(14, 42);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(188, 45);
-            comboBox1.TabIndex = 57;
+            cbFilterbySup.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbFilterbySup.FormattingEnabled = true;
+            cbFilterbySup.Location = new Point(14, 42);
+            cbFilterbySup.Name = "cbFilterbySup";
+            cbFilterbySup.Size = new Size(188, 45);
+            cbFilterbySup.TabIndex = 57;
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(btnFilterbyStatus);
-            groupBox3.Controls.Add(comboBox2);
+            groupBox3.Controls.Add(cbFilterbyStatus);
             groupBox3.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(394, 623);
@@ -456,13 +464,15 @@
             btnFilterbyStatus.UseVisualStyleBackColor = false;
             btnFilterbyStatus.Click += btnFilterbyStatus_Click;
             // 
-            // comboBox2
+            // cbFilterbyStatus
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(15, 42);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(208, 45);
-            comboBox2.TabIndex = 57;
+            cbFilterbyStatus.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbFilterbyStatus.FormattingEnabled = true;
+            cbFilterbyStatus.Items.AddRange(new object[] { "STOCK", "OUT_OF_STOCK", "LOW_STOCK", "EXPIRED" });
+            cbFilterbyStatus.Location = new Point(15, 42);
+            cbFilterbyStatus.Name = "cbFilterbyStatus";
+            cbFilterbyStatus.Size = new Size(208, 45);
+            cbFilterbyStatus.TabIndex = 57;
             // 
             // groupBox4
             // 
@@ -546,6 +556,7 @@
             txtSearch.PlaceholderText = "Search here ...";
             txtSearch.Size = new Size(456, 36);
             txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // pictureBox1
             // 
@@ -568,6 +579,15 @@
             btnAllProds.TabIndex = 9;
             btnAllProds.Text = "All Ingredients";
             btnAllProds.UseVisualStyleBackColor = false;
+            btnAllProds.Click += btnAllProds_Click;
+            // 
+            // usIngredientDetail1
+            // 
+            usIngredientDetail1.BackColor = Color.SeaGreen;
+            usIngredientDetail1.Location = new Point(300, 5);
+            usIngredientDetail1.Name = "usIngredientDetail1";
+            usIngredientDetail1.Size = new Size(918, 918);
+            usIngredientDetail1.TabIndex = 10;
             // 
             // FrmIngredient
             // 
@@ -575,6 +595,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1474, 929);
+            Controls.Add(usIngredientDetail1);
             Controls.Add(btnAllProds);
             Controls.Add(panel5);
             Controls.Add(groupBox4);
@@ -629,11 +650,11 @@
         private Panel panel2;
         private TextBox txtQuantity;
         private Label label3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbFilterbySup;
+        private ComboBox cbFilterbyStatus;
         private ComboBox cbStatus;
         private Label label7;
-        private Button txtCancel;
+        private Button btnClear;
         private Button btnAdd;
         private Button btnFilterbySupp;
         private Button btnFilterbyStatus;
@@ -646,5 +667,6 @@
         private TextBox txtSearch;
         private PictureBox pictureBox1;
         private Button btnAllProds;
+        private USIngredientDetail usIngredientDetail1;
     }
 }

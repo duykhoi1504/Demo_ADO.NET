@@ -82,6 +82,7 @@
             // 
             // dgvAccounts
             // 
+            dgvAccounts.BackgroundColor = Color.SeaGreen;
             dgvAccounts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAccounts.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
             dgvAccounts.Location = new Point(21, 86);

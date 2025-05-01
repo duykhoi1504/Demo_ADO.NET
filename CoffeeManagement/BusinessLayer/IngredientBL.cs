@@ -71,5 +71,15 @@ namespace BusinessLayer
             var ings = GetIngredients();
             return ings.Any(i => i.id == id);
         }
+
+        public List<Ingredient> GetIngredientsBySupplier(string supplierID)
+        {
+            return ingredientDL.GetIngredientsBySupplier(supplierID);
+        }
+
+        public List<Ingredient> GetIngredientsByStatus(string status)
+        {
+            return ingredientDL.GetIngredientsByStatus(status);
+        }
     }
 }

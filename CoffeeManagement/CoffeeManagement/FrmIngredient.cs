@@ -18,11 +18,13 @@ namespace PresentationLayer
     public partial class FrmIngredient : Form
     {
         private IngredientBL ingredientBL;
+        private SupplierBL supplierBL;
 
         public FrmIngredient()
         {
             InitializeComponent();
             ingredientBL = new IngredientBL();
+            supplierBL = new SupplierBL();
         }
 
         private bool InvalidFields()
@@ -47,6 +49,12 @@ namespace PresentationLayer
                 return false;
             }
 
+            if (cbSupplier.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a supplier before adding the ingredient.", "Missing Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             return true;
         }
 
@@ -59,6 +67,38 @@ namespace PresentationLayer
             catch (SqlException ex)
             {
                 throw ex;
+            }
+        }
+
+        private void UpdateStatus()
+        {
+            if (!int.TryParse(txtQuantity.Text, out int quantity)) return;
+
+            DateTime exp = dtpEXP.Value;
+
+            if (exp < DateTime.Now.Date) { cbStatus.Text = "EXPIRED"; }
+            else if (quantity == 0) { cbStatus.Text = "OUT_OF_STOCK"; }
+            else if (quantity <= 15) { cbStatus.Text = "LOW_STOCK"; }
+            else { cbStatus.Text = "STOCK"; }
+        }
+
+        private void LoadSupplier()
+        {
+            try
+            {
+                List<Supplier> supps = supplierBL.GetSuppliers();
+
+                cbSupplier.DataSource = supps;
+                cbSupplier.ValueMember = "id";
+                cbSupplier.SelectedIndex = -1;
+
+                cbFilterbySup.DataSource = supps;
+                cbFilterbySup.ValueMember = "id";
+                cbFilterbySup.SelectedIndex = -1;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Failed to load suppliers: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -106,8 +146,8 @@ namespace PresentationLayer
             string status = cbStatus.Text;
             string supplierID = cbSupplier.Text;
             DateTime exp = dtpEXP.Value;
-            int quantity;
 
+            int quantity;
             if (!int.TryParse(txtQuantity.Text, out quantity))
             {
                 MessageBox.Show("Quantity must be valid numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -128,7 +168,7 @@ namespace PresentationLayer
             }
         }
 
-        private void txtCancel_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtID.Clear();
             txtName.Clear();
@@ -141,12 +181,44 @@ namespace PresentationLayer
 
         private void btnFilterbySupp_Click(object sender, EventArgs e)
         {
+            if (cbFilterbySup.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a supplier to filter.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            string supplierID = cbFilterbySup.SelectedValue.ToString();
+
+            try
+            {
+                var f = ingredientBL.GetIngredientsBySupplier(supplierID);
+                dgvIngredients.DataSource = f;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Failed to filter by supplier: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnFilterbyStatus_Click(object sender, EventArgs e)
         {
+            if (cbFilterbyStatus.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a status to filter.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            string status = cbFilterbyStatus.SelectedItem.ToString();
+
+            try
+            {
+                var f = ingredientBL.GetIngredientsByStatus(status);
+                dgvIngredients.DataSource = f;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Failed to filter by status: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -168,6 +240,73 @@ namespace PresentationLayer
         {
             CustomDataGridView(dgvIngredients);
             LoadIngredient();
+            LoadSupplier();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string s = txtSearch.Text.ToLower();
+
+            var allIngs = ingredientBL.GetIngredients();
+            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList();
+
+            dgvIngredients.DataSource = sI;
+        }
+
+        private void btnAllProds_Click(object sender, EventArgs e)
+        {
+            LoadIngredient();
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+            UpdateStatus();
+        }
+
+        private void dtpEXP_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateStatus();
+        }
+
+        private void dgvIngredients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+            int row = e.RowIndex;
+
+            if (dgvIngredients.Columns[col] is DataGridViewImageColumn)
+            {
+                if (row >= 0 && col == dgvIngredients.Columns["Detail"].Index)
+                {
+                    var i = (Ingredient)dgvIngredients.Rows[row].DataBoundItem;
+                    if (i != null)
+                    {
+                        usIngredientDetail1.Visible = true;
+                        usIngredientDetail1.LoadIngredientForUpdate(i);
+                        usIngredientDetail1.UpdateIngredient += () => LoadIngredient();
+                    }
+                }
+                else if (e.ColumnIndex == dgvIngredients.Columns["Delete"].Index)
+                {
+                    var idCol = dgvIngredients.Columns["Id"].Index;
+                    var id = dgvIngredients.Rows[row].Cells[idCol].Value.ToString();
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this ingredient?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            ingredientBL.DeleteIngredient(id);
+                            MessageBox.Show("Ingredient has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadIngredient();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show($"Error deleting ingredient: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
     }
 }

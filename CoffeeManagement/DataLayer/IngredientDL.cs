@@ -102,5 +102,95 @@ namespace DataLayer
                 throw ex;
             }
         }
+
+        public List<Ingredient> GetIngredientsBySupplier(string supplierID)
+        {
+            string sql = "SELECT * FROM Ingredient WHERE supplierID = '" + supplierID + "'";
+
+            string id, name, unit, status;
+            int quantity;
+            DateTime expirationDate;
+
+            List<Ingredient> ingredients = new List<Ingredient>();
+
+            try
+            {
+                Connect();
+
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@supplierID", supplierID));
+
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, parameters);
+
+                while (reader.Read())
+                {
+                    id = reader["id"].ToString();
+					name = reader["name"].ToString();
+					unit = reader["unit"].ToString();
+					quantity = int.Parse(reader["quantity"].ToString());
+                    expirationDate = (DateTime)reader["expirationDate"];
+                    status = reader["status"].ToString();
+					supplierID = reader["supplierID"].ToString();
+
+                    Ingredient i = new Ingredient(id, name, unit, quantity, expirationDate, status, supplierID);
+                    ingredients.Add(i);
+                }
+                reader.Close();
+                return ingredients;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
+        public List<Ingredient> GetIngredientsByStatus(string status)
+        {
+            string sql = "SELECT * FROM Ingredient WHERE status = '" + status + "'";
+
+            string id, name, unit, supplierID;
+            int quantity;
+            DateTime expirationDate;
+
+            List<Ingredient> ingredients = new List<Ingredient>();
+
+            try
+            {
+                Connect();
+
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@status", status));
+
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text, parameters);
+
+                while (reader.Read())
+                {
+                    id = reader["id"].ToString();
+                    name = reader["name"].ToString();
+                    unit = reader["unit"].ToString();
+                    quantity = int.Parse(reader["quantity"].ToString());
+                    expirationDate = (DateTime)reader["expirationDate"];
+                    status = reader["status"].ToString();
+                    supplierID = reader["supplierID"].ToString();
+
+                    Ingredient i = new Ingredient(id, name, unit, quantity, expirationDate, status, supplierID);
+                    ingredients.Add(i);
+                }
+                reader.Close();
+                return ingredients;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

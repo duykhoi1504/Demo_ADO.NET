@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\hoain\\demo_ado.net\\coffeemanagement\\coffeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataProvider.cs",
-              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataProvider.cs",
-              "RelativeDocumentMoniker": "DataLayer\\DataProvider.cs",
-              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\DataProvider.cs",
-              "RelativeToolTip": "DataLayer\\DataProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Program.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\Program.cs",
+              "RelativeToolTip": "CoffeeManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T09:33:19.795Z",
+              "WhenOpened": "2025-05-01T10:20:05.775Z",
               "EditorCaption": ""
             }
           ]
