@@ -94,3 +94,21 @@ BEGIN
 	WHERE id = @id;
 END
 GO
+
+--==================Stats==================--
+CREATE PROCEDURE GetStatsByProduct
+AS
+BEGIN
+    SELECT 
+        i.productID, 
+        p.name, 
+        SUM(i.price * i.quantity) AS totalRevenue
+    FROM 
+        Item i
+    JOIN 
+        [Order] o ON i.orderID = o.id
+    JOIN 
+        [Product] p ON i.productID = p.id
+    GROUP BY 
+        i.productID, p.name;
+END

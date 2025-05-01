@@ -68,7 +68,7 @@ namespace DataLayer
 
         public int UpdateIngredient(Ingredient i)
         {
-            string sql = "uspUpdateIngredient";
+            string sql = "GetStatsByProduct";
 
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@id", i.id));
