@@ -37,12 +37,13 @@ namespace CoffeeManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Show();
+            this.Hide();
             this.Enabled = false;
             FrmLogin login = new FrmLogin();
             DialogResult result = login.ShowDialog();
             if (result == DialogResult.OK)
             {
+                this.Show();
                 account = login.account;
                 lbName.Text = "xin chao: " + account.Username;
                 this.Enabled = true;
@@ -82,6 +83,16 @@ namespace CoffeeManagement
         private void btnStatistic_Click(object sender, EventArgs e)
         {
             AddForm(new FrmChart());
+        }
+
+        private void btnWareHouse_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmIngredient());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmProducts());
         }
 
 

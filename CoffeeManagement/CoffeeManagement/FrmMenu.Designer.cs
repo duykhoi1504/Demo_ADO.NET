@@ -68,6 +68,7 @@
             // 
             // pnProduct
             // 
+            pnProduct.AutoScroll = true;
             pnProduct.BackColor = SystemColors.Control;
             pnProduct.Location = new Point(12, 180);
             pnProduct.Name = "pnProduct";

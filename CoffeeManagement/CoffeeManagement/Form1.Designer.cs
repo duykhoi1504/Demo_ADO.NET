@@ -30,7 +30,6 @@
         {
             lbName = new Label();
             plMain = new Panel();
-            lbPicture = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             btnSetting = new Button();
@@ -56,28 +55,21 @@
             // 
             // plMain
             // 
-            plMain.Controls.Add(lbPicture);
             plMain.Controls.Add(pictureBox1);
             plMain.Location = new Point(109, 9);
             plMain.Name = "plMain";
             plMain.Size = new Size(1275, 699);
             plMain.TabIndex = 1;
             // 
-            // lbPicture
-            // 
-            lbPicture.AutoSize = true;
-            lbPicture.Location = new Point(399, 329);
-            lbPicture.Name = "lbPicture";
-            lbPicture.Size = new Size(67, 20);
-            lbPicture.TabIndex = 1;
-            lbPicture.Text = "lbPicture";
-            // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = SystemColors.ControlDark;
-            pictureBox1.Location = new Point(217, 93);
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = PresentationLayer.Properties.Resources.cat_barista;
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(442, 219);
+            pictureBox1.Size = new Size(1275, 699);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -133,6 +125,7 @@
             btnProduct.TabIndex = 2;
             btnProduct.Text = "Product";
             btnProduct.UseVisualStyleBackColor = true;
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnWareHouse
             // 
@@ -142,6 +135,7 @@
             btnWareHouse.TabIndex = 2;
             btnWareHouse.Text = "WareHouse";
             btnWareHouse.UseVisualStyleBackColor = true;
+            btnWareHouse.Click += btnWareHouse_Click;
             // 
             // Home
             // 
@@ -174,7 +168,6 @@
             Text = " ";
             Load += Form1_Load;
             plMain.ResumeLayout(false);
-            plMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -188,7 +181,6 @@
         private Panel panel2;
         private Button Home;
         private Button Supplier;
-        private Label lbPicture;
         private PictureBox pictureBox1;
         private Button btnWareHouse;
         private Button btnSetting;

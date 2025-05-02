@@ -29,6 +29,17 @@ namespace PresentationLayer
                 return;
             lbProdName.Text = prod.name;
             lbProdPrice.Text = prod.price.ToString();
+            if (prod.image != null)
+            {
+                using (MemoryStream ms = new MemoryStream(prod.image))
+                {
+                    img_prod.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                img_prod.Image = null; // Clear image if null
+            }
 
         }
         public void ProductInit(Product prod)
@@ -39,9 +50,11 @@ namespace PresentationLayer
 
 
 
-        private void panel1_Click(object sender, EventArgs e)
+
+        private void pn_Product_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Item clicked: " + lbProdName.Text);
+            //MessageBox.Show("Item clicked: " + lbProdName.Text);
+
             FrmMenu frmMenu = (FrmMenu)this.ParentForm;
             //Item item = new Item(lbProdName.Text, lbProdPrice.Text, "1", "1", "1");
             //frmMenu.AddItem(item);
@@ -50,9 +63,22 @@ namespace PresentationLayer
                 frmMenu.AddItem(product);
                 Observer.Notify(CONSTANT.UpdateProdCart);
             }
-
         }
 
-  
+        private void pn_Product_MouseHover(object sender, EventArgs e)
+        {
+            pn_Product.BackColor = Color.LightBlue; // Ví dụ thay đổi màu
+        }
+
+        private void pn_Product_MouseEnter(object sender, EventArgs e)
+        {
+            pn_Product.BackColor = Color.Yellow; // Trả về màu ban đầu
+        }
+
+        private void pn_Product_MouseLeave(object sender, EventArgs e)
+        {
+            pn_Product.BackColor = Color.Transparent; // Trả về màu ban đầu
+
+        }
     }
 }

@@ -33,13 +33,18 @@ namespace PresentationLayer
             InitializeComponent();
             categoryBL = new CategoryBL();
             productBL = new ProductBL();
-            itemBL= new ItemBL();
-            orderBL =new OrderBL();
+            itemBL = new ItemBL();
+            orderBL = new OrderBL();
 
             // Đăng ký observer cho FrmMenu
             Observer.Register(this);
         }
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            LoadCatogery();
+            LoadProduct();
 
+        }
         public void AddItem(Product product)
         {
             // Kiểm tra và khởi tạo cartSlots nếu cần
@@ -93,12 +98,7 @@ namespace PresentationLayer
                 pnProdItems.Controls.Add(us);
             }
         }
-        private void FrmMenu_Load(object sender, EventArgs e)
-        {
-            LoadCatogery();
-            //LoadProduct();
 
-        }
 
 
         private void LoadCatogery()
@@ -119,7 +119,7 @@ namespace PresentationLayer
                     // Xử lý sự kiện khi nhấn nút category
                     // Ví dụ: lọc sản phẩm theo category
                     LoadProduct(category.id.ToString());
-                    MessageBox.Show("Category clicked: " + category.name);
+                    //MessageBox.Show("Category clicked: " + category.name);
                 });
             }
             //////////////////////////////////////////////////////////////////////////////////////
@@ -239,6 +239,8 @@ namespace PresentationLayer
 
 
         }
+
+       
     }
 
 }
