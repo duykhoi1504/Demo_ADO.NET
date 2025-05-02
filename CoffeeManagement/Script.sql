@@ -96,7 +96,9 @@ END
 GO
 
 --==================Stats==================--
+--drop proc GetStatsByProduct
 CREATE PROCEDURE GetStatsByProduct
+    @Year varchar(20)
 AS
 BEGIN
     SELECT 
@@ -109,6 +111,29 @@ BEGIN
         [Order] o ON i.orderID = o.id
     JOIN 
         [Product] p ON i.productID = p.id
+    WHERE 
+         YEAR(o.createdDate) = @Year
     GROUP BY 
         i.productID, p.name;
 END
+GO
+--*******
+--drop proc GetMonthlyRevenue
+CREATE PROCEDURE GetMonthlyRevenue
+    @Year Varchar(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        MONTH(createdDate) AS Month, 
+        SUM(totalPrice) AS TotalRevenue  
+    FROM 
+        [Order] 
+    WHERE 
+        YEAR(createdDate) = @Year
+    GROUP BY 
+        MONTH(createdDate) 
+    ORDER BY 
+        MONTH(createdDate);
+END;

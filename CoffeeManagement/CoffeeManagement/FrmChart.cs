@@ -16,48 +16,104 @@ namespace PresentationLayer
     public partial class FrmChart : Form
     {
 
-        ItemBL itemBL;
+        //ItemBL itemBL;
+        //OrderBL orderBL;
         StatsBL statsBL;
-        OrderBL orderBL;
         List<Stats> products;
+        List<Stats> monthsTotal;
+
         public FrmChart()
         {
 
             InitializeComponent();
-            itemBL = new ItemBL();
-            orderBL = new OrderBL();
+            //itemBL = new ItemBL();
+            //orderBL = new OrderBL();
             statsBL = new StatsBL();
-            products =new List<Stats>();
-      
+            products = new List<Stats>();
+            monthsTotal = new List<Stats>();
+            txtSearch.Text = DateTime.Now.Year.ToString();
+
         }
 
         private void FrmChart_Load(object sender, EventArgs e)
         {
-            // Lấy dữ liệu từ danh sách
-            products = statsBL.GetStatsByProduct();
-            string[] seriesArray = products.Select(p => p.name).Distinct().ToArray();
-            float[] pointsArray = products.Select(p => p.value).ToArray();
-            //string[] seriesArray = { "2", "3" };
-            //float[] pointsArray = { 1,3 };
-            chart_StatByProduct.ChartAreas[0].RecalculateAxesScale();
-            // Set palette.
-            chart_StatByProduct.Palette = ChartColorPalette.SeaGreen;
 
-      
+            StatsByProduct();
+            StatsByMonth();
+        }
+
+        private void StatsByProduct()
+        {
+            // Lấy dữ liệu từ danh sách
+            products.Clear();
+            products = statsBL.GetStatsByProduct(txtSearch.Text);
 
 
             // Set title.
+            this.chart_StatByProduct.Titles.Clear(); // Clear previous titles
             this.chart_StatByProduct.Titles.Add("Thống kê theo sản phẩm");
+            this.chart_StatByProduct.Series.Clear();
+
+            ChartArea chartArea = new ChartArea();
+            this.chart_StatByProduct.ChartAreas.Clear();
+            this.chart_StatByProduct.ChartAreas.Add(chartArea);
+            //this.chart_StatByProduct.ChartAreas[0].AxisX.Interval = 0; // Đặt khoảng cách phù hợp
+
 
             // Add series.
-            for (int i = 0; i < seriesArray.Length; i++)
+            for (int i = 0; i < products.Count; i++)
             {
                 // Add series.
-                Series series = this.chart_StatByProduct.Series.Add(seriesArray[i]);
-
-                // Add point.
-                series.Points.Add(pointsArray[i]);
+                Series series = this.chart_StatByProduct.Series.Add(products[i].name);
+                series.ChartType = SeriesChartType.Bar;
+                series.Points.AddXY(products[i].name, products[i].value);
+                // Optional: Show values on bars
+                series.IsValueShownAsLabel = false;
             }
+            this.chart_StatByProduct.ChartAreas[0].AxisX.Title = "tên sản phảm";
+            this.chart_StatByProduct.ChartAreas[0].AxisY.Title = "doanh thu";
+        }
+        private void StatsByMonth()
+        {
+            monthsTotal.Clear();
+            monthsTotal = statsBL.GetStatsByMonth(txtSearch.Text);
+
+
+            //string[] seriesName = monthsTotal.Select(p => p.name).ToArray();
+
+
+            //float[] pointsValue = monthsTotal.Select(p => p.value).ToArray();
+
+            // Set title.
+            this.chart_StatByMonth.Titles.Clear(); // Clear previous titles
+            this.chart_StatByMonth.Titles.Add("Thống kê theo tháng");
+            this.chart_StatByMonth.Series.Clear();
+
+
+            ChartArea chartArea = new ChartArea();
+            this.chart_StatByMonth.ChartAreas.Clear();
+            this.chart_StatByMonth.ChartAreas.Add(chartArea);
+
+
+            // Add series.
+            for (int i = 0; i < monthsTotal.Count; i++)
+            {
+                // Add series.
+                Series series = this.chart_StatByMonth.Series.Add(monthsTotal[i].name);
+                series.ChartType = SeriesChartType.Column;
+                series.Points.AddXY(float.Parse(monthsTotal[i].name), monthsTotal[i].value);
+                // Optional: Show values on bars
+                series.IsValueShownAsLabel = true;
+            }
+            this.chart_StatByMonth.ChartAreas[0].AxisX.Title = "Tháng";
+            this.chart_StatByMonth.ChartAreas[0].AxisY.Title = "Doanh thu";
+        }
+
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            StatsByProduct();
+            StatsByMonth();
         }
     }
 }

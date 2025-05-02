@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\StatsDL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataLayer\\StatsDL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\businesslayer\\statsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\statsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\businesslayer\\statsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\statsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmchart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmChart.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmChart.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\FrmChart.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:57:12.554Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatsDL.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\StatsDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\StatsDL.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\StatsDL.cs",
+              "RelativeToolTip": "DataLayer\\StatsDL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:01:21.08Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -40,20 +65,20 @@
               "RelativeDocumentMoniker": "BusinessLayer\\StatsBL.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\StatsBL.cs",
               "RelativeToolTip": "BusinessLayer\\StatsBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T17:25:11.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Stats.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Stats.cs",
               "RelativeDocumentMoniker": "DataTransfer\\Stats.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Stats.cs",
               "RelativeToolTip": "DataTransfer\\Stats.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T17:16:47.045Z",
               "EditorCaption": ""
@@ -61,40 +86,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StatsDL.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\StatsDL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\StatsDL.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\StatsDL.cs",
-              "RelativeToolTip": "BusinessLayer\\StatsDL.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:14:57.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FrmChart.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs",
               "RelativeDocumentMoniker": "CoffeeManagement\\FrmChart.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs",
               "RelativeToolTip": "CoffeeManagement\\FrmChart.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCcAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T15:54:24.281Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmChart.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\FrmChart.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmChart.cs [Design]",
-              "RelativeToolTip": "CoffeeManagement\\FrmChart.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:52:28.625Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

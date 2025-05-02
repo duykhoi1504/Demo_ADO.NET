@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -15,17 +16,29 @@ namespace BusinessLayer
         {
             statsDL = new StatsDL();
         }
-        public List<Stats> GetStatsByProduct()
+        public List<Stats> GetStatsByProduct(string year)
         {
             try
             {
-                return statsDL.GetStatsByProduct();
+                return statsDL.GetStatsByProduct(year);
             }
             catch(SqlException ex)
             {
                 throw ex;
             }
           
+        }
+        public List<Stats> GetStatsByMonth(string year)
+        {
+            try
+            {
+                return statsDL.GetStatsByMonth(year);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
