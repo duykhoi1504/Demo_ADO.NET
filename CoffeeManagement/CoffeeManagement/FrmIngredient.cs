@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -245,12 +246,12 @@ namespace PresentationLayer
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string s = txtSearch.Text.ToLower();
+            string s = txtSearch.Text.ToLower(); //Lấy giá trị tìm kiếm và chuyển thành chữ thường
 
             var allIngs = ingredientBL.GetIngredients();
-            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList();
+            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList(); //Sử dụng LINQ để lọc nguyên liệu theo tên
 
-            dgvIngredients.DataSource = sI;
+            dgvIngredients.DataSource = sI; //Cập nhật DataGridView với danh sách đã lọc
         }
 
         private void btnAllProds_Click(object sender, EventArgs e)

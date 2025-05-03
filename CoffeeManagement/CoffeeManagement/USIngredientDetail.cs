@@ -18,6 +18,7 @@ namespace PresentationLayer
     {
         public IngredientBL ingredientBL;
         public SupplierBL supplierBL;
+        public InventoryTransactionBL inventoryTransactionBL;
         private Ingredient currentIngredient;
 
         public event Action UpdateIngredient;
@@ -27,6 +28,7 @@ namespace PresentationLayer
             InitializeComponent();
             ingredientBL = new IngredientBL();
             supplierBL = new SupplierBL();
+            inventoryTransactionBL = new InventoryTransactionBL();
         }
 
         private bool InvalidFields()
@@ -62,6 +64,29 @@ namespace PresentationLayer
             }
         }
 
+        private DataGridView CustomDataGridView(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+
+            List<String> names = new List<String>() { "Id", "IngredientID", "Quantity", "Type", "Date", "Note" };
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                dgv.Columns[i].Name = names[i];
+                dgv.Columns[i].DataPropertyName = names[i];
+            }
+
+            DataGridViewImageColumn deleteColumn = new DataGridViewImageColumn
+            {
+                Name = "Delete",
+                Image = Properties.Resources.cat_delete,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
+            };
+            dgv.Columns.Add(deleteColumn);
+
+            return dgv;
+        }
+
         private void UpdateStatus()
         {
             if (!int.TryParse(txtQuantity.Text, out int quantity)) return;
@@ -91,9 +116,22 @@ namespace PresentationLayer
             this.Visible = true;
         }
 
+        public void LoadTransaction()
+        {
+            try
+            {
+                dgvTransaction.DataSource = inventoryTransactionBL.GetTransactions();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Failed to load transaction: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void USIngredientDetail_Load(object sender, EventArgs e)
         {
             LoadSupplier();
+            CustomDataGridView(dgvTransaction);
             this.Visible = false;
         }
 
@@ -149,6 +187,47 @@ namespace PresentationLayer
         private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateStatus();
+        }
+
+        private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+            int row = e.RowIndex;
+
+            if (dgvTransaction.Columns[col] is DataGridViewImageColumn)
+            {
+                if (e.ColumnIndex == dgvTransaction.Columns["Delete"].Index)
+                {
+                    var idCol = dgvTransaction.Columns["Id"].Index;
+                    var id = dgvTransaction.Rows[row].Cells[idCol].Value.ToString();
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this transaction?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            ingredientBL.DeleteIngredient(id);
+                            MessageBox.Show("Transaction has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadTransaction();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show($"Error deleting transaction: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

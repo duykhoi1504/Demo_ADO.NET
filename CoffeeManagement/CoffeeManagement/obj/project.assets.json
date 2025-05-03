@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net9.0-windows7.0": {
+      "DataGridView-AutoFilter/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/DataGridViewAutoFilter.dll": {}
+        },
+        "runtime": {
+          "lib/net20/DataGridViewAutoFilter.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -260,6 +269,19 @@
     }
   },
   "libraries": {
+    "DataGridView-AutoFilter/1.1.0": {
+      "sha512": "QPaTjR+Krge2K2Vv5jxMBNAKR0I1Z1xX+ML2C8PyVwnckyMwPFoZnjg7Lq6oHh4iWpAIHlPFapX59EVHW0wDsg==",
+      "type": "package",
+      "path": "datagridview-autofilter/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "datagridview-autofilter.1.1.0.nupkg.sha512",
+        "datagridview-autofilter.nuspec",
+        "icon/icon.png",
+        "lib/net20/DataGridViewAutoFilter.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -703,6 +725,7 @@
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
       "BusinessLayer >= 1.0.0",
+      "DataGridView-AutoFilter >= 1.1.0",
       "System.Data.SqlClient >= 4.8.6",
       "System.Drawing.Common >= 9.0.4",
       "TransferObject >= 1.0.0",
@@ -710,23 +733,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MR KHOI\\.nuget\\packages\\": {},
+    "C:\\Users\\hoain\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\MR KHOI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\obj\\",
+      "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\hoain\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MR KHOI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hoain\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -735,18 +758,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
-              "projectPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
+            "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj": {
+              "projectPath": "C:\\Users\\hoain\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\TransferObject.csproj"
             }
           }
         }
@@ -767,6 +789,10 @@
       "net9.0-windows7.0": {
         "targetAlias": "net9.0-windows",
         "dependencies": {
+          "DataGridView-AutoFilter": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.6, )"
@@ -799,8 +825,20 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DataGridView-AutoFilter 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DataGridView-AutoFilter",
+      "targetGraphs": [
+        "net9.0-windows7.0"
+      ]
+    }
+  ]
 }
