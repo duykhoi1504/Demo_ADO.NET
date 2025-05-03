@@ -1,4 +1,4 @@
 # Demo_ADO.NET
-branch hoainhan (03/5): Đang code, xin đừng push git.
-
-from Nhan to Khoi (30/4): Khoảng 2-3 ngày tới t code Quản lý Kho, nên làm xong thống kê mà tchưa xong Kho thì làm giúp cái Quản lý Ca Làm nhé.
+branch hoainhan (03/5): T có để cái mẫu thiết kế Quản lý ca làm trên sheet ấy.
+Mô tả sơ phần trống cho Ca Làm ở FrmAccount: FrmAccount có chừa 1 khoảng trống để chứa button, 1 button để mở form đăng ký ca làm trong tuần cho nhân viên, 1 button để điểm danh, 1 button để xem các ca làm của nhân viên đã chọn. Có thể thiết kế thêm.
+Form Ca Làm riêng: Danh sách tất cả ca làm (thêm xử lý), Danh sách ca làm của nhân viên trong tuần, Tính lương cho nhân viên.
