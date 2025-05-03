@@ -4,6 +4,9 @@
     <Compile Update="FrmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAllTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="USUpdateCoupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="USUpdateTransaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
