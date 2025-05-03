@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using CoffeeManagement;
 using DataLayer;
 using TransferObject;
 
@@ -26,7 +27,7 @@ namespace PresentationLayer
 
         private bool InvalidFields()
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(txtFullName.Text) || 
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(txtFullName.Text) ||
                 string.IsNullOrWhiteSpace(txtAddress.Text) || string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,6 +188,17 @@ namespace PresentationLayer
                     }
                 }
             }
+        }
+
+        private void btn_Regis_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.AddForm(new FrmShiftRegister());
+        }
+
+        private void btn_Checking_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.AddForm(new FrmShiftConfirm());
+
         }
     }
 }

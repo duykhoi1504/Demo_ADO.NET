@@ -39,6 +39,7 @@
             btnWareHouse = new Button();
             Home = new Button();
             Supplier = new Button();
+            btn_Account = new Button();
             plMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btn_Account);
             panel2.Controls.Add(btnSetting);
             panel2.Controls.Add(btnStatistic);
             panel2.Controls.Add(btnReceipt);
@@ -157,6 +159,16 @@
             Supplier.UseVisualStyleBackColor = true;
             Supplier.Click += Supplier_Click;
             // 
+            // btn_Account
+            // 
+            btn_Account.Location = new Point(0, 281);
+            btn_Account.Name = "btn_Account";
+            btn_Account.Size = new Size(94, 29);
+            btn_Account.TabIndex = 3;
+            btn_Account.Text = "Accout";
+            btn_Account.UseVisualStyleBackColor = true;
+            btn_Account.Click += btn_Account_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -187,5 +199,6 @@
         private Button btnStatistic;
         private Button btnReceipt;
         private Button btnProduct;
+        private Button btn_Account;
     }
 }

@@ -22,6 +22,12 @@
     <Compile Update="FrmReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmShiftConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmShiftRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="USAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>

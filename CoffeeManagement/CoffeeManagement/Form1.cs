@@ -70,7 +70,7 @@ namespace CoffeeManagement
         {
             AddForm(new FrmReceipt());
         }
-        private void AddForm(Form form)
+        public void AddForm(Form form)
         {
             form.TopLevel = false;
             plMain.Controls.Clear();
@@ -93,6 +93,12 @@ namespace CoffeeManagement
         private void btnProduct_Click(object sender, EventArgs e)
         {
             AddForm(new FrmProducts());
+        }
+
+        private void btn_Account_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmAccount());
+
         }
 
 
