@@ -64,6 +64,9 @@
     <Compile Update="USProdItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="USShiftItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="USUpdateAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>

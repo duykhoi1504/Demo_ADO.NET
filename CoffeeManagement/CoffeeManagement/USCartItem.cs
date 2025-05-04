@@ -54,16 +54,21 @@ namespace PresentationLayer
             cartSlot.Quantity--;
             //lbQuantity.Text = cartSlot.quantity.ToString();
             SetCartLabel();
-                
+
             if (cartSlot.Quantity <= 0)
             {
                 FrmMenu frmMenu = (FrmMenu)this.ParentForm;
                 frmMenu.RemoveItem(cartSlot.product);
                 //this.Dispose();
             }
-       
+
 
             //Observer.Notify("UpdateProdItems");
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

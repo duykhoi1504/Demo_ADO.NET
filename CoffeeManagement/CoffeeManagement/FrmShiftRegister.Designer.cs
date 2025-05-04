@@ -30,18 +30,16 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            btn_Add = new Button();
             cb_Staff = new ComboBox();
+            lblResult = new Label();
             dt_DateStart = new DateTimePicker();
             label3 = new Label();
-            dgv_Shift = new DataGridView();
             btn_SaveShift = new Button();
             btn_Close = new Button();
             label2 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewComboBoxColumn();
+            pn_ShiftItems = new FlowLayoutPanel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_Shift).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -55,7 +53,10 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(btn_Add);
             panel1.Controls.Add(cb_Staff);
+            panel1.Controls.Add(lblResult);
             panel1.Controls.Add(dt_DateStart);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
@@ -63,14 +64,35 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(782, 79);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // btn_Add
+            // 
+            btn_Add.Location = new Point(351, 26);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(94, 28);
+            btn_Add.TabIndex = 3;
+            btn_Add.Text = "Add";
+            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.Click += btn_Add_Click;
             // 
             // cb_Staff
             // 
             cb_Staff.FormattingEnabled = true;
-            cb_Staff.Location = new Point(585, 29);
+            cb_Staff.Location = new Point(617, 26);
             cb_Staff.Name = "cb_Staff";
             cb_Staff.Size = new Size(151, 28);
             cb_Staff.TabIndex = 2;
+            cb_Staff.SelectedIndexChanged += cb_Staff_SelectedIndexChanged;
+            // 
+            // lblResult
+            // 
+            lblResult.AutoSize = true;
+            lblResult.Location = new Point(95, 57);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(111, 20);
+            lblResult.TabIndex = 0;
+            lblResult.Text = "Đăng ký ca làm";
             // 
             // dt_DateStart
             // 
@@ -78,43 +100,37 @@
             dt_DateStart.Name = "dt_DateStart";
             dt_DateStart.Size = new Size(250, 27);
             dt_DateStart.TabIndex = 1;
+            dt_DateStart.ValueChanged += dt_DateStart_ValueChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(515, 32);
+            label3.Location = new Point(568, 31);
             label3.Name = "label3";
             label3.Size = new Size(43, 20);
             label3.TabIndex = 0;
             label3.Text = "Staff:";
             // 
-            // dgv_Shift
-            // 
-            dgv_Shift.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Shift.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dgv_Shift.Location = new Point(6, 130);
-            dgv_Shift.Name = "dgv_Shift";
-            dgv_Shift.RowHeadersWidth = 51;
-            dgv_Shift.Size = new Size(782, 309);
-            dgv_Shift.TabIndex = 2;
-            // 
             // btn_SaveShift
             // 
-            btn_SaveShift.Location = new Point(81, 458);
+            btn_SaveShift.BackColor = Color.White;
+            btn_SaveShift.Location = new Point(75, 501);
             btn_SaveShift.Name = "btn_SaveShift";
             btn_SaveShift.Size = new Size(296, 52);
             btn_SaveShift.TabIndex = 3;
             btn_SaveShift.Text = "Save Shift";
-            btn_SaveShift.UseVisualStyleBackColor = true;
+            btn_SaveShift.UseVisualStyleBackColor = false;
+            btn_SaveShift.Click += btn_SaveShift_Click;
             // 
             // btn_Close
             // 
-            btn_Close.Location = new Point(437, 458);
+            btn_Close.BackColor = Color.White;
+            btn_Close.Location = new Point(431, 501);
             btn_Close.Name = "btn_Close";
             btn_Close.Size = new Size(296, 52);
             btn_Close.TabIndex = 3;
             btn_Close.Text = "Cancel";
-            btn_Close.UseVisualStyleBackColor = true;
+            btn_Close.UseVisualStyleBackColor = false;
             btn_Close.Click += btn_Close_Click;
             // 
             // label2
@@ -126,43 +142,30 @@
             label2.TabIndex = 0;
             label2.Text = "Đăng ký ca làm";
             // 
-            // Column1
+            // pn_ShiftItems
             // 
-            Column1.HeaderText = "Thứ";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "ngày";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Ca làm";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
+            pn_ShiftItems.BackColor = Color.White;
+            pn_ShiftItems.Location = new Point(6, 156);
+            pn_ShiftItems.Name = "pn_ShiftItems";
+            pn_ShiftItems.Size = new Size(782, 296);
+            pn_ShiftItems.TabIndex = 4;
             // 
             // FrmShiftRegister
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(798, 565);
+            Controls.Add(pn_ShiftItems);
             Controls.Add(btn_Close);
             Controls.Add(btn_SaveShift);
             Controls.Add(label2);
-            Controls.Add(dgv_Shift);
             Controls.Add(panel1);
             Name = "FrmShiftRegister";
             Text = "FrmShiftRegister";
             Load += FrmShiftRegister_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_Shift).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,15 +174,14 @@
 
         private Label label1;
         private Panel panel1;
-        private DataGridView dgv_Shift;
         private Button btn_SaveShift;
         private Button btn_Close;
         private ComboBox cb_Staff;
         private DateTimePicker dt_DateStart;
         private Label label3;
         private Label label2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewComboBoxColumn Column3;
+        private Button btn_Add;
+        private Label lblResult;
+        private FlowLayoutPanel pn_ShiftItems;
     }
 }

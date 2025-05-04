@@ -32,9 +32,9 @@ namespace PresentationLayer
             ItemBL = new ItemBL();
             this.cartSlots = cartSlots;
             this.totalPrice = totalPrice;
-            PoadPaymentMethod();
+            LoadPaymentMethod();
         }
-        private void PoadPaymentMethod()
+        private void LoadPaymentMethod()
         {
             cbPaymentMethod.Items.Clear();
 

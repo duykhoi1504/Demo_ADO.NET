@@ -112,6 +112,7 @@
             panel1.Padding = new Padding(0, 1, 0, 1);
             panel1.Size = new Size(385, 77);
             panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // USCartItem
             // 
