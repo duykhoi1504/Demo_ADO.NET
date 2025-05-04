@@ -15,12 +15,12 @@ namespace PresentationLayer
 {
     public partial class USShiftItem : UserControl
     {
-        DateTime dateTime;
+        public DateTime dateTime;
         public Shift shift;
         ShiftBL shiftBL;
         List<Shift> Shifts;
         //Account account;
-        public USShiftItem(DateTime date,Account account)
+        public USShiftItem(DateTime date)
         {
             InitializeComponent();
             shiftBL = new ShiftBL();
@@ -63,7 +63,8 @@ namespace PresentationLayer
                 if (shift != null)
                 {
                     // You can now safely access shift.name and shift.time
-                    MessageBox.Show($"Selected Shift: {shift.name} - {shift.time}");
+                    //MessageBox.Show($"Selected Shift: {shift.name} - {shift.time}");
+                    
                 }
                 else
                 {
@@ -75,7 +76,8 @@ namespace PresentationLayer
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             FrmShiftRegister FrmSh = (FrmShiftRegister)this.ParentForm;
-            FrmSh.RemoveItem(this);
+
+            FrmSh?.RemoveItem(this);
 
             //MessageBox.Show(account.fullName+"\n"+shift.name + shift.time + "\n ");
 

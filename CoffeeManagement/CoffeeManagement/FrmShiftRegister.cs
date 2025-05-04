@@ -20,9 +20,12 @@ namespace PresentationLayer
     {
         Account account;
         AccountBL accountBL;
+        WorkdayBL workdayBL;
         //ShiftBL shiftBL;
         List<Account> Accounts;
         List<Shift> Shifts;
+        List<DateTime> dates;
+
         DateTime date;
         public FrmShiftRegister()
         {
@@ -30,21 +33,21 @@ namespace PresentationLayer
             accountBL = new AccountBL();
             Accounts = new List<Account>();
             account = new Account();
-            Shifts= new List<Shift>();
+            Shifts = new List<Shift>();
+            workdayBL = new WorkdayBL();
+            dates = new List<DateTime>();
             //shiftBL = new ShiftBL();
+            Accounts = accountBL.GetAccounts();
         }
 
         private void FrmShiftRegister_Load(object sender, EventArgs e)
         {
             dt_DateStart.Value = DateTime.Now;
-            Accounts = accountBL.GetAccounts();
             //Shifts = shiftBL.GetShifts();   
             LoadStaffCombox(cb_Staff);
 
 
         }
-
-
 
         private void LoadStaffCombox(ComboBox dcombo)
         {
@@ -73,13 +76,8 @@ namespace PresentationLayer
         }
         public void RemoveItem(USShiftItem us)
         {
-
-
             // Nếu số lượng bằng 0, xóa sản phẩm khỏi giỏ hàng
             pn_ShiftItems.Controls.Remove(us);
-
-
-
         }
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -88,9 +86,9 @@ namespace PresentationLayer
                 MessageBox.Show("Vui lòng chọn ngày hoặc nhân viên");
                 return;
             }
-            USShiftItem usShiftItem = new USShiftItem(date, account);
+            USShiftItem usShiftItem = new USShiftItem(date);
             usShiftItem.Dock = DockStyle.Top;
-            usShiftItem.BringToFront();
+            //usShiftItem.BringToFront();
             pn_ShiftItems.Controls.Add(usShiftItem);
             usShiftItem.Show();
         }
@@ -108,32 +106,50 @@ namespace PresentationLayer
         private void btn_SaveShift_Click(object sender, EventArgs e)
         {
             Shifts.Clear();
-            // Khởi tạo danh sách nếu chưa được khởi tạo
-            if (Shifts == null)
-            {
-                Shifts = new List<Shift>();
-            }
+            dates.Clear();
 
             foreach (USShiftItem a in pn_ShiftItems.Controls)
             {
                 // Kiểm tra nếu shift không phải là null trước khi thêm vào danh sách
-                if (a.shift != null)
+                if (a.shift != null && a.dateTime != null)
                 {
                     Shifts.Add(a.shift);
+                    dates.Add(a.dateTime);
                 }
             }
+            DialogResult checkout = MessageBox.Show("Bạn có chắc chắn thêm ca?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (checkout != DialogResult.Yes) return;
 
-            // Tạo chuỗi để hiển thị
-            string m = "";
-            foreach (var a in Shifts)
+            // Kiểm tra xem panel có rỗng hay không
+            if ((pn_ShiftItems == null))
             {
-                m +=account.fullName +"-"+ a.name+"-" + a.time + "\n";
+                MessageBox.Show("Vui lòng thêm ca");
+                return; // Kết thúc hàm nếu rỗng
             }
+            try
+            {
+                for (int i = 0; i < pn_ShiftItems.Controls.Count; i++)
+                {
+                    Workday wd = new Workday(account.id, Shifts[i].id, dates[i]);
+                    workdayBL.AddWorkday(wd);
 
-            // Hiển thị thông báo
-            MessageBox.Show(m);
+                }
+                MessageBox.Show("thêm ca làm thành công!");
+                pn_ShiftItems.Controls.Clear();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi khi them ca: " + ex.Message);
+            }
+            //// Tạo chuỗi để hiển thị
+            //string m = "";
+            //foreach (var a in Shifts)
+            //{
+            //    m += account.id + "-" + a.name + "-" + a.time + "\n";
+            //}
+
+            //// Hiển thị thông báo
+            //MessageBox.Show(m);
         }
-
-
     }
 }

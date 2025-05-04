@@ -35,10 +35,6 @@
             panel1 = new Panel();
             dt_DateStart = new DateTimePicker();
             label1 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewCheckBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgv_Shift).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -73,7 +69,6 @@
             // dgv_Shift
             // 
             dgv_Shift.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Shift.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dgv_Shift.Location = new Point(6, 130);
             dgv_Shift.Name = "dgv_Shift";
             dgv_Shift.RowHeadersWidth = 51;
@@ -105,36 +100,6 @@
             label1.TabIndex = 0;
             label1.Text = "Xác nhận hoàn thành ca - Ngày:";
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Tên NV";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Ca làm";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Đã hoàn thành";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Resizable = DataGridViewTriState.True;
-            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Ghi chú";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
             // FrmShiftConfirm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -147,6 +112,7 @@
             Controls.Add(panel1);
             Name = "FrmShiftConfirm";
             Text = "FrmShiftConfirm";
+            Load += FrmShiftConfirm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Shift).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -163,9 +129,5 @@
         private Panel panel1;
         private DateTimePicker dt_DateStart;
         private Label label1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewCheckBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
     }
 }

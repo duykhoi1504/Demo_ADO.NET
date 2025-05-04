@@ -137,3 +137,15 @@ BEGIN
     ORDER BY 
         MONTH(createdDate);
 END;
+GO
+--/////////////////////////////////////
+
+CREATE PROCEDURE AddWorkday
+    @AccountID INT,
+    @ShiftID INT,
+    @Date DATE
+AS
+BEGIN
+    INSERT INTO Workday(accountID, shiftID, date)
+    VALUES (@AccountID, @ShiftID, @Date);
+END;
