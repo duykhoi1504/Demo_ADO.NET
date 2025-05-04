@@ -22,6 +22,7 @@ namespace PresentationLayer
         private Ingredient currentIngredient;
 
         public event Action UpdateIngredient;
+        public event Action DeleteTransaction;
 
         public USIngredientDetail()
         {
@@ -66,16 +67,6 @@ namespace PresentationLayer
 
         private DataGridView CustomDataGridView(DataGridView dgv)
         {
-            dgv.Rows.Clear();
-
-            List<String> names = new List<String>() { "Id", "IngredientID", "Quantity", "Type", "Date", "Note" };
-
-            for (int i = 0; i < names.Count; i++)
-            {
-                dgv.Columns[i].Name = names[i];
-                dgv.Columns[i].DataPropertyName = names[i];
-            }
-
             DataGridViewImageColumn deleteColumn = new DataGridViewImageColumn
             {
                 Name = "Delete",
@@ -102,7 +93,7 @@ namespace PresentationLayer
         public void LoadIngredientForUpdate(Ingredient i)
         {
             currentIngredient = i;
-
+            
             txtID.Text = i.id;
             txtName.Text = i.name;
             txtUnit.Text = i.unit;
@@ -112,6 +103,7 @@ namespace PresentationLayer
             dtpEXP.Value = i.expirationDate;
 
             txtID.Enabled = false;
+            LoadTransaction();
 
             this.Visible = true;
         }
@@ -120,7 +112,8 @@ namespace PresentationLayer
         {
             try
             {
-                dgvTransaction.DataSource = inventoryTransactionBL.GetTransactions();
+                var f = inventoryTransactionBL.GetTransactionsByIngredient(txtID.Text);
+                dgvTransaction.DataSource = f;
             }
             catch (SqlException ex)
             {
@@ -198,8 +191,18 @@ namespace PresentationLayer
             {
                 if (e.ColumnIndex == dgvTransaction.Columns["Delete"].Index)
                 {
+                    var dateCol = dgvTransaction.Columns["Date"].Index;
+                    var transactionDate = DateTime.Parse(dgvTransaction.Rows[row].Cells[dateCol].Value.ToString());
+
+                    // Kiểm tra thời gian tạo giao dịch dưới 3 ngày thì được xóa
+                    if ((DateTime.Now - transactionDate).TotalDays > 3)
+                    {
+                        MessageBox.Show("Can only delete transactions within 3 days of creation.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     var idCol = dgvTransaction.Columns["Id"].Index;
-                    var id = dgvTransaction.Rows[row].Cells[idCol].Value.ToString();
+                    var id = Convert.ToInt32(dgvTransaction.Rows[row].Cells[idCol].Value);
 
                     DialogResult result = MessageBox.Show("Are you sure you want to delete this transaction?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -207,8 +210,32 @@ namespace PresentationLayer
                     {
                         try
                         {
-                            ingredientBL.DeleteIngredient(id);
+                            // Lấy thông tin chi tiết của giao dịch trước khi xóa
+                            var t = inventoryTransactionBL.GetTransaction(id);
+
+                            inventoryTransactionBL.DeleteTransaction(id);
+
+                            // Cập nhật số lượng nguyên liệu sau khi xóa giao dịch
+                            var i = ingredientBL.GetIngredient(t.ingredientID);
+                            if (t.type == "IN")
+                            {
+                                i.quantity -= t.quantity;
+                            }
+                            else if (t.type == "OUT")
+                            {
+                                i.quantity += t.quantity;
+                            }
+                            ingredientBL.UpdateIngredient(i);
+
+                            // Cập nhật quantity trong thông tin chi tiết
+                            txtQuantity.Text = i.quantity.ToString();
+                            UpdateStatus();
+
                             MessageBox.Show("Transaction has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            DeleteTransaction?.Invoke();
+                            UpdateIngredient?.Invoke();
+
                             LoadTransaction();
                         }
                         catch (SqlException ex)
@@ -222,12 +249,46 @@ namespace PresentationLayer
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            usUpdateTransaction1.Visible = true;
 
+            usUpdateTransaction1.SetTransactionType("IN");
+            usUpdateTransaction1.SetFixedIngredient(txtID.Text);
+
+            usUpdateTransaction1.RefreshIngredients();
+
+            usUpdateTransaction1.TransactionCreated += () => {
+                LoadTransaction();
+
+                // Cập nhật quantity
+                var updatedIngredient = ingredientBL.GetIngredient(txtID.Text);
+                txtQuantity.Text = updatedIngredient.quantity.ToString();
+                UpdateStatus();
+                UpdateIngredient?.Invoke();
+            };
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            usUpdateTransaction1.Visible = true;
 
+            usUpdateTransaction1.SetTransactionType("OUT");
+            usUpdateTransaction1.SetFixedIngredient(txtID.Text);
+
+            usUpdateTransaction1.RefreshIngredients();
+
+            usUpdateTransaction1.TransactionCreated += () => {
+                LoadTransaction();
+
+                var updatedIngredient = ingredientBL.GetIngredient(txtID.Text);
+                txtQuantity.Text = updatedIngredient.quantity.ToString();
+                UpdateStatus();
+                UpdateIngredient?.Invoke();
+            };
+        }
+
+        private void dtpEXP_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateStatus();
         }
     }
 }

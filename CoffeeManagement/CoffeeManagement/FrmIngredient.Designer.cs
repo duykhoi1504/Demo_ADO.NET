@@ -74,6 +74,7 @@
             pictureBox1 = new PictureBox();
             btnAllProds = new Button();
             usIngredientDetail1 = new USIngredientDetail();
+            usUpdateTransaction1 = new USUpdateTransaction();
             ((System.ComponentModel.ISupportInitialize)dgvIngredients).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -584,10 +585,19 @@
             // usIngredientDetail1
             // 
             usIngredientDetail1.BackColor = Color.SeaGreen;
+            usIngredientDetail1.BorderStyle = BorderStyle.Fixed3D;
             usIngredientDetail1.Location = new Point(300, 5);
             usIngredientDetail1.Name = "usIngredientDetail1";
             usIngredientDetail1.Size = new Size(918, 918);
             usIngredientDetail1.TabIndex = 10;
+            // 
+            // usUpdateTransaction1
+            // 
+            usUpdateTransaction1.BackColor = Color.SeaGreen;
+            usUpdateTransaction1.Location = new Point(350, 250);
+            usUpdateTransaction1.Name = "usUpdateTransaction1";
+            usUpdateTransaction1.Size = new Size(788, 425);
+            usUpdateTransaction1.TabIndex = 11;
             // 
             // FrmIngredient
             // 
@@ -595,6 +605,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1474, 929);
+            Controls.Add(usUpdateTransaction1);
             Controls.Add(usIngredientDetail1);
             Controls.Add(btnAllProds);
             Controls.Add(panel5);
@@ -605,6 +616,7 @@
             Controls.Add(dgvIngredients);
             Controls.Add(label1);
             Name = "FrmIngredient";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ingredients";
             Load += FrmIngredient_Load;
             ((System.ComponentModel.ISupportInitialize)dgvIngredients).EndInit();
@@ -668,5 +680,6 @@
         private PictureBox pictureBox1;
         private Button btnAllProds;
         private USIngredientDetail usIngredientDetail1;
+        private USUpdateTransaction usUpdateTransaction1;
     }
 }

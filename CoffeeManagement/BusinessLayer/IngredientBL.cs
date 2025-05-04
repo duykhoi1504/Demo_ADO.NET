@@ -30,6 +30,18 @@ namespace BusinessLayer
             }
         }
 
+        public Ingredient GetIngredient(string id)
+        {
+            try
+            {
+                return ingredientDL.GetIngredient(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public int AddIngredient(Ingredient i)
         {
             try

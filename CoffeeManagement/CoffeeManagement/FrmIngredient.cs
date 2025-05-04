@@ -39,7 +39,7 @@ namespace PresentationLayer
 
             if (txtID.Text.Length > 10)
             {
-                MessageBox.Show("Password cannot be more than 10 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingredient ID cannot be more than 10 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -53,6 +53,12 @@ namespace PresentationLayer
             if (cbSupplier.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select a supplier before adding the ingredient.", "Missing Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (dtpEXP.Value < DateTime.Now.Date)
+            {
+                MessageBox.Show("The ingredient expired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -224,24 +230,37 @@ namespace PresentationLayer
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-
+            usUpdateTransaction1.Visible = true;
+            usUpdateTransaction1.SetTransactionType("IN");
+            usUpdateTransaction1.RefreshIngredients();
+            usUpdateTransaction1.TransactionCreated += () => LoadIngredient();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-
+            usUpdateTransaction1.Visible = true;
+            usUpdateTransaction1.SetTransactionType("OUT");
+            usUpdateTransaction1.RefreshIngredients();
+            usUpdateTransaction1.TransactionCreated += () => LoadIngredient();
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-
+            FrmAllTransaction frmAllTransaction = new FrmAllTransaction();
+            frmAllTransaction.ShowDialog();
         }
 
         private void FrmIngredient_Load(object sender, EventArgs e)
         {
             CustomDataGridView(dgvIngredients);
+
             LoadIngredient();
             LoadSupplier();
+
+            usIngredientDetail1.DeleteTransaction += () => LoadIngredient();
+            usIngredientDetail1.UpdateIngredient += () => LoadIngredient();
+
+            usUpdateTransaction1.TransactionCreated += () => LoadIngredient();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
