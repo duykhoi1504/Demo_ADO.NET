@@ -36,17 +36,26 @@ namespace PresentationLayer
 
         private void FrmAllTransaction_Load(object sender, EventArgs e)
         {
+            dgvTransaction.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvTransaction.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvTransaction.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             LoadTransaction();
         }
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-
+            usUpdateTransaction1.Visible = true;
+            usUpdateTransaction1.SetTransactionType("IN");
+            usUpdateTransaction1.RefreshIngredients();
+            usUpdateTransaction1.TransactionCreated += () => LoadTransaction();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-
+            usUpdateTransaction1.Visible = true;
+            usUpdateTransaction1.SetTransactionType("OUT");
+            usUpdateTransaction1.RefreshIngredients();
+            usUpdateTransaction1.TransactionCreated += () => LoadTransaction();
         }
     }
 }

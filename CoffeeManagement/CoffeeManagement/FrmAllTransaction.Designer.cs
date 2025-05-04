@@ -38,6 +38,7 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             label1 = new Label();
+            usUpdateTransaction1 = new USUpdateTransaction();
             ((System.ComponentModel.ISupportInitialize)dgvTransaction).BeginInit();
             SuspendLayout();
             // 
@@ -137,12 +138,21 @@
             label1.TabIndex = 79;
             label1.Text = "All Inventory Transaction";
             // 
+            // usUpdateTransaction1
+            // 
+            usUpdateTransaction1.BackColor = Color.SeaGreen;
+            usUpdateTransaction1.Location = new Point(250, 150);
+            usUpdateTransaction1.Name = "usUpdateTransaction1";
+            usUpdateTransaction1.Size = new Size(788, 425);
+            usUpdateTransaction1.TabIndex = 83;
+            // 
             // FrmAllTransaction
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1287, 739);
+            Controls.Add(usUpdateTransaction1);
             Controls.Add(btnExport);
             Controls.Add(btnImport);
             Controls.Add(dgvTransaction);
@@ -167,5 +177,6 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private Label label1;
+        private USUpdateTransaction usUpdateTransaction1;
     }
 }

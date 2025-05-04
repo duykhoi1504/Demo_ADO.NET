@@ -68,7 +68,7 @@ namespace DataLayer
 
         public int UpdateIngredient(Ingredient i)
         {
-            string sql = "GetStatsByProduct";
+            string sql = "uspUpdateIngredient";
 
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@id", i.id));
@@ -89,8 +89,27 @@ namespace DataLayer
             }
         }
 
+        public bool HasTransaction(string id)
+        {
+            string sql = "SELECT COUNT(*) FROM InventoryTransaction WHERE IngredientID = '" + id + "'";
+
+            try
+            {
+                return ((int)(MyExecuteScalar(sql, CommandType.Text)) > 0);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public int DeleteIngredient(string id)
         {
+            if (HasTransaction(id))
+            {
+                throw new Exception("Cannot delete ingredient that have transaction.");
+            }
+
             string sql = "DELETE FROM Ingredient WHERE id = '" + id + "'";
 
             try
@@ -182,6 +201,40 @@ namespace DataLayer
                 }
                 reader.Close();
                 return ingredients;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
+        public Ingredient GetIngredient(string id)
+        {
+            string sql = "SELECT * FROM Ingredient WHERE id = '" + id + "'";
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
+
+                if (reader.Read())
+                {
+                    string name = reader["name"].ToString();
+                    string unit = reader["unit"].ToString();
+                    int quantity = int.Parse(reader["quantity"].ToString());
+                    DateTime expirationDate = (DateTime)reader["expirationDate"];
+                    string status = reader["status"].ToString();
+                    string supplierID = reader["supplierID"].ToString();
+
+                    return new Ingredient(id, name, unit, quantity, expirationDate, status, supplierID);
+                }
+
+                reader.Close();
+                return null;
             }
             catch (SqlException ex)
             {

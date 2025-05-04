@@ -52,15 +52,16 @@
             txtID = new TextBox();
             label8 = new Label();
             dgvTransaction = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
+            Id = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             lbClose = new Label();
             btnImport = new Button();
             btnExport = new Button();
+            usUpdateTransaction1 = new USUpdateTransaction();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTransaction).BeginInit();
             SuspendLayout();
@@ -81,7 +82,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(266, 424);
+            label2.Location = new Point(266, 406);
             label2.Name = "label2";
             label2.Size = new Size(405, 45);
             label2.TabIndex = 71;
@@ -113,7 +114,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(19, 68);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(876, 344);
+            groupBox1.Size = new Size(876, 325);
             groupBox1.TabIndex = 72;
             groupBox1.TabStop = false;
             groupBox1.Text = "Ingredient Details";
@@ -123,7 +124,7 @@
             btnCancel.BackColor = Color.White;
             btnCancel.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.SeaGreen;
-            btnCancel.Location = new Point(466, 255);
+            btnCancel.Location = new Point(466, 243);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(130, 60);
             btnCancel.TabIndex = 70;
@@ -136,7 +137,7 @@
             btnAdd.BackColor = Color.White;
             btnAdd.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdd.ForeColor = Color.SeaGreen;
-            btnAdd.Location = new Point(279, 255);
+            btnAdd.Location = new Point(279, 243);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(137, 60);
             btnAdd.TabIndex = 69;
@@ -244,6 +245,7 @@
             dtpEXP.Name = "dtpEXP";
             dtpEXP.Size = new Size(193, 39);
             dtpEXP.TabIndex = 57;
+            dtpEXP.ValueChanged += dtpEXP_ValueChanged;
             // 
             // txtName
             // 
@@ -332,21 +334,21 @@
             // 
             dgvTransaction.BackgroundColor = Color.SeaGreen;
             dgvTransaction.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransaction.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dgvTransaction.Location = new Point(19, 484);
+            dgvTransaction.Columns.AddRange(new DataGridViewColumn[] { Id, Column2, Column3, Column4, Date, Column6 });
+            dgvTransaction.Location = new Point(19, 459);
             dgvTransaction.Name = "dgvTransaction";
             dgvTransaction.RowHeadersWidth = 82;
-            dgvTransaction.Size = new Size(876, 411);
+            dgvTransaction.Size = new Size(876, 359);
             dgvTransaction.TabIndex = 73;
             dgvTransaction.CellContentClick += dgvTransaction_CellContentClick;
             // 
-            // Column1
+            // Id
             // 
-            Column1.DataPropertyName = "id";
-            Column1.HeaderText = "ID";
-            Column1.MinimumWidth = 10;
-            Column1.Name = "Column1";
-            Column1.Width = 200;
+            Id.DataPropertyName = "id";
+            Id.HeaderText = "ID";
+            Id.MinimumWidth = 10;
+            Id.Name = "Id";
+            Id.Width = 200;
             // 
             // Column2
             // 
@@ -372,13 +374,13 @@
             Column4.Name = "Column4";
             Column4.Width = 200;
             // 
-            // Column5
+            // Date
             // 
-            Column5.DataPropertyName = "date";
-            Column5.HeaderText = "Date";
-            Column5.MinimumWidth = 10;
-            Column5.Name = "Column5";
-            Column5.Width = 200;
+            Date.DataPropertyName = "date";
+            Date.HeaderText = "Date";
+            Date.MinimumWidth = 10;
+            Date.Name = "Date";
+            Date.Width = 200;
             // 
             // Column6
             // 
@@ -405,7 +407,7 @@
             btnImport.BackColor = Color.White;
             btnImport.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnImport.ForeColor = Color.SeaGreen;
-            btnImport.Location = new Point(298, 913);
+            btnImport.Location = new Point(298, 838);
             btnImport.Name = "btnImport";
             btnImport.Size = new Size(137, 60);
             btnImport.TabIndex = 75;
@@ -418,7 +420,7 @@
             btnExport.BackColor = Color.White;
             btnExport.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExport.ForeColor = Color.SeaGreen;
-            btnExport.Location = new Point(485, 913);
+            btnExport.Location = new Point(485, 838);
             btnExport.Name = "btnExport";
             btnExport.Size = new Size(130, 60);
             btnExport.TabIndex = 76;
@@ -426,12 +428,21 @@
             btnExport.UseVisualStyleBackColor = false;
             btnExport.Click += btnExport_Click;
             // 
+            // usUpdateTransaction1
+            // 
+            usUpdateTransaction1.BackColor = Color.SeaGreen;
+            usUpdateTransaction1.Location = new Point(70, 250);
+            usUpdateTransaction1.Name = "usUpdateTransaction1";
+            usUpdateTransaction1.Size = new Size(788, 425);
+            usUpdateTransaction1.TabIndex = 77;
+            // 
             // USIngredientDetail
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             BorderStyle = BorderStyle.Fixed3D;
+            Controls.Add(usUpdateTransaction1);
             Controls.Add(btnExport);
             Controls.Add(btnImport);
             Controls.Add(lbClose);
@@ -440,7 +451,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "USIngredientDetail";
-            Size = new Size(914, 987);
+            Size = new Size(914, 916);
             Load += USIngredientDetail_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -476,13 +487,14 @@
         private Label label8;
         private DataGridView dgvTransaction;
         private Label lbClose;
-        private DataGridViewTextBoxColumn Column1;
+        private Button btnImport;
+        private Button btnExport;
+        private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Date;
         private DataGridViewTextBoxColumn Column6;
-        private Button btnImport;
-        private Button btnExport;
+        private USUpdateTransaction usUpdateTransaction1;
     }
 }

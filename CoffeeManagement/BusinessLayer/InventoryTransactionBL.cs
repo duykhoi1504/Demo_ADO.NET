@@ -31,6 +31,18 @@ namespace BusinessLayer
             }
         }
 
+        public InventoryTransaction GetTransaction(int id)
+        {
+            try
+            {
+                return inventoryTransactionDL.GetTransaction(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public int AddTransaction(InventoryTransaction t)
         {
             try
@@ -60,6 +72,18 @@ namespace BusinessLayer
             try
             {
                 return inventoryTransactionDL.DeleteTransaction(id);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<InventoryTransaction> GetTransactionsByIngredient(string ingredientID)
+        {
+            try
+            {
+                return inventoryTransactionDL.GetTransactionsByIngredient(ingredientID);
             }
             catch (SqlException ex)
             {
