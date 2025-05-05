@@ -110,15 +110,22 @@ namespace PresentationLayer
 
         public void LoadTransaction()
         {
-            try
-            {
-                var f = inventoryTransactionBL.GetTransactionsByIngredient(txtID.Text);
-                dgvTransaction.DataSource = f;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Failed to load transaction: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            var allTransactions = inventoryTransactionBL.GetTransactions();
+
+            string ingredientID = txtID.Text;
+            allTransactions = allTransactions.Where(t => t.ingredientID == ingredientID).ToList();
+
+            dgvTransaction.DataSource = allTransactions;
+
+            //try
+            //{
+            //    var f = inventoryTransactionBL.GetTransactionsByIngredient(txtID.Text);
+            //    dgvTransaction.DataSource = f;
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Failed to load transaction: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void USIngredientDetail_Load(object sender, EventArgs e)
