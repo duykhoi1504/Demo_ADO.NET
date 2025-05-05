@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using TransferObject;
 using BusinessLayer;
 using System.Data.SqlClient;
+using DataLayer;
+using System.Data.Common;
 
 namespace PresentationLayer
 {
@@ -53,15 +55,19 @@ namespace PresentationLayer
 
         private void LoadProductByCategory(int categoryID)
         {
-            try
-            {
-                MessageBox.Show($"Category ID: {categoryID}");
-                dgvProducts.DataSource = productBL.GetProductsByCategory(categoryID);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            var allProducts = productBL.GetProducts();
+            allProducts = allProducts.Where(p => p.categoryID == categoryID).ToList();
+            dgvProducts.DataSource = allProducts;
+
+            //try
+            //{
+            //    MessageBox.Show($"Category ID: {categoryID}");
+            //    dgvProducts.DataSource = productBL.GetProductsByCategory(categoryID);
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void LoadProduct()

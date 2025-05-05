@@ -194,17 +194,22 @@ namespace PresentationLayer
                 return;
             }
 
-            string supplierID = cbFilterbySup.SelectedValue.ToString();
+            var allIngredients = ingredientBL.GetIngredients();
 
-            try
-            {
-                var f = ingredientBL.GetIngredientsBySupplier(supplierID);
-                dgvIngredients.DataSource = f;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Failed to filter by supplier: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string supId = cbFilterbySup.SelectedValue.ToString();
+            allIngredients = allIngredients.Where(i => i.supplierID == supId).ToList();
+
+            dgvIngredients.DataSource = allIngredients;
+
+            //try
+            //{
+            //    var f = ingredientBL.GetIngredientsBySupplier(supID);
+            //    dgvIngredients.DataSource = f;
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Failed to filter by supplier: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnFilterbyStatus_Click(object sender, EventArgs e)
@@ -215,17 +220,22 @@ namespace PresentationLayer
                 return;
             }
 
-            string status = cbFilterbyStatus.SelectedItem.ToString();
+            var allIngredients = ingredientBL.GetIngredients();
 
-            try
-            {
-                var f = ingredientBL.GetIngredientsByStatus(status);
-                dgvIngredients.DataSource = f;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Failed to filter by status: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string status = cbFilterbyStatus.SelectedItem.ToString();
+            allIngredients = allIngredients.Where(i => i.status == status).ToList();
+
+            dgvIngredients.DataSource = allIngredients;
+
+            //try
+            //{
+            //    var f = ingredientBL.GetIngredientsByStatus(status);
+            //    dgvIngredients.DataSource = f;
+            //}
+            //catch (SqlException ex)
+            //{
+            //    MessageBox.Show("Failed to filter by status: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -268,7 +278,7 @@ namespace PresentationLayer
             string s = txtSearch.Text.ToLower(); //Lấy giá trị tìm kiếm và chuyển thành chữ thường
 
             var allIngs = ingredientBL.GetIngredients();
-            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList(); //Sử dụng LINQ để lọc nguyên liệu theo tên
+            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList();
 
             dgvIngredients.DataSource = sI; //Cập nhật DataGridView với danh sách đã lọc
         }
