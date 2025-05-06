@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnExport = new Button();
-            btnImport = new Button();
             dgvTransaction = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -38,45 +36,18 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             label1 = new Label();
-            usUpdateTransaction1 = new USUpdateTransaction();
             ((System.ComponentModel.ISupportInitialize)dgvTransaction).BeginInit();
             SuspendLayout();
-            // 
-            // btnExport
-            // 
-            btnExport.BackColor = Color.White;
-            btnExport.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExport.ForeColor = Color.SeaGreen;
-            btnExport.Location = new Point(720, 650);
-            btnExport.Name = "btnExport";
-            btnExport.Size = new Size(130, 60);
-            btnExport.TabIndex = 82;
-            btnExport.Text = "Export";
-            btnExport.UseVisualStyleBackColor = false;
-            btnExport.Click += btnExport_Click;
-            // 
-            // btnImport
-            // 
-            btnImport.BackColor = Color.White;
-            btnImport.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnImport.ForeColor = Color.SeaGreen;
-            btnImport.Location = new Point(436, 650);
-            btnImport.Name = "btnImport";
-            btnImport.Size = new Size(137, 60);
-            btnImport.TabIndex = 81;
-            btnImport.Text = "Import";
-            btnImport.UseVisualStyleBackColor = false;
-            btnImport.Click += btnImport_Click;
             // 
             // dgvTransaction
             // 
             dgvTransaction.BackgroundColor = Color.SeaGreen;
             dgvTransaction.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTransaction.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dgvTransaction.Location = new Point(17, 87);
+            dgvTransaction.Location = new Point(17, 88);
             dgvTransaction.Name = "dgvTransaction";
             dgvTransaction.RowHeadersWidth = 82;
-            dgvTransaction.Size = new Size(1253, 537);
+            dgvTransaction.Size = new Size(1253, 611);
             dgvTransaction.TabIndex = 80;
             // 
             // Column1
@@ -138,23 +109,12 @@
             label1.TabIndex = 79;
             label1.Text = "All Inventory Transaction";
             // 
-            // usUpdateTransaction1
-            // 
-            usUpdateTransaction1.BackColor = Color.SeaGreen;
-            usUpdateTransaction1.Location = new Point(250, 150);
-            usUpdateTransaction1.Name = "usUpdateTransaction1";
-            usUpdateTransaction1.Size = new Size(788, 425);
-            usUpdateTransaction1.TabIndex = 83;
-            // 
             // FrmAllTransaction
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(1287, 739);
-            Controls.Add(usUpdateTransaction1);
-            Controls.Add(btnExport);
-            Controls.Add(btnImport);
+            ClientSize = new Size(1287, 718);
             Controls.Add(dgvTransaction);
             Controls.Add(label1);
             Name = "FrmAllTransaction";
@@ -166,9 +126,6 @@
         }
 
         #endregion
-
-        private Button btnExport;
-        private Button btnImport;
         private DataGridView dgvTransaction;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -177,6 +134,5 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private Label label1;
-        private USUpdateTransaction usUpdateTransaction1;
     }
 }

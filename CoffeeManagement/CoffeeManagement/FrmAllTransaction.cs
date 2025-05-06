@@ -41,21 +41,5 @@ namespace PresentationLayer
             dgvTransaction.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             LoadTransaction();
         }
-
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            usUpdateTransaction1.Visible = true;
-            usUpdateTransaction1.SetTransactionType("IN");
-            usUpdateTransaction1.RefreshIngredients();
-            usUpdateTransaction1.TransactionCreated += () => LoadTransaction();
-        }
-
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            usUpdateTransaction1.Visible = true;
-            usUpdateTransaction1.SetTransactionType("OUT");
-            usUpdateTransaction1.RefreshIngredients();
-            usUpdateTransaction1.TransactionCreated += () => LoadTransaction();
-        }
     }
 }
