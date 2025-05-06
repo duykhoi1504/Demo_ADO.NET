@@ -25,13 +25,14 @@ namespace TransferObject
         //if item[?] == order.ID
         public List<Item> Items { get; set; }
         public Order() { }
-        public Order( float totalPrice,float counterfeit, string paymentMethod, int accountID,List<Item>items=null)
+        public Order( float totalPrice,float counterfeit, string paymentMethod,string couponID, int accountID,List<Item>items=null)
         {
             this.id = id;
             //this.createdDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             this.counterfeit = counterfeit;
             this.totalPrice = totalPrice;
             this.paymentMethod = paymentMethod;
+            this.couponID = couponID;
             this.change = UpdateChange();
             this.accountID = accountID;
             this.Items = new List<Item>(); // Khởi tạo danh sách Items

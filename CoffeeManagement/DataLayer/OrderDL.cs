@@ -97,8 +97,7 @@ namespace DataLayer
                 new SqlParameter("@Counterfeit", order.counterfeit),
                 new SqlParameter("@Change", order.change),
                 new SqlParameter("@PaymentMethod", order.paymentMethod),
-                //new SqlParameter("@CouponID", (object)order.CouponID ?? DBNull.Value),
-                new SqlParameter("@CouponID", "CP002"),
+                new SqlParameter("@CouponID", order.couponID ?? (object)DBNull.Value),
 
                 new SqlParameter("@AccountID", order.accountID) 
             };
@@ -170,7 +169,7 @@ namespace DataLayer
                 new SqlParameter("@Counterfeit", order.counterfeit),
                 new SqlParameter("@Change", order.change),
                 new SqlParameter("@PaymentMethod", order.paymentMethod),
-                new SqlParameter("@CouponID", "CP002"), // Sử dụng giá trị null nếu không có coupon
+                new SqlParameter("@CouponID", order.couponID ?? (object)DBNull.Value), // Sử dụng giá trị null nếu không có coupon
                 new SqlParameter("@AccountID", order.accountID),
                 new SqlParameter("@OrderID", order.id) // ID của đơn hàng cần cập nhật
             };

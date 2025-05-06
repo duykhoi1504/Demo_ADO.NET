@@ -21,8 +21,9 @@ namespace PresentationLayer
         List<CartSlot> cartSlots;
         OrderBL orderBL;
         ItemBL ItemBL;
+        CouponBL couponBL;
         float totalPrice = 0;
-
+        float tempTotalPrice = 0; // Lưu giá trị tổng ban đầu
 
 
         public FrmCartInfo(List<CartSlot> cartSlots, float totalPrice)
@@ -30,11 +31,14 @@ namespace PresentationLayer
             InitializeComponent();
             orderBL = new OrderBL();
             ItemBL = new ItemBL();
+            couponBL = new CouponBL();
             this.cartSlots = cartSlots;
             this.totalPrice = totalPrice;
-            LoadPaymentMethod();
+            this.tempTotalPrice = totalPrice; // Lưu giá trị tổng ban đầu
+            LoadComBoxPaymentMethod();
+            LoadComBoxCoupon();
         }
-        private void LoadPaymentMethod()
+        private void LoadComBoxPaymentMethod()
         {
             cbPaymentMethod.Items.Clear();
 
@@ -43,9 +47,32 @@ namespace PresentationLayer
             {
                 cbPaymentMethod.Items.Add(a.ToString());
             }
-            cbPaymentMethod.SelectedIndex = 0;
+            if (cbPaymentMethod.Items.Count > 0)
+            {
+                cbPaymentMethod.SelectedIndex = 0; // Chọn item đầu tiên nếu có
+            }
         }
-
+        private void LoadComBoxCoupon()
+        {
+            cbCoupon.Items.Clear();
+            List<Coupon> coupons = couponBL.GetCoupons();
+            foreach (var coupon in coupons)
+            {
+                cbCoupon.Items.Add(coupon);
+            }
+            //if (cbCoupon.Items.Count > 0)
+            //{
+            //    cbCoupon.SelectedIndex = 0; // Chọn item đầu tiên nếu có
+            //}
+        }
+        private string GetSelectedCouponID()
+        {
+            if (cbCoupon.SelectedItem is Coupon coupon)
+            {
+                return coupon.id; // Trả về ID của coupon đã chọn
+            }
+            return null; // Nếu không có gì được chọn
+        }
         private void FrmCartInfo_Load(object sender, EventArgs e)
         {
 
@@ -110,11 +137,11 @@ namespace PresentationLayer
             }
             try
             {
-                Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, Form1.Instance.account.id);
+                Order order = new Order(totalPrice, Counterfeit, cbPaymentMethod.Text, GetSelectedCouponID(), Form1.Instance.account.id);
 
                 int newOrderId = orderBL.AddOrder(order);
                 //gắn id mới vào order
-                
+
                 foreach (var slot in cartSlots)
                 {
                     Item item = new Item(1, newOrderId, slot.product.id, slot.Quantity, slot.totalPrice);
@@ -148,5 +175,35 @@ namespace PresentationLayer
 
         }
 
+        private void cbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void cbCoupon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            totalPrice = tempTotalPrice; 
+            if (cbCoupon.SelectedItem is Coupon coupon) // Kiểm tra xem có coupon được chọn không
+            {
+
+                if (coupon.value > totalPrice) // Kiểm tra giá trị coupon
+                {
+                    MessageBox.Show("Mã giảm giá không hợp lệ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbCoupon.SelectedIndex = -1; // Đặt lại lựa chọn
+                    lbLastTotalPrice.Text = tempTotalPrice.ToString(); // Khôi phục giá trị tổng
+                    totalPrice = tempTotalPrice; // Khôi phục giá trị tổng
+                    return;
+                }
+
+                // Cập nhật giá trị tổng sau khi áp dụng coupon
+                float newTotalPrice = totalPrice - coupon.value;
+                lbLastTotalPrice.Text = newTotalPrice.ToString();
+                 totalPrice = newTotalPrice; // Cập nhật giá trị tổng
+            }
+          
+        }
     }
 }

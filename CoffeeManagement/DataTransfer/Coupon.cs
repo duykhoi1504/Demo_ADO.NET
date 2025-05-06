@@ -17,5 +17,9 @@ namespace TransferObject
             this.description = description;
             this.value = value;
         }
+        public override string ToString() // Đảm bảo phương thức này được override
+        {
+            return id; // Trả về description để hiển thị trong ComboBox
+        }
     }
 }
