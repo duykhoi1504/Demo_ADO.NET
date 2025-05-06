@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datalayer\\workdaydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E5EAD01-21D9-4CA3-992E-6ED136E100F3}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\workdaydl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\businesslayer\\workdaybl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26722F2E-9151-40DB-8918-DE9F1353AE33}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\workdaybl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmcartinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -40,14 +44,14 @@
               "RelativeDocumentMoniker": "CoffeeManagement\\FrmCartInfo.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmCartInfo.cs",
               "RelativeToolTip": "CoffeeManagement\\FrmCartInfo.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHsAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAIBJwHsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T15:43:34.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WorkdayBL.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\BusinessLayer\\WorkdayBL.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\WorkdayBL.cs",
@@ -60,13 +64,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WorkdayDL.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\WorkdayDL.cs",
               "RelativeDocumentMoniker": "DataLayer\\WorkdayDL.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataLayer\\WorkdayDL.cs",
               "RelativeToolTip": "DataLayer\\WorkdayDL.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T15:22:55.402Z",
               "EditorCaption": ""
@@ -86,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FrmShiftRegister.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs",
               "RelativeDocumentMoniker": "CoffeeManagement\\FrmShiftRegister.cs",
               "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs",
               "RelativeToolTip": "CoffeeManagement\\FrmShiftRegister.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAAAHcAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T15:01:11.423Z",
               "EditorCaption": ""
