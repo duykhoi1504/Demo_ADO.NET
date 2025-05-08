@@ -18,7 +18,7 @@ namespace BusinessLayer
             supplierDL = new SupplierDL();
         }
 
-        public List<Supplier> GetSuppliers()
+        public List<Supplier> GetSuppliers(string id=null)
         {
             try
             {

@@ -49,13 +49,10 @@ namespace DataLayer
         public int AddWorkday(Workday wd    )
         {
             string sql = "AddWorkday";
-
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@AccountID", wd.accountID));
             parameters.Add(new SqlParameter("@ShiftID", wd.shiftID));
             parameters.Add(new SqlParameter("@Date", wd.date));
-
-
             try
             {
                 return (MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters));
@@ -81,6 +78,28 @@ namespace DataLayer
                 throw ex;
             }
 
+        }
+        public float CalculateSalary(int accountID, int month,int year)
+        {
+            string sql = "CalSalaryByAccIDAndDate";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@accountID", accountID));
+            parameters.Add(new SqlParameter("@month", month));
+            parameters.Add(new SqlParameter("@year", year));
+
+            try
+            {
+                var result = MyExecuteScalar(sql, CommandType.StoredProcedure, parameters);
+                return Convert.ToSingle(result);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

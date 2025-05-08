@@ -176,4 +176,26 @@ END;
 GO
 
 
+--/////tính lương
+
+CREATE PROC CalSalaryByAccIDAndDate
+	@accountID INT ,
+    @month INT  ,
+	 @year INT 
+	 AS
+BEGIN
+SELECT 
+   
+    SUM(s.wage) AS totalSalary
+FROM 
+    Workday w
+JOIN 
+    Shift s ON w.shiftID = s.id
+WHERE 
+	w.accountID=@accountID
+    AND MONTH(w.date) = @month
+    AND YEAR(w.date) = @year
+    AND w.isChecked = 1
+END;
+GO
 

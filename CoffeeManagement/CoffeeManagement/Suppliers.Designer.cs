@@ -30,8 +30,9 @@
         {
             dataGridView1 = new DataGridView();
             AddSupllier = new Button();
-            addSupplier1 = new AddSupplier();
+            usp_addSupplier = new AddSupplier();
             Delete = new Button();
+            btn_update = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // AddSupllier
             // 
-            AddSupllier.Location = new Point(47, 284);
+            AddSupllier.Location = new Point(46, 251);
             AddSupllier.Name = "AddSupllier";
             AddSupllier.Size = new Size(94, 29);
             AddSupllier.TabIndex = 1;
@@ -54,16 +55,18 @@
             AddSupllier.UseVisualStyleBackColor = true;
             AddSupllier.Click += AddSupllier_Click;
             // 
-            // addSupplier1
+            // usp_addSupplier
             // 
-            addSupplier1.Location = new Point(179, 95);
-            addSupplier1.Name = "addSupplier1";
-            addSupplier1.Size = new Size(463, 250);
-            addSupplier1.TabIndex = 2;
+            usp_addSupplier.BackColor = SystemColors.ActiveCaption;
+            usp_addSupplier.Location = new Point(355, 216);
+            usp_addSupplier.Name = "usp_addSupplier";
+            usp_addSupplier.Size = new Size(420, 244);
+            usp_addSupplier.TabIndex = 2;
+            usp_addSupplier.Load += usp_addSupplier_Load;
             // 
             // Delete
             // 
-            Delete.Location = new Point(162, 284);
+            Delete.Location = new Point(146, 251);
             Delete.Name = "Delete";
             Delete.Size = new Size(94, 29);
             Delete.TabIndex = 3;
@@ -71,13 +74,25 @@
             Delete.UseVisualStyleBackColor = true;
             Delete.Click += Delete_Click;
             // 
+            // btn_update
+            // 
+            btn_update.Location = new Point(255, 251);
+            btn_update.Name = "btn_update";
+            btn_update.Size = new Size(94, 29);
+            btn_update.TabIndex = 4;
+            btn_update.Text = "update";
+            btn_update.UseCompatibleTextRendering = true;
+            btn_update.UseVisualStyleBackColor = true;
+            btn_update.Click += btn_update_Click;
+            // 
             // Suppliers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(822, 491);
+            Controls.Add(btn_update);
             Controls.Add(Delete);
-            Controls.Add(addSupplier1);
+            Controls.Add(usp_addSupplier);
             Controls.Add(AddSupllier);
             Controls.Add(dataGridView1);
             Name = "Suppliers";
@@ -91,7 +106,8 @@
 
         private DataGridView dataGridView1;
         private Button AddSupllier;
-        private AddSupplier addSupplier1;
+        private AddSupplier usp_addSupplier;
         private Button Delete;
+        private Button btn_update;
     }
 }

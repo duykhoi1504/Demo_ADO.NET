@@ -27,7 +27,7 @@ namespace PresentationLayer
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
- 
+
             //AddSupplier.UpdateDataGridView += ResetDataGridView;
             try
             {
@@ -57,7 +57,7 @@ namespace PresentationLayer
 
         private void AddSupllier_Click(object sender, EventArgs e)
         {
-            addSupplier1.Visible = true;
+            usp_addSupplier.Visible = true;
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -91,6 +91,41 @@ namespace PresentationLayer
             }
         }
 
-       
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            
+
+            // Kiểm tra xem có hàng nào được chọn không
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy id từ hàng được chọn
+                string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
+
+                // Lấy nhà cung cấp dựa trên id
+                var suppliers = supplierBL.GetSuppliers(id);
+
+                // Kiểm tra xem có nhà cung cấp nào được tìm thấy không
+                if (suppliers.Count > 0)
+                {
+                    usp_addSupplier.Visible = true;
+
+                    Supplier s = suppliers[0];
+                    usp_addSupplier.loadSuplierByID(s.id, s.name, s.address);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy nhà cung cấp với ID đã chọn.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một nhà cung cấp để cập nhật.");
+            }
+        }
+
+        private void usp_addSupplier_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 } 

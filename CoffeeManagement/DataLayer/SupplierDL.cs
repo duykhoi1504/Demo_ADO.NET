@@ -10,21 +10,33 @@ namespace DataLayer
 {
     public class SupplierDL : DataProvider
     {
-        public List<Supplier> GetSuppliers()
+        public List<Supplier> GetSuppliers( string id=null)
         {
-            string sql = "SELECT * FROM Supplier";
-            string id, name, address;
+            // Nếu id không được cung cấp, chọn tất cả
+            string sql= "";
+            if (string.IsNullOrEmpty(id))
+            {
+                sql = "SELECT * FROM Supplier";
+            }
+            else
+            {
+                sql = "SELECT * FROM Supplier WHERE id = '@id'";
+            }
+            string ids, name, address;
+            
             List<Supplier> suppliers = new List<Supplier>();
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@id", id));
             try
             {
                 Connect();
                 SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
-                    id = reader[0].ToString();
+                    ids = reader[0].ToString();
                     name = reader["name"].ToString();
                     address = reader[2].ToString();
-                    Supplier s = new Supplier(id, name, address);
+                    Supplier s = new Supplier(ids, name, address);
                     suppliers.Add(s);
                 }
                 reader.Close();

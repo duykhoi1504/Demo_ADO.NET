@@ -18,7 +18,7 @@ namespace PresentationLayer
         public event EventHandler SupplierAdded;
         //public static event Action UpdateDataGridView;
         public SupplierBL supplierBL;
-
+      
         public AddSupplier()
         {
             InitializeComponent();
@@ -27,9 +27,15 @@ namespace PresentationLayer
 
         private void AddSupplier_Load(object sender, EventArgs e)
         {
-            this.Visible = false;
-        }
 
+            this.Visible = false;
+
+        }
+        public void loadSuplierByID(string id,string name, string address) { 
+            txtId.Text = id;
+            txtName.Text = name;
+            txtAdress.Text = address;
+        }
         private void close_Click(object sender, EventArgs e)
         {
             this.Visible = false;

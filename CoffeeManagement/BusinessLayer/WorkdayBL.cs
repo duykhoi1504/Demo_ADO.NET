@@ -61,5 +61,22 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+        public float CalculateSalary(int accountID,int month,int year)
+        {
+            
+            try
+            {
+                return workdayDL.CalculateSalary(accountID,month ,year);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+
+        }
     }
 }

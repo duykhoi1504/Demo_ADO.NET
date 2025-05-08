@@ -67,7 +67,6 @@
             usUpdateAccount1 = new USUpdateAccount();
             btn_Checking = new Button();
             btn_Regis = new Button();
-            btn_ShowAllWorkDay = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAccounts).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -510,20 +509,6 @@
             btn_Regis.UseVisualStyleBackColor = false;
             btn_Regis.Click += btn_Regis_Click;
             // 
-            // btn_ShowAllWorkDay
-            // 
-            btn_ShowAllWorkDay.BackColor = Color.White;
-            btn_ShowAllWorkDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_ShowAllWorkDay.ForeColor = Color.SeaGreen;
-            btn_ShowAllWorkDay.Location = new Point(614, 367);
-            btn_ShowAllWorkDay.Margin = new Padding(2);
-            btn_ShowAllWorkDay.Name = "btn_ShowAllWorkDay";
-            btn_ShowAllWorkDay.Size = new Size(272, 40);
-            btn_ShowAllWorkDay.TabIndex = 21;
-            btn_ShowAllWorkDay.Text = "Shift List";
-            btn_ShowAllWorkDay.UseVisualStyleBackColor = false;
-            btn_ShowAllWorkDay.Click += btn_ShowAllWorkDay_Click;
-            // 
             // FrmAccount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -534,7 +519,6 @@
             Controls.Add(groupBox1);
             Controls.Add(dgvAccounts);
             Controls.Add(label1);
-            Controls.Add(btn_ShowAllWorkDay);
             Controls.Add(btn_Regis);
             Controls.Add(btn_Checking);
             Margin = new Padding(2);
@@ -590,6 +574,5 @@
         private USUpdateAccount usUpdateAccount1;
         private Button btn_Checking;
         private Button btn_Regis;
-        private Button btn_ShowAllWorkDay;
     }
 }
