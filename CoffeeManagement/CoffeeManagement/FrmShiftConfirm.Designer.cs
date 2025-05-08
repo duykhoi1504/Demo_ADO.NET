@@ -74,6 +74,7 @@
             dgv_Shift.RowHeadersWidth = 51;
             dgv_Shift.Size = new Size(782, 309);
             dgv_Shift.TabIndex = 6;
+            dgv_Shift.CellContentClick += dgv_Shift_CellContentClick;
             // 
             // panel1
             // 

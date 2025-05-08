@@ -100,6 +100,7 @@ namespace PresentationLayer
 
         private void cb_Staff_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(cb_Staff.SelectedItem == null ) return;
             account = Accounts.FirstOrDefault(a => a.fullName == cb_Staff.SelectedItem.ToString());
         }
 
@@ -138,6 +139,9 @@ namespace PresentationLayer
                 pn_ShiftItems.Controls.Clear();
             }
             catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi khi them ca: " + ex.Message);
+            }catch(Exception ex)
             {
                 MessageBox.Show("Lỗi khi them ca: " + ex.Message);
             }

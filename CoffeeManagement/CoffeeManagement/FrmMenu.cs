@@ -82,7 +82,6 @@ namespace PresentationLayer
                     return;
                 }
             }
-
         }
 
         private void UpdateProdCart()

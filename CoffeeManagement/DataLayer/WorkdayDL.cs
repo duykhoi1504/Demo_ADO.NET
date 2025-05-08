@@ -6,12 +6,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TransferObject;
+using System.Net;
+using System.Xml.Linq;
 
 namespace DataLayer
 {
-    public class WorkdayDL:DataProvider
+    public class WorkdayDL : DataProvider
     {
-        public int AddWorkday(Workday wd)
+        public List<Workday> GetAllWorkdays(int accountID)
+        {
+            //string sql = "GetWorkDayByAccountID";
+            string sql = "SELECT * FROM Workday";
+            int shiftID =0;
+            List<Workday> workdays = new List<Workday>();
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@AccountID", accountID));
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text,parameters);
+                while (reader.Read())
+                {
+                    Workday s = new Workday();
+                    s.date = DateTime.Parse(reader["date"].ToString()) ;
+                    s.shiftID = int.Parse(reader["shiftID"].ToString());
+
+                    s.accountID = int.Parse(reader["accountID"].ToString());
+                    s.isChecked = reader.GetBoolean(reader.GetOrdinal("isChecked")); // Use GetBoolean for the BIT type
+                    workdays.Add(s);
+                }
+                reader.Close();
+                return workdays;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public int AddWorkday(Workday wd    )
         {
             string sql = "AddWorkday";
 
@@ -19,7 +52,7 @@ namespace DataLayer
             parameters.Add(new SqlParameter("@AccountID", wd.accountID));
             parameters.Add(new SqlParameter("@ShiftID", wd.shiftID));
             parameters.Add(new SqlParameter("@Date", wd.date));
-    
+
 
             try
             {
@@ -30,6 +63,22 @@ namespace DataLayer
                 throw ex;
             }
         }
+        public int UpdateWorkday(DateTime date,bool isChecked)
+        {
+            string sql = "UpdateWorkday";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@date",date));
+            parameters.Add(new SqlParameter("@isChecked",isChecked));
 
+            try
+            {
+                return (MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

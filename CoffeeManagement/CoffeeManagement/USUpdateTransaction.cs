@@ -21,8 +21,8 @@ namespace PresentationLayer
 
         public event Action TransactionCreated;
 
-        private string lockedIngredientID = null;
-        private bool selectionLocked = false;
+        //private string lockedIngredientID = null;
+        //private bool selectionLocked = false;
         private string fixedIngredientId = null;
 
         public USUpdateTransaction()

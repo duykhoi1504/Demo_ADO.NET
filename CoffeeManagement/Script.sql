@@ -149,3 +149,28 @@ BEGIN
     INSERT INTO Workday(accountID, shiftID, date)
     VALUES (@AccountID, @ShiftID, @Date);
 END;
+GO
+
+
+CREATE PROC UpdateWorkday
+
+    @date DATE,
+	@isChecked BIT
+AS
+BEGIN
+    UPDATE Workday
+	SET isChecked = @isChecked
+	WHERE date = @date;
+END;
+GO
+
+CREATE PROC GetWorkDayByAccountID
+    @AccountID int
+AS
+BEGIN
+SELECT date,s.name,s.time,w.accountID, w.isChecked
+from Workday w
+JOIN Shift s on w.shiftID = s.id
+Where w.accountID=@AccountID
+END;
+GO
