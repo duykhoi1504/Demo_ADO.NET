@@ -26,10 +26,7 @@ namespace BusinessLayer
             {
                 throw ex;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+       
         }
         public int AddWorkday(Workday wd)
         {

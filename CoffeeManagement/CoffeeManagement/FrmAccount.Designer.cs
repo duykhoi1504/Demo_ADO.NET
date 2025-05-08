@@ -522,6 +522,7 @@
             btn_ShowAllWorkDay.TabIndex = 21;
             btn_ShowAllWorkDay.Text = "Shift List";
             btn_ShowAllWorkDay.UseVisualStyleBackColor = false;
+            btn_ShowAllWorkDay.Click += btn_ShowAllWorkDay_Click;
             // 
             // FrmAccount
             // 

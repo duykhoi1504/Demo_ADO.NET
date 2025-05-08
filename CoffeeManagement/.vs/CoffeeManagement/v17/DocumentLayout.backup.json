@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\datatransfer\\workday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD4C4CD-9535-43E6-AEC0-C1AB988629BC}|DataTransfer\\TransferObject.csproj|solutionrelative:datatransfer\\workday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|c:\\users\\mr khoi\\documents\\github\\testnhanhkhoi\\demo_ado.net\\coffeemanagement\\coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4BFD6864-78D1-412C-941B-0282AEEC699A}|CoffeeManagement\\PresentationLayer.csproj|solutionrelative:coffeemanagement\\frmshiftregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmProducts.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmProducts.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\FrmProducts.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmProducts.cs",
-              "RelativeToolTip": "CoffeeManagement\\FrmProducts.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAAGoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:19:48.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Shift.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Shift.cs",
-              "RelativeDocumentMoniker": "DataTransfer\\Shift.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Shift.cs",
-              "RelativeToolTip": "DataTransfer\\Shift.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAqwA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:15:17.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Workday.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Workday.cs",
-              "RelativeDocumentMoniker": "DataTransfer\\Workday.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\DataTransfer\\Workday.cs",
-              "RelativeToolTip": "DataTransfer\\Workday.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:15:12.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmShiftConfirm.cs",
-              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftConfirm.cs",
-              "RelativeDocumentMoniker": "CoffeeManagement\\FrmShiftConfirm.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftConfirm.cs*",
-              "RelativeToolTip": "CoffeeManagement\\FrmShiftConfirm.cs*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAuwH0AAABLAAAAAAAAAA==",
+              "Title": "FrmShiftRegister.cs",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmShiftRegister.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs",
+              "RelativeToolTip": "CoffeeManagement\\FrmShiftRegister.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwDMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:14:12.685Z",
+              "WhenOpened": "2025-05-08T11:24:29.054Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmShiftRegister.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs",
+              "RelativeDocumentMoniker": "CoffeeManagement\\FrmShiftRegister.cs",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftRegister.cs [Design]",
+              "RelativeToolTip": "CoffeeManagement\\FrmShiftRegister.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:24:27.441Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmShiftConfirm.cs [Design]",
+              "Title": "FrmShiftConfirm.cs",
               "DocumentMoniker": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftConfirm.cs",
               "RelativeDocumentMoniker": "CoffeeManagement\\FrmShiftConfirm.cs",
-              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftConfirm.cs [Design]*",
-              "RelativeToolTip": "CoffeeManagement\\FrmShiftConfirm.cs [Design]*",
+              "ToolTip": "C:\\Users\\MR KHOI\\Documents\\GitHub\\TestNHanhKhoi\\Demo_ADO.NET\\CoffeeManagement\\CoffeeManagement\\FrmShiftConfirm.cs",
+              "RelativeToolTip": "CoffeeManagement\\FrmShiftConfirm.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T04:53:33.087Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-08T10:57:19.039Z",
+              "EditorCaption": ""
             }
           ]
         }

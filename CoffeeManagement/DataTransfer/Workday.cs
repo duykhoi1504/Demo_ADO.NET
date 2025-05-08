@@ -14,9 +14,9 @@ namespace TransferObject
         public bool isChecked { get; set; }
 
 
-        ///
-        //public string name { get; set; }
-        //public string time { get; set; }
+        
+        public string name { get; set; }
+        public string time { get; set; }
 
         public Workday() {
             this.isChecked = false;

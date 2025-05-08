@@ -200,5 +200,10 @@ namespace PresentationLayer
             Form1.Instance.AddForm(new FrmShiftConfirm());
 
         }
+
+        private void btn_ShowAllWorkDay_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.AddForm(new FrmWorkdayList());   
+        }
     }
 }

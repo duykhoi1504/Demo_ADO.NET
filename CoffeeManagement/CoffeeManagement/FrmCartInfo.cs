@@ -69,6 +69,7 @@ namespace PresentationLayer
         {
             if (cbCoupon.SelectedItem is Coupon coupon)
             {
+
                 return coupon.id; // Trả về ID của coupon đã chọn
             }
             return null; // Nếu không có gì được chọn

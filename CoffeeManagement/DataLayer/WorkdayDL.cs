@@ -13,11 +13,11 @@ namespace DataLayer
 {
     public class WorkdayDL : DataProvider
     {
+
         public List<Workday> GetAllWorkdays(int accountID)
         {
-            //string sql = "GetWorkDayByAccountID";
-            string sql = "SELECT * FROM Workday";
-            int shiftID =0;
+            string sql = "GetWorkDayByAccountID";
+            //string sql = "SELECT * FROM Workday";
             List<Workday> workdays = new List<Workday>();
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@AccountID", accountID));
@@ -25,12 +25,14 @@ namespace DataLayer
             try
             {
                 Connect();
-                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text,parameters);
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.StoredProcedure,parameters);
                 while (reader.Read())
                 {
                     Workday s = new Workday();
                     s.date = DateTime.Parse(reader["date"].ToString()) ;
-                    s.shiftID = int.Parse(reader["shiftID"].ToString());
+                    //s.shiftID = int.Parse(reader["shiftID"].ToString());
+                    s.name = reader["name"].ToString();
+                    s.time = reader["time"].ToString();
 
                     s.accountID = int.Parse(reader["accountID"].ToString());
                     s.isChecked = reader.GetBoolean(reader.GetOrdinal("isChecked")); // Use GetBoolean for the BIT type

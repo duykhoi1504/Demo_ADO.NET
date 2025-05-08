@@ -33,6 +33,7 @@
             label2 = new Label();
             dgv_Shift = new DataGridView();
             panel1 = new Panel();
+            cbStaff = new ComboBox();
             dt_DateStart = new DateTimePicker();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv_Shift).BeginInit();
@@ -56,6 +57,7 @@
             btn_SaveShift.TabIndex = 8;
             btn_SaveShift.Text = "Confirm";
             btn_SaveShift.UseVisualStyleBackColor = true;
+            btn_SaveShift.Click += btn_SaveShift_Click;
             // 
             // label2
             // 
@@ -78,6 +80,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(cbStaff);
             panel1.Controls.Add(dt_DateStart);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(6, 45);
@@ -85,9 +88,18 @@
             panel1.Size = new Size(782, 79);
             panel1.TabIndex = 5;
             // 
+            // cbStaff
+            // 
+            cbStaff.FormattingEnabled = true;
+            cbStaff.Location = new Point(622, 30);
+            cbStaff.Name = "cbStaff";
+            cbStaff.Size = new Size(151, 28);
+            cbStaff.TabIndex = 9;
+            cbStaff.SelectedIndexChanged += cbStaff_SelectedIndexChanged;
+            // 
             // dt_DateStart
             // 
-            dt_DateStart.Location = new Point(361, 36);
+            dt_DateStart.Location = new Point(230, 31);
             dt_DateStart.Name = "dt_DateStart";
             dt_DateStart.Size = new Size(250, 27);
             dt_DateStart.TabIndex = 1;
@@ -95,7 +107,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(137, 36);
+            label1.Location = new Point(6, 33);
             label1.Name = "label1";
             label1.Size = new Size(218, 20);
             label1.TabIndex = 0;
@@ -130,5 +142,6 @@
         private Panel panel1;
         private DateTimePicker dt_DateStart;
         private Label label1;
+        private ComboBox cbStaff;
     }
 }
