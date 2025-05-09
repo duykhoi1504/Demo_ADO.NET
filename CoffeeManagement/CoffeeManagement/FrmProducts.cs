@@ -111,7 +111,7 @@ namespace PresentationLayer
             dgv.Columns.Add(deleteColumn);
 
             //Custom cao, rộng các cột
-            dgv.RowTemplate.Height = 200;
+            dgv.RowTemplate.Height = 100;
             dgv.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgv.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv.Columns["Image"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

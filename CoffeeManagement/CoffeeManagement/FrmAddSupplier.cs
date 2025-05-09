@@ -13,32 +13,16 @@ using TransferObject;
 
 namespace PresentationLayer
 {
-    public partial class AddSupplier : UserControl
+    public partial class FrmAddSupplier : Form
     {
-        public event EventHandler SupplierAdded;
-        //public static event Action UpdateDataGridView;
         public SupplierBL supplierBL;
-      
-        public AddSupplier()
+     
+
+        public FrmAddSupplier()
         {
             InitializeComponent();
+ 
             supplierBL = new SupplierBL();
-        }
-
-        private void AddSupplier_Load(object sender, EventArgs e)
-        {
-
-            this.Visible = false;
-
-        }
-        public void loadSuplierByID(string id,string name, string address) { 
-            txtId.Text = id;
-            txtName.Text = name;
-            txtAdress.Text = address;
-        }
-        private void close_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
         }
 
         private void SaveSupplier_Click(object sender, EventArgs e)
@@ -51,7 +35,8 @@ namespace PresentationLayer
             Supplier s = new Supplier(id, name, address);
             try
             {
-                supplierBL.AddSupplier(s);
+                supplierBL.UpdateSupplier(s);
+                MessageBox.Show("Sửa nhà cung cấp thành công!");
                 //SupplierAdded?.Invoke(this, EventArgs.Empty);
                 Observer.Notify(CONSTANT.UpdateDataGridView1);
                 //UpdateDataGridView?.Invoke();
@@ -62,9 +47,26 @@ namespace PresentationLayer
             }
             finally
             {
-                this.Visible = false;
-                
+                this.Close();
+
             }
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmAddSupplier_Load(object sender, EventArgs e)
+        {
+
+        }
+        public void loadSuplierByID(string id, string name, string address)
+        {
+            txtId.Text = id;
+            txtName.Text = name;
+            txtAdress.Text = address;
+        }
+
     }
 }

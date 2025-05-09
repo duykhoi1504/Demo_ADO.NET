@@ -29,7 +29,18 @@ BEGIN
 	WHERE id = @id;
 END
 GO
-
+--=================SUPPLIER==================--
+CREATE PROC uspUpdateSupplier
+	@id  Nchar(10),
+	@name NVARCHAR(100),
+	@address NVARCHAR(max)
+AS
+BEGIN
+	UPDATE Supplier
+	SET id = @id, [name] = @name,[address] = @address
+	WHERE id = @id;
+END
+GO
 --==================COUPON==================--
 CREATE PROC uspUpdateCoupon
 	@id VARCHAR(10),

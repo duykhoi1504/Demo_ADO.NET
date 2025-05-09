@@ -11,6 +11,10 @@ namespace TransferObject
         public string id { get; set; }
         public string name { get; set; }
         public string address { get; set; }
+        public Supplier()
+        {
+         
+        }
         public Supplier(string id, string name, string address)
         {
             this.id = id;

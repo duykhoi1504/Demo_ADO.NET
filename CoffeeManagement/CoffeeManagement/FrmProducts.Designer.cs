@@ -54,9 +54,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Comic Sans MS", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(26, 23);
+            label1.Location = new Point(16, 14);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(165, 74);
+            label1.Size = new Size(105, 48);
             label1.TabIndex = 0;
             label1.Text = "Menu";
             // 
@@ -65,17 +66,19 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(309, 23);
+            panel1.Location = new Point(190, 14);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(550, 83);
+            panel1.Size = new Size(338, 52);
             panel1.TabIndex = 2;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Location = new Point(85, 65);
+            panel2.Location = new Point(52, 41);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(456, 3);
+            panel2.Size = new Size(281, 2);
             panel2.TabIndex = 2;
             // 
             // txtSearch
@@ -83,20 +86,22 @@
             txtSearch.BackColor = Color.SeaGreen;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearch.ForeColor = Color.White;
-            txtSearch.Location = new Point(85, 16);
+            txtSearch.ForeColor = SystemColors.Window;
+            txtSearch.Location = new Point(52, 10);
+            txtSearch.Margin = new Padding(2);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search here ...";
-            txtSearch.Size = new Size(456, 36);
+            txtSearch.Size = new Size(281, 23);
             txtSearch.TabIndex = 1;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.search;
-            pictureBox1.Location = new Point(3, 11);
+            pictureBox1.Location = new Point(2, 7);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(67, 62);
+            pictureBox1.Size = new Size(41, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -106,9 +111,10 @@
             btnAddProduct.BackColor = Color.White;
             btnAddProduct.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddProduct.ForeColor = Color.SeaGreen;
-            btnAddProduct.Location = new Point(1457, 36);
+            btnAddProduct.Location = new Point(705, 21);
+            btnAddProduct.Margin = new Padding(2);
             btnAddProduct.Name = "btnAddProduct";
-            btnAddProduct.Size = new Size(158, 65);
+            btnAddProduct.Size = new Size(97, 41);
             btnAddProduct.TabIndex = 3;
             btnAddProduct.Text = "Add";
             btnAddProduct.UseVisualStyleBackColor = false;
@@ -120,10 +126,11 @@
             dgvProducts.BorderStyle = BorderStyle.None;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProducts.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dgvProducts.Location = new Point(26, 195);
+            dgvProducts.Location = new Point(16, 122);
+            dgvProducts.Margin = new Padding(2);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 82;
-            dgvProducts.Size = new Size(1596, 825);
+            dgvProducts.Size = new Size(1172, 472);
             dgvProducts.TabIndex = 4;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
@@ -171,16 +178,17 @@
             // 
             Column6.DataPropertyName = "image";
             Column6.HeaderText = "Image";
-            Column6.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            Column6.ImageLayout = DataGridViewImageCellLayout.Zoom;
             Column6.MinimumWidth = 10;
             Column6.Name = "Column6";
             Column6.Width = 200;
             // 
             // pnlLoadCats
             // 
-            pnlLoadCats.Location = new Point(26, 125);
+            pnlLoadCats.Location = new Point(16, 78);
+            pnlLoadCats.Margin = new Padding(2);
             pnlLoadCats.Name = "pnlLoadCats";
-            pnlLoadCats.Size = new Size(1596, 64);
+            pnlLoadCats.Size = new Size(1172, 40);
             pnlLoadCats.TabIndex = 5;
             // 
             // btnAllProds
@@ -188,9 +196,10 @@
             btnAllProds.BackColor = Color.White;
             btnAllProds.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAllProds.ForeColor = Color.SeaGreen;
-            btnAllProds.Location = new Point(1208, 36);
+            btnAllProds.Location = new Point(551, 21);
+            btnAllProds.Margin = new Padding(2);
             btnAllProds.Name = "btnAllProds";
-            btnAllProds.Size = new Size(229, 65);
+            btnAllProds.Size = new Size(141, 41);
             btnAllProds.TabIndex = 7;
             btnAllProds.Text = "All Products";
             btnAllProds.UseVisualStyleBackColor = false;
@@ -199,17 +208,18 @@
             // usAddProduct1
             // 
             usAddProduct1.BackColor = Color.SeaGreen;
-            usAddProduct1.Location = new Point(250, 200);
+            usAddProduct1.Location = new Point(154, 125);
+            usAddProduct1.Margin = new Padding(1);
             usAddProduct1.Name = "usAddProduct1";
-            usAddProduct1.Size = new Size(1020, 537);
+            usAddProduct1.Size = new Size(628, 336);
             usAddProduct1.TabIndex = 6;
             // 
             // FrmProducts
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(1655, 1045);
+            ClientSize = new Size(1199, 605);
             Controls.Add(btnAllProds);
             Controls.Add(usAddProduct1);
             Controls.Add(pnlLoadCats);
@@ -217,6 +227,7 @@
             Controls.Add(btnAddProduct);
             Controls.Add(panel1);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "FrmProducts";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Products";

@@ -4,6 +4,9 @@
     <Compile Update="FrmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmAllTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,7 +37,7 @@
     <Compile Update="USAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="AddSupplier.cs">
+    <Compile Update="USAddSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="USCategoryButton.cs">

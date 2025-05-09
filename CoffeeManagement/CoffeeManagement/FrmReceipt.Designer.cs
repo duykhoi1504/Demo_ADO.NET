@@ -28,71 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             dgvReceipt = new DataGridView();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            txtSearch = new TextBox();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvReceipt).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // dgvReceipt
             // 
-            textBox1.Location = new Point(311, 15);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            dgvReceipt.BackgroundColor = Color.SeaGreen;
+            dgvReceipt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvReceipt.Location = new Point(2, 65);
+            dgvReceipt.Name = "dgvReceipt";
+            dgvReceipt.RowHeadersWidth = 51;
+            dgvReceipt.Size = new Size(1196, 543);
+            dgvReceipt.TabIndex = 2;
+            dgvReceipt.CellContentClick += dgvReceipt_CellContentClick;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(txtSearch);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(394, 5);
+            panel1.Margin = new Padding(2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(338, 52);
+            panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Location = new Point(52, 41);
+            panel2.Margin = new Padding(2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(281, 2);
+            panel2.TabIndex = 2;
+            // 
+            // txtSearch
+            // 
+            txtSearch.BackColor = Color.White;
+            txtSearch.BorderStyle = BorderStyle.None;
+            txtSearch.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.ForeColor = SystemColors.Window;
+            txtSearch.Location = new Point(52, 18);
+            txtSearch.Margin = new Padding(2);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Search here ...";
+            txtSearch.Size = new Size(281, 23);
+            txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.search;
+            pictureBox1.Location = new Point(2, 7);
+            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(41, 39);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(255, 18);
+            label1.Font = new Font("Comic Sans MS", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(11, 9);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(51, 20);
-            label1.TabIndex = 1;
-            label1.Text = "search";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(136, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Danh sach hoa don";
-            // 
-            // dgvReceipt
-            // 
-            dgvReceipt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReceipt.Location = new Point(12, 56);
-            dgvReceipt.Name = "dgvReceipt";
-            dgvReceipt.RowHeadersWidth = 51;
-            dgvReceipt.Size = new Size(776, 382);
-            dgvReceipt.TabIndex = 2;
-            dgvReceipt.CellContentClick += dgvReceipt_CellContentClick;
+            label1.Size = new Size(141, 48);
+            label1.TabIndex = 4;
+            label1.Text = "Receipt";
             // 
             // FrmReceipt
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgvReceipt);
-            Controls.Add(label2);
+            BackColor = Color.SeaGreen;
+            ClientSize = new Size(1199, 605);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(panel1);
+            Controls.Add(dgvReceipt);
             Name = "FrmReceipt";
             Text = "FrmReceipt";
             Load += FrmReceipt_Load;
             ((System.ComponentModel.ISupportInitialize)dgvReceipt).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private Label label1;
-        private Label label2;
         private DataGridView dgvReceipt;
+        private Panel panel1;
+        private Panel panel2;
+        private TextBox txtSearch;
+        private PictureBox pictureBox1;
+        private Label label1;
     }
 }

@@ -41,7 +41,17 @@ namespace BusinessLayer
                 throw ex;
             }
         }
-
+        public int UpdateSupplier(Supplier s)
+        {
+            try
+            {
+                return supplierDL.UpdateSupplier(s);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
         public int deleteSupplier(string id)
         {
             try

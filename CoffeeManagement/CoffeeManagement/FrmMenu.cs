@@ -24,7 +24,7 @@ namespace PresentationLayer
         ProductBL productBL;
         OrderBL orderBL;
         ItemBL itemBL;
-
+        List<Product> prods;
         float totalPrice = 0;
 
         public List<CartSlot> cartSlots = new List<CartSlot>();
@@ -109,6 +109,8 @@ namespace PresentationLayer
             {
                 Button button = new Button();
                 button.Text = category.name;
+                button.BackColor = Color.White;
+                button.ForeColor = Color.DarkGreen;
                 button.Dock = DockStyle.Left; // Că n chỉnh button theo chiều dọc
                 pnFilter.Controls.Add(button);
 
@@ -118,18 +120,27 @@ namespace PresentationLayer
                     // Xử lý sự kiện khi nhấn nút category
                     // Ví dụ: lọc sản phẩm theo category
                     LoadProduct(category.id.ToString());
-                    //MessageBox.Show("Category clicked: " + category.name);
                 });
             }
-            //////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////
+            Button all = new Button();
+            all.Text = "Show All";
+            all.BackColor = Color.White;
+            all.ForeColor = Color.DarkGreen;
+            all.Dock = DockStyle.Left; // Că n chỉnh button theo chiều dọc
+            all.Click += ((s, e) =>
+            {
+                LoadProduct();
+            });
+            pnFilter.Controls.Add(all);
         }
         private void LoadProduct(string key = null)
         {
-
-            //load product
-
-
-            List<Product> prods = new List<Product>();
+            if (prods == null)
+            {
+                prods = new List<Product>();
+            }
+            prods.Clear();
             prods = productBL.GetProducts();
             pnProduct.Controls.Clear();
 
@@ -160,17 +171,9 @@ namespace PresentationLayer
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            //float totalPrice = 0;   
+
             UpdateProdCart();
-            //string message = "Items:\n";
 
-            //foreach (CartSlot slot in cartSlots)
-            //{
-
-            //    message += slot.product.name + " - " + slot.Quantity + " - " + slot.totalPrice + "\n";
-            //    //totalPrice += slot.totalPrice;
-            //}
-            //MessageBox.Show(message);
             FrmCartInfo frmCartInfo = new FrmCartInfo(cartSlots, totalPrice);
             frmCartInfo.Show();
 
@@ -182,7 +185,7 @@ namespace PresentationLayer
             {
                 totalPrice += slot.totalPrice;
             }
-            btnTotal.Text = "Total Price: " + totalPrice.ToString();
+            btnTotal.Text = "Total Price: " + totalPrice.ToString("#,0") + " VND";
         }
 
         public void OnNotify(string key)
@@ -202,44 +205,46 @@ namespace PresentationLayer
             }
         }
 
-        private void btnShowAllProduct_Click(object sender, EventArgs e)
-        {
-            LoadProduct();
-        }
+
         private void ActionAfterCheckout()
         {
+            cartSlots.Clear(); // Xóa giỏ hàng sau khi thanh toán
             pnProdItems.Controls.Clear(); // Xóa các sản phẩm cũ trong panel
         }
 
-
-
-        private void btnAddCustomer_Click_1(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //Form1 mainForm = Form1.Instance;
-            //string m = $"{mainForm.account.id} + {Form1.Instance.account.id}";
-            //MessageBox.Show(m);
-            //////////////
-            //string m = "";
-            //List<Order> ors=new List<Order>();
-            //ors = orderBL.GetOrders();
-            //foreach (var order in ors)
+            //if(prods==null)
             //{
-            //    m += $"{order.id} + {order.accountID} + {order.totalPrice}\n";
+            //    return;
             //}
-            //MessageBox.Show(m);
-            string m = "";
-            List<Item> ors = new List<Item>();
-            ors = itemBL.GetItemByOrderID(1);
-            foreach (var order in ors)
-            {
-                m += $"{order.id} + {order.productID} + {order.productName}\n";
-            }
-            MessageBox.Show(m);
-
-
+            //prods.Where(p => p.name.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
+            //LoadProduct();
         }
 
-       
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            pnProduct.Controls.Clear(); // Xóa các sản phẩm cũ trong panel
+            List<Product> prods2 = productBL.GetProducts();
+            var filteredProducts = prods2
+           .Where(p => p.name.ToLower().Contains(txtSearch.Text.ToLower()))
+           .ToList();
+            string m = "";
+            foreach (var prod in filteredProducts)
+            {
+                m += prod.name + " \n";
+            }
+            MessageBox.Show(m);
+            foreach (var prod in filteredProducts)
+            {
+
+                USProdItem us = new USProdItem();
+                us.ProductInit(prod);
+                //us.Dock = DockStyle.Left; // Căn chỉnh control sản phẩm theo chiều dọc
+                pnProduct.Controls.Add(us);
+            }
+
+        }
     }
 
 }

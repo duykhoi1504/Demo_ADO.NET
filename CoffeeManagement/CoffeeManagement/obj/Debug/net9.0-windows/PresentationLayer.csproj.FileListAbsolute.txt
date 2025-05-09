@@ -158,7 +158,6 @@ C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-w
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCoupons.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USUpdateCoupon.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.csproj.AssemblyReference.cache
-C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.AddSupplier.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\CoffeeManagement.Form1.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCartInfo.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmCoupons.resources
@@ -236,3 +235,5 @@ C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-w
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USShiftItem.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USUpdateTransaction.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmWorkdayList.resources
+C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USAddSupplier.resources
+C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmAddSupplier.resources

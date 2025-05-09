@@ -46,6 +46,8 @@ namespace CoffeeManagement
                 this.Show();
                 account = login.account;
                 lbName.Text = "xin chao: " + account.Username;
+                txt_name.Text = account.Username;
+
                 this.Enabled = true;
 
             }
@@ -54,8 +56,6 @@ namespace CoffeeManagement
                 Application.Exit();
             }
         }
-
-
         private void Supplier_Click(object sender, EventArgs e)
         {
             AddForm(new Suppliers());
@@ -101,20 +101,19 @@ namespace CoffeeManagement
 
         }
 
+        private void btnCoupon_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmCoupons());
 
-        //private void OpenChildForm(Form childForm)
-        //{
-        //    if (currenFormChild != null)
-        //    {
-        //        currenFormChild.Close();
-        //    }
-        //    currenFormChild = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    plMain.Controls.Add(childForm);
-        //    plMain.Tag = childForm;
-        //    childForm.BringToFront();
-        //    childForm.Show();
-        //}
+        }
+
+        private void plMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+
+
     }
 }

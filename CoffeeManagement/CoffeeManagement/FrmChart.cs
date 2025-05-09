@@ -21,7 +21,7 @@ namespace PresentationLayer
         StatsBL statsBL;
         List<Stats> products;
         List<Stats> monthsTotal;
-
+        string year;
         public FrmChart()
         {
 
@@ -31,13 +31,12 @@ namespace PresentationLayer
             statsBL = new StatsBL();
             products = new List<Stats>();
             monthsTotal = new List<Stats>();
-            txtSearch.Text = DateTime.Now.Year.ToString();
-
+            year = DateTime.Now.Year.ToString();
+            dt_date.Value = DateTime.Now;
         }
 
         private void FrmChart_Load(object sender, EventArgs e)
         {
-
             StatsByProduct();
             StatsByMonth();
         }
@@ -46,7 +45,7 @@ namespace PresentationLayer
         {
             // Lấy dữ liệu từ danh sách
             products.Clear();
-            products = statsBL.GetStatsByProduct(txtSearch.Text);
+            products = statsBL.GetStatsByProduct(year);
 
 
             // Set title.
@@ -63,20 +62,26 @@ namespace PresentationLayer
             // Add series.
             for (int i = 0; i < products.Count; i++)
             {
+
                 // Add series.
-                Series series = this.chart_StatByProduct.Series.Add(products[i].name);
-                series.ChartType = SeriesChartType.Bar;
+                Series series = this.chart_StatByProduct.Series.Add(products[i].name + ":" + products[i].value.ToString("#,0"));
+                series.ChartType = SeriesChartType.Column;
                 series.Points.AddXY(products[i].name, products[i].value);
+
+            
                 // Optional: Show values on bars
                 series.IsValueShownAsLabel = false;
+
             }
-            this.chart_StatByProduct.ChartAreas[0].AxisX.Title = "tên sản phảm";
+
+            chart_StatByProduct.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+            this.chart_StatByProduct.ChartAreas[0].AxisX.Title = "sản phảm";
             this.chart_StatByProduct.ChartAreas[0].AxisY.Title = "doanh thu";
         }
         private void StatsByMonth()
         {
             monthsTotal.Clear();
-            monthsTotal = statsBL.GetStatsByMonth(txtSearch.Text);
+            monthsTotal = statsBL.GetStatsByMonth(year);
 
 
             //string[] seriesName = monthsTotal.Select(p => p.name).ToArray();
@@ -110,8 +115,10 @@ namespace PresentationLayer
         }
 
 
-        private void btn_Search_Click(object sender, EventArgs e)
+ 
+        private void dt_date_ValueChanged(object sender, EventArgs e)
         {
+            year = dt_date.Value.Year.ToString();
             StatsByProduct();
             StatsByMonth();
         }

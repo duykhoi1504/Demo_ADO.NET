@@ -18,5 +18,6 @@ namespace TransferObject
             this.name = name;
             this.value = value;
         }
+ 
     }
 }

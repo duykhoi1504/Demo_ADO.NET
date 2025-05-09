@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer
 {
-    partial class AddSupplier
+    partial class USAddSupplier
     {
         /// <summary> 
         /// Required designer variable.
@@ -85,6 +85,8 @@
             Controls.Add(txtAdress);
             Controls.Add(txtName);
             Controls.Add(txtId);
+            MaximumSize = new Size(430, 353);
+            MinimumSize = new Size(430, 353);
             Name = "AddSupplier";
             Size = new Size(430, 353);
             Load += AddSupplier_Load;

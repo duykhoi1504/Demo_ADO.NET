@@ -11,33 +11,92 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using TransferObject;
+using DataLayer;
 namespace PresentationLayer
 {
     public partial class Suppliers : Form, IObserver
     {
 
         private SupplierBL supplierBL;
+        List<Supplier> suppliers;
         public Suppliers()
         {
             InitializeComponent();
             supplierBL = new SupplierBL();
             Observer.Register(this);
 
+            suppliers = supplierBL.GetSuppliers();
         }
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
 
-            //AddSupplier.UpdateDataGridView += ResetDataGridView;
+            CustomDataGridView(dataGridView1);
+            LoadSupplier();
+
+        }
+        private void LoadSupplier()
+        {
             try
             {
-                dataGridView1.DataSource = supplierBL.GetSuppliers();
+                if (suppliers.Count > 0)
+                {
+                    suppliers.Clear();
+                    suppliers = supplierBL.GetSuppliers();
+                    dataGridView1.DataSource = suppliers;
+                }
+                else
+                {
+                    MessageBox.Show("No orders found.");
+                }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                throw ex;
+            }
+        }
+        private DataGridView CustomDataGridView(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+
+
+            List<String> names = new List<String>() { "id", "name", "address" };
+
+            // Clear existing columns first
+            dgv.Columns.Clear();
+
+            // Add columns dynamically
+            foreach (var name in names)
+            {
+                dgv.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = name,
+                    DataPropertyName = name
+                });
             }
 
+            DataGridViewImageColumn updateColumn = new DataGridViewImageColumn
+            {
+                Name = "update",
+                Image = Properties.Resources.cat_write,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
+            };
+            dgv.Columns.Add(updateColumn);
+
+            DataGridViewImageColumn deleteColumn = new DataGridViewImageColumn
+            {
+                Name = "delete",
+                Image = Properties.Resources.cat_delete,
+                ImageLayout = DataGridViewImageCellLayout.Zoom
+            };
+            dgv.Columns.Add(deleteColumn);
+
+            //Custom cao, rộng các cột
+            dgv.RowTemplate.Height = 50;
+            dgv.Columns["address"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            return dgv;
         }
 
         private void ResetDataGridView()
@@ -48,7 +107,7 @@ namespace PresentationLayer
 
         public void OnNotify(string key)
         {
-            if (key == "UpdateDataGridView1")
+            if (key == CONSTANT.UpdateDataGridView1)
             {
                 // Làm mới DataGridView
                 ResetDataGridView();
@@ -57,75 +116,77 @@ namespace PresentationLayer
 
         private void AddSupllier_Click(object sender, EventArgs e)
         {
-            usp_addSupplier.Visible = true;
+            //us_addSupplier.Visible = true;
+            if (txt_id.Text == "" || txt_name.Text == "" || txt_address.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin nhà cung cấp.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thêm nhà cung cấp này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Supplier s = new Supplier(txt_id.Text, txt_name.Text, txt_address.Text);
+                    supplierBL.AddSupplier(s);
+
+                    // Làm mới DataGridView sau khi xóa
+                    ResetDataGridView();
+                    MessageBox.Show("Thêm thành công!");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+                }
+            }
         }
 
-        private void Delete_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                // Lấy ID của nhà cung cấp từ hàng được chọn
-                string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
+            int col = e.ColumnIndex;
+            int row = e.RowIndex;
 
-                // Xác nhận xóa
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà cung cấp này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (row >= 0 && col == dataGridView1.Columns["update"].Index)
+            {
+
+                // Lấy giá trị của ô "id" từ hàng đã chọn
+                string idValue = dataGridView1.Rows[row].Cells["id"].Value.ToString();
+
+
+                FrmAddSupplier frmAddSupplier = new FrmAddSupplier();
+               frmAddSupplier.ShowDialog();
+
+            }
+            else if (e.ColumnIndex == dataGridView1.Columns["delete"].Index)
+            {
+                var idCol = dataGridView1.Columns["id"].Index;
+                var id = dataGridView1.Rows[row].Cells[idCol].Value.ToString();
+
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this coupon?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                 if (result == DialogResult.Yes)
                 {
                     try
                     {
+                        //couponBL.DeleteCoupon(id);
                         supplierBL.deleteSupplier(id);
-
-                        // Làm mới DataGridView sau khi xóa
-                        ResetDataGridView();
-                        MessageBox.Show("Xóa thành công!");
+                        MessageBox.Show("Coupon has been successfully deleted!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadSupplier();
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+                        MessageBox.Show($"Error deleting coupon: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một hàng để xóa.");
-            }
         }
-
-        private void btn_update_Click(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
-            
-
-            // Kiểm tra xem có hàng nào được chọn không
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                // Lấy id từ hàng được chọn
-                string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
-
-                // Lấy nhà cung cấp dựa trên id
-                var suppliers = supplierBL.GetSuppliers(id);
-
-                // Kiểm tra xem có nhà cung cấp nào được tìm thấy không
-                if (suppliers.Count > 0)
-                {
-                    usp_addSupplier.Visible = true;
-
-                    Supplier s = suppliers[0];
-                    usp_addSupplier.loadSuplierByID(s.id, s.name, s.address);
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy nhà cung cấp với ID đã chọn.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một nhà cung cấp để cập nhật.");
-            }
-        }
-
-        private void usp_addSupplier_Load(object sender, EventArgs e)
-        {
-
+            txt_address.Text = "";
+            txt_id.Text = "";
+            txt_name.Text = "";
+            txt_id.Focus();
         }
     }
-} 
+}

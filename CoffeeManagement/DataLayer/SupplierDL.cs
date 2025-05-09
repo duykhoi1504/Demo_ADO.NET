@@ -77,5 +77,24 @@ namespace DataLayer
                 throw ex;
             }
         }
+
+        public int UpdateSupplier(Supplier s)
+        {
+            string sql = "uspUpdateSupplier";
+
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@id", s.id));
+            parameters.Add(new SqlParameter("@name", s.name));
+            parameters.Add(new SqlParameter("@address", s.address));
+
+            try
+            {
+                return (MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

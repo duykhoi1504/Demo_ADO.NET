@@ -33,10 +33,10 @@ namespace PresentationLayer
         {
             lbNameProd.Text = cartSlot.product.name;
 
-            lbPrice.Text = cartSlot.product.price.ToString();
+            lbPrice.Text = cartSlot.product.price.ToString(); ;
 
             lbQuantity.Text = cartSlot.Quantity.ToString();
-            lbTotalPrice.Text = (cartSlot.product.price * cartSlot.Quantity).ToString();
+            lbTotalPrice.Text = (cartSlot.product.price * cartSlot.Quantity).ToString() ; ;
             Observer.Notify(CONSTANT.UpdateTotalPriceButton);
         }
 

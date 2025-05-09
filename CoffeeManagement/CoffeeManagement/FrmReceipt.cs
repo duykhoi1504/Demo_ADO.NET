@@ -40,28 +40,7 @@ namespace PresentationLayer
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string searchText = textBox1.Text.ToLower();
-
-            if (string.IsNullOrEmpty(searchText))
-            {
-                // Reset to show all orders
-                dgvReceipt.DataSource = orders;
-            }
-            else
-            {
-                // Filter the orders based on the search text
-                var filteredOrders = orders.Where(order =>
-                    order.id.ToString().Contains(searchText) ||
-                    order.paymentMethod.ToLower().Contains(searchText) ||
-                    order.couponID.ToLower().Contains(searchText) ||
-                    order.createdDate.ToLower().Contains(searchText)// Add other fields as necessary
-                ).ToList();
-
-                dgvReceipt.DataSource = filteredOrders;
-            }
-        }
+       
 
         private void dgvReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -71,7 +50,7 @@ namespace PresentationLayer
 
             if (row >= 0 && col == dgvReceipt.Columns["Detail"].Index)
             {
-              
+
                 // Lấy giá trị của ô "id" từ hàng đã chọn
                 int idValue = int.Parse(dgvReceipt.Rows[row].Cells["id"].Value.ToString());
                 FrmOrderInfo frmOrderInfo = new FrmOrderInfo(idValue);
@@ -117,5 +96,27 @@ namespace PresentationLayer
             return dgv;
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.ToLower();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                // Reset to show all orders
+                dgvReceipt.DataSource = orders;
+            }
+            else
+            {
+                // Filter the orders based on the search text
+                var filteredOrders = orders.Where(order =>
+                    order.id.ToString().Contains(searchText) ||
+                    order.paymentMethod.ToLower().Contains(searchText) ||
+                    order.couponID.ToLower().Contains(searchText) ||
+                    order.createdDate.ToLower().Contains(searchText)// Add other fields as necessary
+                ).ToList();
+
+                dgvReceipt.DataSource = filteredOrders;
+            }
+        }
     }
 }
