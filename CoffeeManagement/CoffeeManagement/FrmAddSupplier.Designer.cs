@@ -40,22 +40,26 @@
             // 
             // close
             // 
+            close.BackColor = Color.White;
+            close.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             close.Location = new Point(246, 196);
             close.Name = "close";
             close.Size = new Size(94, 29);
             close.TabIndex = 7;
             close.Text = "close";
-            close.UseVisualStyleBackColor = true;
+            close.UseVisualStyleBackColor = false;
             close.Click += close_Click;
             // 
             // SaveSupplier
             // 
+            SaveSupplier.BackColor = Color.White;
+            SaveSupplier.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             SaveSupplier.Location = new Point(102, 193);
             SaveSupplier.Name = "SaveSupplier";
             SaveSupplier.Size = new Size(94, 29);
             SaveSupplier.TabIndex = 6;
             SaveSupplier.Text = "save";
-            SaveSupplier.UseVisualStyleBackColor = true;
+            SaveSupplier.UseVisualStyleBackColor = false;
             SaveSupplier.Click += SaveSupplier_Click;
             // 
             // txtAdress
@@ -82,27 +86,33 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(26, 135);
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(14, 132);
             label3.Name = "label3";
-            label3.Size = new Size(65, 20);
+            label3.Size = new Size(79, 23);
             label3.TabIndex = 8;
             label3.Text = "Address:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(26, 80);
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(31, 77);
             label2.Name = "label2";
-            label2.Size = new Size(52, 20);
+            label2.Size = new Size(62, 23);
             label2.TabIndex = 9;
             label2.Text = "Name:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(26, 37);
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(55, 34);
             label1.Name = "label1";
-            label1.Size = new Size(27, 20);
+            label1.Size = new Size(33, 23);
             label1.TabIndex = 10;
             label1.Text = "ID:";
             // 
@@ -110,6 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SeaGreen;
             ClientSize = new Size(470, 255);
             Controls.Add(label3);
             Controls.Add(label2);

@@ -75,7 +75,7 @@
             txtSearch.BackColor = Color.White;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearch.ForeColor = SystemColors.Window;
+            txtSearch.ForeColor = Color.Black;
             txtSearch.Location = new Point(52, 18);
             txtSearch.Margin = new Padding(2);
             txtSearch.Name = "txtSearch";

@@ -8,7 +8,7 @@ namespace TransferObject
 {
     public class Item
     {
-        public int id { get; set; }
+        public int itemID { get; set; }
         public int orderID { get; set; }
         public string productID { get; set; }
 
@@ -20,7 +20,7 @@ namespace TransferObject
         public Item() { }
         public Item(int id, int orderID, string productID, int quantity, float price)
         {
-            this.id = id;
+            this.itemID = id;
             this.orderID = orderID;
             this.productID = productID;
             this.quantity = quantity;

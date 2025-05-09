@@ -71,7 +71,9 @@ namespace PresentationLayer
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
                     Name = name,
-                    DataPropertyName = name
+                    DataPropertyName = name,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
                 });
             }
 
@@ -87,13 +89,16 @@ namespace PresentationLayer
             {
                 Name = "delete",
                 Image = Properties.Resources.cat_delete,
-                ImageLayout = DataGridViewImageCellLayout.Zoom
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+
             };
             dgv.Columns.Add(deleteColumn);
 
             //Custom cao, rộng các cột
             dgv.RowTemplate.Height = 50;
-            dgv.Columns["address"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgv.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            //dgv.Columns["address"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
             return dgv;

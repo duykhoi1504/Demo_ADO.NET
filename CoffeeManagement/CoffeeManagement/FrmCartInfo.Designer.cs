@@ -28,29 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            cbCoupon = new ComboBox();
-            cbPaymentMethod = new ComboBox();
-            txtCounterfeit = new TextBox();
-            btnClose = new Button();
-            btnCheckout = new Button();
-            dgvCart = new DataGridView();
-            label6 = new Label();
-            lbLastTotalPrice = new Label();
-            lbTotalPrice = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
             label5 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            lbTotalPrice = new Label();
+            lbLastTotalPrice = new Label();
+            label6 = new Label();
+            dgvCart = new DataGridView();
+            btnCheckout = new Button();
+            btnClose = new Button();
+            txtCounterfeit = new TextBox();
+            cbPaymentMethod = new ComboBox();
+            cbCoupon = new ComboBox();
+            groupBox1 = new GroupBox();
             panel1 = new Panel();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
-            groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
+            groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(57, 30);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 28);
+            label5.TabIndex = 0;
+            label5.Text = "Total:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(58, 160);
+            label7.Name = "label7";
+            label7.Size = new Size(130, 28);
+            label7.TabIndex = 0;
+            label7.Text = "amount pay:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(58, 202);
+            label8.Name = "label8";
+            label8.Size = new Size(100, 28);
+            label8.TabIndex = 0;
+            label8.Text = "Payment:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(58, 72);
+            label9.Name = "label9";
+            label9.Size = new Size(89, 28);
+            label9.TabIndex = 0;
+            label9.Text = "Coupon:";
+            // 
+            // lbTotalPrice
+            // 
+            lbTotalPrice.Location = new Point(369, 30);
+            lbTotalPrice.Name = "lbTotalPrice";
+            lbTotalPrice.Size = new Size(351, 34);
+            lbTotalPrice.TabIndex = 0;
+            lbTotalPrice.Text = "000.000 VND";
+            lbTotalPrice.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lbLastTotalPrice
+            // 
+            lbLastTotalPrice.Location = new Point(369, 103);
+            lbLastTotalPrice.Name = "lbLastTotalPrice";
+            lbLastTotalPrice.Size = new Size(351, 34);
+            lbLastTotalPrice.TabIndex = 0;
+            lbLastTotalPrice.Text = "000.000 VND";
+            lbLastTotalPrice.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(58, 119);
+            label6.Name = "label6";
+            label6.Size = new Size(106, 28);
+            label6.TabIndex = 0;
+            label6.Text = "Last total:";
+            // 
+            // dgvCart
+            // 
+            dgvCart.BackgroundColor = Color.SeaGreen;
+            dgvCart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCart.Dock = DockStyle.Fill;
+            dgvCart.GridColor = Color.Black;
+            dgvCart.Location = new Point(0, 0);
+            dgvCart.Name = "dgvCart";
+            dgvCart.RowHeadersWidth = 51;
+            dgvCart.Size = new Size(726, 243);
+            dgvCart.TabIndex = 3;
+            dgvCart.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // btnCheckout
+            // 
+            btnCheckout.BackColor = Color.White;
+            btnCheckout.ForeColor = Color.DarkGreen;
+            btnCheckout.Location = new Point(455, 242);
+            btnCheckout.Name = "btnCheckout";
+            btnCheckout.Size = new Size(127, 38);
+            btnCheckout.TabIndex = 4;
+            btnCheckout.Text = "Checkout";
+            btnCheckout.UseVisualStyleBackColor = false;
+            btnCheckout.Click += btnCheckout_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.White;
+            btnClose.ForeColor = Color.DarkGreen;
+            btnClose.Location = new Point(588, 242);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(127, 38);
+            btnClose.TabIndex = 4;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // txtCounterfeit
+            // 
+            txtCounterfeit.Location = new Point(406, 153);
+            txtCounterfeit.Name = "txtCounterfeit";
+            txtCounterfeit.Size = new Size(303, 34);
+            txtCounterfeit.TabIndex = 5;
+            txtCounterfeit.TextChanged += txtCounterfeit_TextChanged;
+            // 
+            // cbPaymentMethod
+            // 
+            cbPaymentMethod.FormattingEnabled = true;
+            cbPaymentMethod.Location = new Point(558, 194);
+            cbPaymentMethod.Name = "cbPaymentMethod";
+            cbPaymentMethod.Size = new Size(151, 36);
+            cbPaymentMethod.TabIndex = 6;
+            cbPaymentMethod.SelectedIndexChanged += cbPaymentMethod_SelectedIndexChanged;
+            // 
+            // cbCoupon
+            // 
+            cbCoupon.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbCoupon.FormattingEnabled = true;
+            cbCoupon.Location = new Point(342, 64);
+            cbCoupon.Name = "cbCoupon";
+            cbCoupon.Size = new Size(367, 31);
+            cbCoupon.TabIndex = 7;
+            cbCoupon.SelectedIndexChanged += cbCoupon_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -59,7 +183,6 @@
             groupBox1.Controls.Add(txtCounterfeit);
             groupBox1.Controls.Add(btnClose);
             groupBox1.Controls.Add(btnCheckout);
-            groupBox1.Controls.Add(dgvCart);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(lbLastTotalPrice);
             groupBox1.Controls.Add(lbTotalPrice);
@@ -67,218 +190,74 @@
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(panel1);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(12, 294);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(713, 623);
+            groupBox1.Size = new Size(726, 315);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin thanh toán";
-            // 
-            // cbCoupon
-            // 
-            cbCoupon.FormattingEnabled = true;
-            cbCoupon.Location = new Point(539, 509);
-            cbCoupon.Name = "cbCoupon";
-            cbCoupon.Size = new Size(151, 28);
-            cbCoupon.TabIndex = 7;
-            cbCoupon.SelectedIndexChanged += cbCoupon_SelectedIndexChanged;
-            // 
-            // cbPaymentMethod
-            // 
-            cbPaymentMethod.FormattingEnabled = true;
-            cbPaymentMethod.Location = new Point(540, 543);
-            cbPaymentMethod.Name = "cbPaymentMethod";
-            cbPaymentMethod.Size = new Size(151, 28);
-            cbPaymentMethod.TabIndex = 6;
-            cbPaymentMethod.SelectedIndexChanged += cbPaymentMethod_SelectedIndexChanged;
-            // 
-            // txtCounterfeit
-            // 
-            txtCounterfeit.Location = new Point(565, 472);
-            txtCounterfeit.Name = "txtCounterfeit";
-            txtCounterfeit.Size = new Size(125, 27);
-            txtCounterfeit.TabIndex = 5;
-            // 
-            // btnClose
-            // 
-            btnClose.Location = new Point(603, 591);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(94, 29);
-            btnClose.TabIndex = 4;
-            btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += btnClose_Click;
-            // 
-            // btnCheckout
-            // 
-            btnCheckout.Location = new Point(494, 591);
-            btnCheckout.Name = "btnCheckout";
-            btnCheckout.Size = new Size(94, 29);
-            btnCheckout.TabIndex = 4;
-            btnCheckout.Text = "Checkout";
-            btnCheckout.UseVisualStyleBackColor = true;
-            btnCheckout.Click += btnCheckout_Click;
-            // 
-            // dgvCart
-            // 
-            dgvCart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCart.Location = new Point(20, 100);
-            dgvCart.Name = "dgvCart";
-            dgvCart.RowHeadersWidth = 51;
-            dgvCart.Size = new Size(682, 302);
-            dgvCart.TabIndex = 3;
-            dgvCart.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(39, 445);
-            label6.Name = "label6";
-            label6.Size = new Size(142, 20);
-            label6.TabIndex = 0;
-            label6.Text = "Số tiêng thanh toán:";
-            // 
-            // lbLastTotalPrice
-            // 
-            lbLastTotalPrice.AutoSize = true;
-            lbLastTotalPrice.Location = new Point(596, 445);
-            lbLastTotalPrice.Name = "lbLastTotalPrice";
-            lbLastTotalPrice.Size = new Size(95, 20);
-            lbLastTotalPrice.TabIndex = 0;
-            lbLastTotalPrice.Text = "000.000 VND";
-            // 
-            // lbTotalPrice
-            // 
-            lbTotalPrice.AutoSize = true;
-            lbTotalPrice.Location = new Point(596, 406);
-            lbTotalPrice.Name = "lbTotalPrice";
-            lbTotalPrice.Size = new Size(95, 20);
-            lbTotalPrice.TabIndex = 0;
-            lbTotalPrice.Text = "000.000 VND";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(39, 510);
-            label9.Name = "label9";
-            label9.Size = new Size(86, 20);
-            label9.TabIndex = 0;
-            label9.Text = "Khuyến mãi";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(39, 546);
-            label8.Name = "label8";
-            label8.Size = new Size(168, 20);
-            label8.TabIndex = 0;
-            label8.Text = "Phương thức thanh toán";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(39, 479);
-            label7.Name = "label7";
-            label7.Size = new Size(101, 20);
-            label7.TabIndex = 0;
-            label7.Text = "tiền khách trả:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(39, 406);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Tổng tiền:";
+            groupBox1.Text = "Info";
             // 
             // panel1
             // 
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(20, 40);
+            panel1.Controls.Add(dgvCart);
+            panel1.Location = new Point(12, 45);
             panel1.Name = "panel1";
-            panel1.Size = new Size(682, 54);
+            panel1.Size = new Size(726, 243);
             panel1.TabIndex = 2;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(576, 16);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 20);
-            label4.TabIndex = 0;
-            label4.Text = "tổng giá";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(368, 16);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 20);
-            label3.TabIndex = 0;
-            label3.Text = "số lượng";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(183, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(30, 20);
-            label2.TabIndex = 0;
-            label2.Text = "giá";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 16);
+            label1.Font = new Font("Comic Sans MS", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(11, -6);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(100, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Tên sản phẩm";
+            label1.Size = new Size(155, 48);
+            label1.TabIndex = 5;
+            label1.Text = "Payment";
             // 
             // FrmCartInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            ClientSize = new Size(737, 647);
+            BackColor = Color.SeaGreen;
+            ClientSize = new Size(751, 609);
+            Controls.Add(label1);
+            Controls.Add(panel1);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmCartInfo";
             Text = "FrmCartInfo";
             Load += FrmCartInfo_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
+        private Label label5;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label lbTotalPrice;
+        private Label lbLastTotalPrice;
+        private Label label6;
+        private DataGridView dgvCart;
+        private Button btnCheckout;
+        private Button btnClose;
+        private TextBox txtCounterfeit;
+        private ComboBox cbPaymentMethod;
+        private ComboBox cbCoupon;
         private GroupBox groupBox1;
         private Panel panel1;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private Label label1;
-        private DataGridView dgvCart;
-        private Label label6;
-        private Label lbTotalPrice;
-        private Label label5;
-        private Button btnClose;
-        private Button btnCheckout;
-        private Label lbLastTotalPrice;
-        private TextBox txtCounterfeit;
-        private Label label7;
-        private ComboBox cbPaymentMethod;
-        private Label label8;
-        private ComboBox cbCoupon;
-        private Label label9;
     }
 }

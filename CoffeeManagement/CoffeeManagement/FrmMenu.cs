@@ -171,7 +171,11 @@ namespace PresentationLayer
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-
+            if(cartSlots.Count <= 0)
+            {
+                MessageBox.Show("Your cart is empty");
+                return;
+            }
             UpdateProdCart();
 
             FrmCartInfo frmCartInfo = new FrmCartInfo(cartSlots, totalPrice);

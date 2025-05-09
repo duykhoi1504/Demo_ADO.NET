@@ -17,9 +17,14 @@ namespace TransferObject
             this.description = description;
             this.value = value;
         }
+        public Coupon()
+        {
+
+        }
         public override string ToString() // Đảm bảo phương thức này được override
         {
-            return id; // Trả về description để hiển thị trong ComboBox
+            string m= id+"-"+description;
+            return m; // Trả về description để hiển thị trong ComboBox
         }
     }
 }

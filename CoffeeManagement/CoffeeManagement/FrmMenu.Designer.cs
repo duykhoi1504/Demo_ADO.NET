@@ -247,7 +247,8 @@
             Controls.Add(pnFilter);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmMenu";
+            MaximumSize = new Size(1217, 652);
+            MinimumSize = new Size(1217, 652);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMenu";
             Load += FrmMenu_Load;

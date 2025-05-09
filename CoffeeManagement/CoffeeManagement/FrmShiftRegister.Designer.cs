@@ -45,15 +45,18 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(6, 29);
             label1.Name = "label1";
-            label1.Size = new Size(83, 20);
+            label1.Size = new Size(103, 23);
             label1.TabIndex = 0;
             label1.Text = "Date Start :";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.SeaGreen;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(btn_Add);
             panel1.Controls.Add(cb_Staff);
             panel1.Controls.Add(lblResult);
@@ -62,58 +65,69 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(6, 45);
             panel1.Name = "panel1";
-            panel1.Size = new Size(782, 79);
+            panel1.Size = new Size(782, 87);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
             // btn_Add
             // 
-            btn_Add.Location = new Point(351, 26);
+            btn_Add.BackColor = Color.White;
+            btn_Add.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_Add.ForeColor = Color.DarkGreen;
+            btn_Add.Location = new Point(259, 26);
             btn_Add.Name = "btn_Add";
             btn_Add.Size = new Size(94, 28);
             btn_Add.TabIndex = 3;
             btn_Add.Text = "Add";
-            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.UseVisualStyleBackColor = false;
             btn_Add.Click += btn_Add_Click;
             // 
             // cb_Staff
             // 
             cb_Staff.FormattingEnabled = true;
-            cb_Staff.Location = new Point(617, 26);
+            cb_Staff.Location = new Point(487, 23);
             cb_Staff.Name = "cb_Staff";
-            cb_Staff.Size = new Size(151, 28);
+            cb_Staff.Size = new Size(247, 28);
             cb_Staff.TabIndex = 2;
             cb_Staff.SelectedIndexChanged += cb_Staff_SelectedIndexChanged;
             // 
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(95, 57);
+            lblResult.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lblResult.ForeColor = Color.White;
+            lblResult.Location = new Point(119, 59);
             lblResult.Name = "lblResult";
-            lblResult.Size = new Size(111, 20);
+            lblResult.Size = new Size(134, 23);
             lblResult.TabIndex = 0;
             lblResult.Text = "Đăng ký ca làm";
             // 
             // dt_DateStart
             // 
-            dt_DateStart.Location = new Point(95, 27);
+            dt_DateStart.CustomFormat = "dd/MM/yyyy";
+            dt_DateStart.Format = DateTimePickerFormat.Custom;
+            dt_DateStart.Location = new Point(115, 26);
             dt_DateStart.Name = "dt_DateStart";
-            dt_DateStart.Size = new Size(250, 27);
+            dt_DateStart.Size = new Size(116, 27);
             dt_DateStart.TabIndex = 1;
             dt_DateStart.ValueChanged += dt_DateStart_ValueChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(568, 31);
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(425, 26);
             label3.Name = "label3";
-            label3.Size = new Size(43, 20);
+            label3.Size = new Size(56, 23);
             label3.TabIndex = 0;
             label3.Text = "Staff:";
             // 
             // btn_SaveShift
             // 
             btn_SaveShift.BackColor = Color.White;
+            btn_SaveShift.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_SaveShift.ForeColor = Color.DarkGreen;
             btn_SaveShift.Location = new Point(75, 501);
             btn_SaveShift.Name = "btn_SaveShift";
             btn_SaveShift.Size = new Size(296, 52);
@@ -125,6 +139,8 @@
             // btn_Close
             // 
             btn_Close.BackColor = Color.White;
+            btn_Close.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            btn_Close.ForeColor = Color.DarkGreen;
             btn_Close.Location = new Point(431, 501);
             btn_Close.Name = "btn_Close";
             btn_Close.Size = new Size(296, 52);
@@ -136,15 +152,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 9);
+            label2.Font = new Font("Comic Sans MS", 19.8000011F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(6, -6);
             label2.Name = "label2";
-            label2.Size = new Size(111, 20);
+            label2.Size = new Size(317, 48);
             label2.TabIndex = 0;
-            label2.Text = "Đăng ký ca làm";
+            label2.Text = "Register Workday";
             // 
             // pn_ShiftItems
             // 
-            pn_ShiftItems.BackColor = Color.White;
+            pn_ShiftItems.BackColor = Color.SeaGreen;
+            pn_ShiftItems.BorderStyle = BorderStyle.Fixed3D;
             pn_ShiftItems.Location = new Point(6, 156);
             pn_ShiftItems.Name = "pn_ShiftItems";
             pn_ShiftItems.Size = new Size(782, 296);
@@ -154,13 +173,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
+            BackColor = Color.SeaGreen;
             ClientSize = new Size(798, 565);
             Controls.Add(pn_ShiftItems);
             Controls.Add(btn_Close);
             Controls.Add(btn_SaveShift);
             Controls.Add(label2);
             Controls.Add(panel1);
+            ForeColor = SystemColors.ControlText;
             Name = "FrmShiftRegister";
             Text = "FrmShiftRegister";
             Load += FrmShiftRegister_Load;

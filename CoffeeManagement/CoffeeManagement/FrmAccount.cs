@@ -192,13 +192,16 @@ namespace PresentationLayer
 
         private void btn_Regis_Click(object sender, EventArgs e)
         {
-            Form1.Instance.AddForm(new FrmShiftRegister());
+            //Form1.Instance.AddForm(new FrmShiftRegister());
+            FrmShiftRegister shiftRegister = new FrmShiftRegister();
+            shiftRegister.ShowDialog();
         }
 
         private void btn_Checking_Click(object sender, EventArgs e)
         {
-            Form1.Instance.AddForm(new FrmShiftConfirm());
-
+            //Form1.Instance.AddForm(new FrmShiftConfirm());
+            FrmShiftConfirm shiftConfirm = new FrmShiftConfirm();
+            shiftConfirm.ShowDialog();
         }
 
      

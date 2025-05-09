@@ -10,7 +10,7 @@ namespace TransferObject
     public class Order
     {
         public int id { get; set; }
-        public string createdDate { get; set; }
+        public DateTime createdDate { get; set; }
         public float counterfeit { get; set; }
         public float change { get; set; }
         

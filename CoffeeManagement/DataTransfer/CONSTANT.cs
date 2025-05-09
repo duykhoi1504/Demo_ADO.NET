@@ -3,7 +3,11 @@
 //{
 public class CONSTANT
 {
-
+    public enum UserRole
+    {
+        ADMIN,
+        STAFF,
+    }
     public enum paymentMethod
     {
         CASH,

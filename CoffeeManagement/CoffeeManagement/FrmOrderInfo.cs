@@ -17,7 +17,7 @@ namespace PresentationLayer
     {
         ItemBL itemBL;
         OrderBL orderBL;
-
+        CouponBL couponBL;
         Order order;
         List<Item> items;
         public FrmOrderInfo(int id)
@@ -27,17 +27,26 @@ namespace PresentationLayer
             orderBL = new OrderBL();
             itemBL = new ItemBL();
             items = new List<Item>();
+            couponBL = new CouponBL();
             this.order = orderBL.GetOrderByID(id);
+            
         }
         private void LoadOrder() { }
 
         private void FrmOrderInfo_Load(object sender, EventArgs e)
         {
-
+            Coupon coupon = new Coupon();
+            coupon = couponBL.GetCoupons().Where(coupon => coupon.id == order.couponID).FirstOrDefault();
             lbPaymentMethod.Text = order.paymentMethod;
+            if(coupon == null)
+            {
+                coupon = new Coupon();
+                coupon.value = 0;
+            }
+            lbLastTotal.Text = (order.totalPrice-coupon.value).ToString();
             lbStaff.Text = order.accountID.ToString();
-            lbCoupon.Text = order.couponID;
-            lbCreateDate.Text = order.createdDate;
+            lbCoupon.Text = coupon.id+"-"+ coupon.description;
+            lbCreateDate.Text = order.createdDate.ToString("dd/MM/yyyy");
             lbTotalPrice.Text = order.totalPrice.ToString();
             lbcounterFeit.Text = order.counterfeit.ToString();
             try
@@ -55,5 +64,7 @@ namespace PresentationLayer
         {
             this.Close();
         }
+
+     
     }
 }

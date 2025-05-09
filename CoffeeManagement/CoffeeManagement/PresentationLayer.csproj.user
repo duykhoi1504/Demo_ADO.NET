@@ -16,6 +16,9 @@
     <Compile Update="FrmCoupons.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmIngredient.cs">
       <SubType>Form</SubType>
     </Compile>

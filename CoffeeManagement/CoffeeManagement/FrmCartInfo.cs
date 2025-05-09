@@ -56,14 +56,15 @@ namespace PresentationLayer
         {
             cbCoupon.Items.Clear();
             List<Coupon> coupons = couponBL.GetCoupons();
-            foreach (var coupon in coupons)
-            {
-                cbCoupon.Items.Add(coupon);
-            }
-            //if (cbCoupon.Items.Count > 0)
+            cbCoupon.DataSource = coupons;
+            //foreach (var coupon in coupons)
             //{
-            //    cbCoupon.SelectedIndex = 0; // Chọn item đầu tiên nếu có
+            //    cbCoupon.Items.Add(coupon);
             //}
+            if (cbCoupon.Items.Count > 0)
+            {
+                cbCoupon.SelectedIndex = -1; // Chọn item đầu tiên nếu có
+            }
         }
         private string GetSelectedCouponID()
         {
@@ -82,18 +83,26 @@ namespace PresentationLayer
                 var displayList = cartSlots.Select(slot => new
                 {
                     ProductName = slot.product.name,
+                    ProductPrice = slot.product.price,
                     Quantity = slot.Quantity,
                     TotalPrice = slot.totalPrice
                 }).ToList();
 
                 dgvCart.DataSource = displayList;
+                dgvCart.Columns["ProductName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvCart.Columns["ProductPrice"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                dgvCart.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvCart.Columns["TotalPrice"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            lbTotalPrice.Text = totalPrice.ToString();
-            lbLastTotalPrice.Text = totalPrice.ToString();
+            lbTotalPrice.Text = totalPrice.ToString("#,0");
+            lbLastTotalPrice.Text = totalPrice.ToString("#,0");
 
         }
 
@@ -186,7 +195,7 @@ namespace PresentationLayer
 
         private void cbCoupon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            totalPrice = tempTotalPrice; 
+            totalPrice = tempTotalPrice;
             if (cbCoupon.SelectedItem is Coupon coupon) // Kiểm tra xem có coupon được chọn không
             {
 
@@ -194,16 +203,21 @@ namespace PresentationLayer
                 {
                     MessageBox.Show("Mã giảm giá không hợp lệ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     cbCoupon.SelectedIndex = -1; // Đặt lại lựa chọn
-                    lbLastTotalPrice.Text = tempTotalPrice.ToString(); // Khôi phục giá trị tổng
+                    lbLastTotalPrice.Text = tempTotalPrice.ToString("#,0"); // Khôi phục giá trị tổng
                     totalPrice = tempTotalPrice; // Khôi phục giá trị tổng
                     return;
                 }
 
                 // Cập nhật giá trị tổng sau khi áp dụng coupon
                 float newTotalPrice = totalPrice - coupon.value;
-                lbLastTotalPrice.Text = newTotalPrice.ToString();
-                 totalPrice = newTotalPrice; // Cập nhật giá trị tổng
+                lbLastTotalPrice.Text = newTotalPrice.ToString("#,0");
+                totalPrice = newTotalPrice; // Cập nhật giá trị tổng
             }
+
+        }
+
+        private void txtCounterfeit_TextChanged(object sender, EventArgs e)
+        {
           
         }
     }

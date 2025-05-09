@@ -32,7 +32,7 @@ namespace DataLayer
                 while (reader.Read())
                 {
                     Item item = new Item();
-                    item.id = int.Parse(reader[0].ToString());
+                    item.itemID = int.Parse(reader["itemID"].ToString());
                     item.orderID = reader.GetInt32(1);
                     item.productID = reader["productID"].ToString();
                     item.quantity = reader.GetInt32(3);
@@ -93,7 +93,7 @@ namespace DataLayer
             List<SqlParameter> itemParameters = new List<SqlParameter>
     {
         new SqlParameter("@OrderID", item.orderID),
-        new SqlParameter("@id", item.id) // ID của mục cần cập nhật
+        new SqlParameter("@id", item.itemID) // ID của mục cần cập nhật
     };
 
             try

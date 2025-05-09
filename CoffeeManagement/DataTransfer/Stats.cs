@@ -11,6 +11,7 @@ namespace TransferObject
         //public string id;
         public string name;
         public float value;
+        public DateTime date;
         public Stats() { }
         public Stats( string name, float value)
         {

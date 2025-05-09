@@ -18,9 +18,11 @@ namespace PresentationLayer
         {
             InitializeComponent();
 
+        
         }
         private void USProdItem_Load(object sender, EventArgs e)
         {
+          
             SetProdLabel(product);
         }
         public void SetProdLabel(Product prod)
@@ -28,7 +30,7 @@ namespace PresentationLayer
             if (prod == null)
                 return;
             lbProdName.Text = prod.name;
-            lbProdPrice.Text = prod.price.ToString();
+            lbProdPrice.Text = prod.price.ToString("#,0");
             if (prod.image != null)
             {
                 using (MemoryStream ms = new MemoryStream(prod.image))
@@ -67,12 +69,16 @@ namespace PresentationLayer
 
         private void pn_Product_MouseHover(object sender, EventArgs e)
         {
-            pn_Product.BackColor = Color.LightBlue; // Ví dụ thay đổi màu
+            pn_Product.BackColor = Color.Yellow; // Ví dụ thay đổi màu
+
         }
 
         private void pn_Product_MouseEnter(object sender, EventArgs e)
         {
             pn_Product.BackColor = Color.Yellow; // Trả về màu ban đầu
+            //lbProdName.ForeColor = Color.DarkGreen; // Thay đổi màu chữ   
+            //lbProdPrice.ForeColor = Color.DarkGreen; // Thay đổi màu chữ   
+
         }
 
         private void pn_Product_MouseLeave(object sender, EventArgs e)
@@ -80,5 +86,7 @@ namespace PresentationLayer
             pn_Product.BackColor = Color.Transparent; // Trả về màu ban đầu
 
         }
+
+     
     }
 }

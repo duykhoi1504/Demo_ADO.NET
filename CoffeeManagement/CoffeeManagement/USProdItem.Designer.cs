@@ -28,48 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            lbProdPrice = new Label();
             pn_Product = new Panel();
             img_prod = new PictureBox();
+            lbProdPrice = new Label();
             lbProdName = new Label();
-            panel1.SuspendLayout();
             pn_Product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)img_prod).BeginInit();
             SuspendLayout();
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightGreen;
-            panel1.Controls.Add(lbProdPrice);
-            panel1.Controls.Add(pn_Product);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.MaximumSize = new Size(160, 140);
-            panel1.MinimumSize = new Size(160, 140);
-            panel1.Name = "panel1";
-            panel1.Padding = new Padding(1);
-            panel1.Size = new Size(160, 140);
-            panel1.TabIndex = 0;
-            // 
-            // lbProdPrice
-            // 
-            lbProdPrice.AutoSize = true;
-            lbProdPrice.Enabled = false;
-            lbProdPrice.Location = new Point(51, 108);
-            lbProdPrice.Name = "lbProdPrice";
-            lbProdPrice.Size = new Size(42, 20);
-            lbProdPrice.TabIndex = 5;
-            lbProdPrice.Text = "price";
-            // 
             // pn_Product
             // 
+            pn_Product.BackColor = Color.Transparent;
+            pn_Product.BorderStyle = BorderStyle.Fixed3D;
             pn_Product.Controls.Add(img_prod);
+            pn_Product.Controls.Add(lbProdPrice);
             pn_Product.Controls.Add(lbProdName);
             pn_Product.Dock = DockStyle.Fill;
-            pn_Product.Location = new Point(1, 1);
+            pn_Product.ForeColor = Color.Transparent;
+            pn_Product.Location = new Point(0, 0);
             pn_Product.Name = "pn_Product";
-            pn_Product.Size = new Size(158, 138);
+            pn_Product.Size = new Size(173, 140);
             pn_Product.TabIndex = 0;
             pn_Product.Click += pn_Product_Click;
             pn_Product.MouseEnter += pn_Product_MouseEnter;
@@ -80,44 +58,50 @@
             // 
             img_prod.BackColor = SystemColors.ButtonHighlight;
             img_prod.Enabled = false;
-            img_prod.Location = new Point(17, 3);
+            img_prod.Location = new Point(3, 3);
             img_prod.Name = "img_prod";
-            img_prod.Size = new Size(118, 81);
+            img_prod.Size = new Size(163, 77);
             img_prod.SizeMode = PictureBoxSizeMode.StretchImage;
             img_prod.TabIndex = 4;
             img_prod.TabStop = false;
             // 
+            // lbProdPrice
+            // 
+            lbProdPrice.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lbProdPrice.Location = new Point(3, 103);
+            lbProdPrice.Name = "lbProdPrice";
+            lbProdPrice.Size = new Size(171, 25);
+            lbProdPrice.TabIndex = 6;
+            lbProdPrice.Text = "price";
+            lbProdPrice.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // lbProdName
             // 
-            lbProdName.AutoSize = true;
-            lbProdName.Enabled = false;
-            lbProdName.Location = new Point(50, 87);
+            lbProdName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lbProdName.Location = new Point(3, 83);
             lbProdName.Name = "lbProdName";
-            lbProdName.Size = new Size(49, 20);
-            lbProdName.TabIndex = 3;
+            lbProdName.Size = new Size(171, 25);
+            lbProdName.TabIndex = 6;
             lbProdName.Text = "Name";
+            lbProdName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // USProdItem
             // 
             AutoScaleMode = AutoScaleMode.None;
-            Controls.Add(panel1);
+            BackColor = Color.SeaGreen;
+            Controls.Add(pn_Product);
             Name = "USProdItem";
-            Size = new Size(160, 140);
+            Size = new Size(173, 140);
             Load += USProdItem_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             pn_Product.ResumeLayout(false);
-            pn_Product.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)img_prod).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel1;
         private PictureBox img_prod;
-        private Label lbProdPrice;
         private Label lbProdName;
+        private Label lbProdPrice;
         private Panel pn_Product;
     }
 }

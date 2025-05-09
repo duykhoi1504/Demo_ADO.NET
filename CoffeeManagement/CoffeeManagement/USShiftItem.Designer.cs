@@ -38,9 +38,11 @@
             // 
             lb_Day.AutoSize = true;
             lb_Day.BackColor = Color.White;
+            lb_Day.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lb_Day.ForeColor = Color.DarkGreen;
             lb_Day.Location = new Point(3, 17);
             lb_Day.Name = "lb_Day";
-            lb_Day.Size = new Size(34, 20);
+            lb_Day.Size = new Size(41, 23);
             lb_Day.TabIndex = 0;
             lb_Day.Text = "Thứ";
             // 
@@ -48,36 +50,41 @@
             // 
             lb_DateTime.AutoSize = true;
             lb_DateTime.BackColor = Color.White;
+            lb_DateTime.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lb_DateTime.ForeColor = Color.DarkGreen;
             lb_DateTime.Location = new Point(132, 18);
             lb_DateTime.Name = "lb_DateTime";
-            lb_DateTime.Size = new Size(44, 20);
+            lb_DateTime.Size = new Size(52, 23);
             lb_DateTime.TabIndex = 0;
             lb_DateTime.Text = "Ngày";
             // 
             // cb_Shift
             // 
+            cb_Shift.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cb_Shift.ForeColor = Color.DarkGreen;
             cb_Shift.FormattingEnabled = true;
-            cb_Shift.Location = new Point(404, 14);
+            cb_Shift.Location = new Point(371, 14);
             cb_Shift.Name = "cb_Shift";
-            cb_Shift.Size = new Size(289, 28);
+            cb_Shift.Size = new Size(322, 28);
             cb_Shift.TabIndex = 1;
             cb_Shift.SelectedIndexChanged += cb_Shift_SelectedIndexChanged;
             // 
             // btn_Delete
             // 
-            btn_Delete.Location = new Point(720, 14);
+            btn_Delete.BackColor = Color.IndianRed;
+            btn_Delete.Location = new Point(699, 3);
             btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(35, 29);
+            btn_Delete.Size = new Size(71, 51);
             btn_Delete.TabIndex = 2;
             btn_Delete.Text = "X";
-            btn_Delete.UseVisualStyleBackColor = true;
+            btn_Delete.UseVisualStyleBackColor = false;
             btn_Delete.Click += btn_Delete_Click;
             // 
             // USShiftItem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.CadetBlue;
+            BackColor = Color.White;
             BorderStyle = BorderStyle.Fixed3D;
             Controls.Add(btn_Delete);
             Controls.Add(cb_Shift);

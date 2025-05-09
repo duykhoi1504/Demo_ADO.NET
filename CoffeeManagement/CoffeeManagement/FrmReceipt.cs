@@ -58,31 +58,11 @@ namespace PresentationLayer
                 frmOrderInfo.ShowDialog();
 
             }
-            //// Kiểm tra nếu người dùng click vào một hàng hợp lệ
-            //if (e.RowIndex >= 0)
-            //{
-            //    // Lấy dữ liệu từ hàng được click
-            //    var selectedRow = dgvReceipt.Rows[e.RowIndex];
-            //    string cellValue = selectedRow.Cells[0].Value.ToString(); // Lấy giá trị của ô đầu tiên
 
-            //    // Thực hiện hành động bạn muốn với dữ liệu
-            //    MessageBox.Show($"Bạn đã click vào hàng: {cellValue}");
-            //}
         }
         private DataGridView CustomDataGridView(DataGridView dgv)
         {
             dgv.Rows.Clear();
-
-            //List<String> names = new List<String>() { "Id", "Username", "Password", "Role", "FullName", "Sex", "DateOfBirth", "Address", "PhoneNumber", "DateOfRegistration" };
-
-            //for (int i = 0; i < names.Count; i++)
-            //{
-            //    dgv.Columns[i].Name = names[i];
-            //    dgv.Columns[i].DataPropertyName = names[i];
-            //}
-
-
-
             DataGridViewImageColumn detailColumn = new DataGridViewImageColumn
             {
                 Name = "Detail",
@@ -112,7 +92,7 @@ namespace PresentationLayer
                     order.id.ToString().Contains(searchText) ||
                     order.paymentMethod.ToLower().Contains(searchText) ||
                     order.couponID.ToLower().Contains(searchText) ||
-                    order.createdDate.ToLower().Contains(searchText)// Add other fields as necessary
+                    order.createdDate.ToString().Contains(searchText)// Add other fields as necessary
                 ).ToList();
 
                 dgvReceipt.DataSource = filteredOrders;

@@ -129,7 +129,7 @@ namespace PresentationLayer
         {
             //LoadWorkDayOffStaff();
             this.Close();
-
+            
         }
 
         private void btn_CalSalary_Click(object sender, EventArgs e)

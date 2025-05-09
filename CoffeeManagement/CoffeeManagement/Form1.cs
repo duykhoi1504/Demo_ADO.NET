@@ -1,3 +1,4 @@
+using BusinessLayer;
 using DataLayer;
 using PresentationLayer;
 using System.Data;
@@ -9,7 +10,8 @@ namespace CoffeeManagement
 {
     public partial class Form1 : Form
     {
-
+        AccountBL accountBL;
+        StatsBL statsBL;
         private static Form1 instance;
         public static Form1 Instance
         {
@@ -32,6 +34,8 @@ namespace CoffeeManagement
         {
             InitializeComponent();
             instance = this;
+            accountBL = new AccountBL();
+            statsBL = new StatsBL();
             //cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=CoffeeManagement;Integrated Security=True");
         }
 
@@ -45,9 +49,9 @@ namespace CoffeeManagement
             {
                 this.Show();
                 account = login.account;
-                lbName.Text = "xin chao: " + account.Username;
+                FrmDashBoard dashBoard = new FrmDashBoard();
+                AddForm(dashBoard);
                 txt_name.Text = account.Username;
-
                 this.Enabled = true;
 
             }
@@ -56,6 +60,8 @@ namespace CoffeeManagement
                 Application.Exit();
             }
         }
+
+        
         private void Supplier_Click(object sender, EventArgs e)
         {
             AddForm(new Suppliers());
@@ -112,8 +118,10 @@ namespace CoffeeManagement
 
         }
 
-
-
-
+        private void txt_name_Click(object sender, EventArgs e)
+        {
+            FrmDashBoard dashBoard = new FrmDashBoard();
+            AddForm(dashBoard);
+        }
     }
 }

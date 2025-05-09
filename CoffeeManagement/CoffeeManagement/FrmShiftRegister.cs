@@ -86,6 +86,26 @@ namespace PresentationLayer
                 MessageBox.Show("Vui lòng chọn ngày hoặc nhân viên");
                 return;
             }
+            if(date<= DateTime.Today)
+            {
+                MessageBox.Show("Vui lòng chọn ngày khác");
+                return;
+            }
+
+            // Kiểm tra trùng lặp ngày và ca
+            foreach (USShiftItem item in pn_ShiftItems.Controls)
+            {
+                //đang sửa
+                Shifts.Add(item.shift);
+                //if (item.dateTime.Date == date.Date && item.shift.id == shift.id/* shift id bạn đang thêm */)
+                //{
+                //    MessageBox.Show("Nhân viên đã được đăng ký ca này vào ngày đã chọn");
+                //    return;
+                //}
+            }
+
+
+
             USShiftItem usShiftItem = new USShiftItem(date);
             usShiftItem.Dock = DockStyle.Top;
             //usShiftItem.BringToFront();

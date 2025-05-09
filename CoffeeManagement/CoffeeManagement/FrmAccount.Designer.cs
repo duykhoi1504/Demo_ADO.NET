@@ -92,7 +92,7 @@
             dgvAccounts.Margin = new Padding(2);
             dgvAccounts.Name = "dgvAccounts";
             dgvAccounts.RowHeadersWidth = 82;
-            dgvAccounts.Size = new Size(877, 299);
+            dgvAccounts.Size = new Size(1175, 299);
             dgvAccounts.TabIndex = 3;
             dgvAccounts.CellContentClick += dgvAccounts_CellContentClick;
             // 
@@ -181,7 +181,7 @@
             btnAdd.BackColor = Color.White;
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdd.ForeColor = Color.SeaGreen;
-            btnAdd.Location = new Point(775, 37);
+            btnAdd.Location = new Point(938, 36);
             btnAdd.Margin = new Padding(2);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(90, 40);
@@ -195,7 +195,7 @@
             btnClear.BackColor = Color.White;
             btnClear.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClear.ForeColor = Color.SeaGreen;
-            btnClear.Location = new Point(775, 94);
+            btnClear.Location = new Point(938, 93);
             btnClear.Margin = new Padding(2);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(90, 40);
@@ -209,7 +209,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(14, 73);
+            label2.Location = new Point(113, 75);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(82, 23);
@@ -222,7 +222,7 @@
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = Color.White;
-            txtPassword.Location = new Point(103, 74);
+            txtPassword.Location = new Point(202, 76);
             txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(140, 23);
@@ -231,7 +231,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Location = new Point(102, 99);
+            panel2.Location = new Point(201, 101);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(140, 2);
@@ -242,7 +242,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(14, 37);
+            label4.Location = new Point(113, 39);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(87, 23);
@@ -255,7 +255,7 @@
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsername.ForeColor = Color.White;
-            txtUsername.Location = new Point(103, 38);
+            txtUsername.Location = new Point(202, 40);
             txtUsername.Margin = new Padding(2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(140, 23);
@@ -264,7 +264,7 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Location = new Point(102, 62);
+            panel4.Location = new Point(201, 64);
             panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
             panel4.Size = new Size(140, 2);
@@ -301,16 +301,17 @@
             groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2);
-            groupBox1.Size = new Size(877, 162);
+            groupBox1.Size = new Size(1175, 162);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Add Account";
             // 
             // dtpDOB
             // 
+            dtpDOB.CustomFormat = "dd/MM/yyyy";
             dtpDOB.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpDOB.Format = DateTimePickerFormat.Short;
-            dtpDOB.Location = new Point(526, 34);
+            dtpDOB.Format = DateTimePickerFormat.Custom;
+            dtpDOB.Location = new Point(689, 33);
             dtpDOB.Margin = new Padding(2);
             dtpDOB.MinDate = new DateTime(1890, 1, 1, 0, 0, 0, 0);
             dtpDOB.Name = "dtpDOB";
@@ -321,7 +322,7 @@
             // 
             cbRole.FormattingEnabled = true;
             cbRole.Items.AddRange(new object[] { "ADMIN", "STAFF" });
-            cbRole.Location = new Point(315, 36);
+            cbRole.Location = new Point(414, 38);
             cbRole.Margin = new Padding(2);
             cbRole.Name = "cbRole";
             cbRole.Size = new Size(105, 31);
@@ -331,7 +332,7 @@
             // 
             cbSex.FormattingEnabled = true;
             cbSex.Items.AddRange(new object[] { "Nam", "Nữ" });
-            cbSex.Location = new Point(315, 71);
+            cbSex.Location = new Point(414, 73);
             cbSex.Margin = new Padding(2);
             cbSex.Name = "cbSex";
             cbSex.Size = new Size(105, 31);
@@ -342,7 +343,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(441, 37);
+            label9.Location = new Point(604, 36);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
             label9.Size = new Size(45, 23);
@@ -352,7 +353,7 @@
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Location = new Point(527, 99);
+            panel7.Location = new Point(690, 98);
             panel7.Margin = new Padding(2);
             panel7.Name = "panel7";
             panel7.Size = new Size(214, 2);
@@ -364,7 +365,7 @@
             txtFullName.BorderStyle = BorderStyle.None;
             txtFullName.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtFullName.ForeColor = Color.White;
-            txtFullName.Location = new Point(529, 74);
+            txtFullName.Location = new Point(692, 73);
             txtFullName.Margin = new Padding(2);
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new Size(214, 23);
@@ -375,7 +376,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(438, 74);
+            label8.Location = new Point(601, 73);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.Size = new Size(88, 23);
@@ -385,7 +386,7 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Location = new Point(531, 136);
+            panel6.Location = new Point(694, 135);
             panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
             panel6.Size = new Size(211, 2);
@@ -397,7 +398,7 @@
             txtPhoneNumber.BorderStyle = BorderStyle.None;
             txtPhoneNumber.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPhoneNumber.ForeColor = Color.White;
-            txtPhoneNumber.Location = new Point(532, 111);
+            txtPhoneNumber.Location = new Point(695, 110);
             txtPhoneNumber.Margin = new Padding(2);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new Size(211, 23);
@@ -408,7 +409,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(441, 111);
+            label7.Location = new Point(604, 110);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(63, 23);
@@ -420,7 +421,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(270, 74);
+            label6.Location = new Point(369, 76);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(37, 23);
@@ -432,7 +433,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(270, 38);
+            label5.Location = new Point(369, 40);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(44, 23);
@@ -454,7 +455,7 @@
             txtAddress.BorderStyle = BorderStyle.None;
             txtAddress.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtAddress.ForeColor = Color.White;
-            txtAddress.Location = new Point(103, 111);
+            txtAddress.Location = new Point(202, 113);
             txtAddress.Margin = new Padding(2);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(316, 23);
@@ -465,7 +466,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(14, 110);
+            label3.Location = new Point(113, 112);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(70, 23);
@@ -486,10 +487,10 @@
             btn_Checking.BackColor = Color.White;
             btn_Checking.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Checking.ForeColor = Color.SeaGreen;
-            btn_Checking.Location = new Point(315, 367);
+            btn_Checking.Location = new Point(617, 367);
             btn_Checking.Margin = new Padding(2);
             btn_Checking.Name = "btn_Checking";
-            btn_Checking.Size = new Size(272, 40);
+            btn_Checking.Size = new Size(571, 40);
             btn_Checking.TabIndex = 21;
             btn_Checking.Text = "Shift Check";
             btn_Checking.UseVisualStyleBackColor = false;
@@ -503,7 +504,7 @@
             btn_Regis.Location = new Point(17, 367);
             btn_Regis.Margin = new Padding(2);
             btn_Regis.Name = "btn_Regis";
-            btn_Regis.Size = new Size(272, 40);
+            btn_Regis.Size = new Size(571, 40);
             btn_Regis.TabIndex = 21;
             btn_Regis.Text = "Shift Register";
             btn_Regis.UseVisualStyleBackColor = false;
@@ -514,7 +515,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(907, 581);
+            ClientSize = new Size(1199, 605);
             Controls.Add(usUpdateAccount1);
             Controls.Add(groupBox1);
             Controls.Add(dgvAccounts);
@@ -522,6 +523,8 @@
             Controls.Add(btn_Regis);
             Controls.Add(btn_Checking);
             Margin = new Padding(2);
+            MaximumSize = new Size(1217, 652);
+            MinimumSize = new Size(1217, 652);
             Name = "FrmAccount";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Accounts";

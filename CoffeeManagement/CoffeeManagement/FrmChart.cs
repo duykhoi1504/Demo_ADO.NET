@@ -82,7 +82,7 @@ namespace PresentationLayer
         {
             monthsTotal.Clear();
             monthsTotal = statsBL.GetStatsByMonth(year);
-
+         
 
             //string[] seriesName = monthsTotal.Select(p => p.name).ToArray();
 

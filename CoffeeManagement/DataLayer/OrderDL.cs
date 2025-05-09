@@ -26,7 +26,7 @@ namespace DataLayer
                     {
                      
                         order.id = int.Parse(reader[0].ToString());
-                        order.createdDate = reader["createdDate"].ToString();
+                        order.createdDate = DateTime.Parse(reader["createdDate"].ToString());
                         order.totalPrice = float.Parse(reader["totalPrice"].ToString());
                         order.counterfeit = float.Parse(reader["counterfeit"].ToString());
                         order.change = float.Parse(reader["change"].ToString());
@@ -58,7 +58,7 @@ namespace DataLayer
                 {
                     Order order = new Order();
                     order.id = int.Parse(reader[0].ToString());
-                    order.createdDate = reader["createdDate"].ToString();
+                    order.createdDate = DateTime.Parse(reader["createdDate"].ToString());
                     order.totalPrice = float.Parse(reader["totalPrice"].ToString());
                     order.counterfeit = float.Parse(reader["counterfeit"].ToString());
 

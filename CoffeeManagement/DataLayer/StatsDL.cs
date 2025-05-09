@@ -68,5 +68,32 @@ namespace DataLayer
                 throw ex;
             }
         }
+        public List<Stats> GetFullDateAndTotalRevenue( )
+        {
+            string sql = "GetFullDateAndTotalRevenue";
+            List<Stats> stats = new List<Stats>();
+
+            try
+            {
+
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.StoredProcedure);
+                while (reader.Read())
+                {
+                    Stats stat = new Stats();
+
+                    stat.date = DateTime.Parse(reader["OrderDate"].ToString());
+                    stat.value = float.Parse(reader["TotalRevenue"].ToString());
+                    stats.Add(stat);
+                }
+                reader.Close();
+                return stats;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

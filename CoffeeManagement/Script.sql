@@ -129,7 +129,8 @@ BEGIN
 END
 GO
 --*******
---drop proc GetMonthlyRevenue
+drop proc GetMonthlyRevenue
+--tinh tong tien luong co trong thang
 CREATE PROCEDURE GetMonthlyRevenue
     @Year Varchar(20)
 AS
@@ -142,11 +143,28 @@ BEGIN
     FROM 
         [Order] 
     WHERE 
-        YEAR(createdDate) = @Year
+        YEAR(createdDate) = 2025
     GROUP BY 
         MONTH(createdDate) 
     ORDER BY 
         MONTH(createdDate);
+END;
+GO
+
+--drop proc GetFullDateAndTotalRevenue
+CREATE PROCEDURE GetFullDateAndTotalRevenue
+AS
+BEGIN
+SELECT 
+    CAST(createdDate AS DATE) AS OrderDate,
+    SUM(totalPrice) AS TotalRevenue  
+FROM 
+    [Order] 
+
+GROUP BY
+    CAST(createdDate AS DATE)
+ORDER BY
+    OrderDate
 END;
 GO
 --/////////////////////////////////////

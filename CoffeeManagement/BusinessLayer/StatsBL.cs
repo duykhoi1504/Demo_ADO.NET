@@ -40,5 +40,16 @@ namespace BusinessLayer
             }
 
         }
+        public List<Stats> GetFullDateAndTotalRevenue()
+        {
+            try
+            {
+                return statsDL.GetFullDateAndTotalRevenue();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
