@@ -54,6 +54,7 @@ namespace CoffeeManagement
             {
                 this.Show();
                 account = login.account;
+                //account=accountBL.GetAccounts().FirstOrDefault(i=>i.);
                 FrmDashBoard dashBoard = new FrmDashBoard();
                 AddForm(dashBoard);
                 txt_name.Text = account.Username;
@@ -65,7 +66,31 @@ namespace CoffeeManagement
                 Application.Exit();
             }
         }
-        //private void 
+        private bool OnlyAdminCanEntry(Account account)
+        {
+
+            if (account == null || string.IsNullOrEmpty(account.role))
+            {
+                MessageBox.Show("Role is not set. Please contact support.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            if (account.role.ToLower() == CONSTANT.UserRole.STAFF.ToString().ToLower())
+            {
+                MessageBox.Show("Only For Admin!!!!!!", "From Admin");
+                return false;
+            }
+            return true; // Return true if the user is allowed to enter
+        }
+        public void AddForm(Form form)
+        {
+            form.TopLevel = false;
+            plMain.Controls.Clear();
+            plMain.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Show();
+        }
         private void Supplier_Click(object sender, EventArgs e)
         {
             AddForm(new Suppliers());
@@ -78,20 +103,19 @@ namespace CoffeeManagement
         }
         private void btnReceipt_Click(object sender, EventArgs e)
         {
+            if (!OnlyAdminCanEntry(account))
+            {
+                return;
+            }
             AddForm(new FrmReceipt());
-        }
-        public void AddForm(Form form)
-        {
-            form.TopLevel = false;
-            plMain.Controls.Clear();
-            plMain.Controls.Add(form);
-            form.Dock = DockStyle.Fill;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Show();
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
+            if (!OnlyAdminCanEntry(account))
+            {
+                return;
+            }
             AddForm(new FrmChart());
         }
 
@@ -102,17 +126,29 @@ namespace CoffeeManagement
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
+            if (!OnlyAdminCanEntry(account))
+            {
+                return;
+            }
             AddForm(new FrmProducts());
         }
 
         private void btn_Account_Click(object sender, EventArgs e)
         {
+            if (!OnlyAdminCanEntry(account))
+            {
+                return;
+            }
             AddForm(new FrmAccount());
 
         }
 
         private void btnCoupon_Click(object sender, EventArgs e)
         {
+            if (!OnlyAdminCanEntry(account))
+            {
+                return;
+            }
             AddForm(new FrmCoupons());
 
         }

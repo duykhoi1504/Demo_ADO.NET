@@ -37,7 +37,8 @@ namespace DataLayer
                     acc.id = int.Parse(reader[0].ToString());
                     acc.Username = reader["username"].ToString();
                     acc.Password = reader["password"].ToString();
-                    //acc.role = reader["username"].ToString();
+
+                    acc.role = reader["role"].ToString();
                     //acc.fullName = reader["fullName"].ToString();
                     //acc.sex = reader["sex"].ToString();
                     //acc.dateOfBirth = reader["dateOfBirth"].ToString();
