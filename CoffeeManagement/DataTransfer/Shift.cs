@@ -20,5 +20,9 @@ namespace TransferObject
             this.time = time;
             this.wage = wage;
         }
+        public override string ToString()
+        {
+            return $"{name} - {time}";
+        }
     }
 }

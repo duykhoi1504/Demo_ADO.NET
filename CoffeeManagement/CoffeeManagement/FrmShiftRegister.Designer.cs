@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            cb_CaLam = new ComboBox();
             btn_Add = new Button();
             cb_Staff = new ComboBox();
             lblResult = new Label();
@@ -57,6 +58,7 @@
             // 
             panel1.BackColor = Color.SeaGreen;
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(cb_CaLam);
             panel1.Controls.Add(btn_Add);
             panel1.Controls.Add(cb_Staff);
             panel1.Controls.Add(lblResult);
@@ -65,9 +67,17 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(6, 45);
             panel1.Name = "panel1";
-            panel1.Size = new Size(782, 87);
+            panel1.Size = new Size(782, 105);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // cb_CaLam
+            // 
+            cb_CaLam.FormattingEnabled = true;
+            cb_CaLam.Location = new Point(115, 67);
+            cb_CaLam.Name = "cb_CaLam";
+            cb_CaLam.Size = new Size(248, 28);
+            cb_CaLam.TabIndex = 4;
             // 
             // btn_Add
             // 
@@ -96,11 +106,11 @@
             lblResult.AutoSize = true;
             lblResult.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             lblResult.ForeColor = Color.White;
-            lblResult.Location = new Point(119, 59);
+            lblResult.Location = new Point(6, 67);
             lblResult.Name = "lblResult";
-            lblResult.Size = new Size(134, 23);
+            lblResult.Size = new Size(74, 23);
             lblResult.TabIndex = 0;
-            lblResult.Text = "Đăng ký ca làm";
+            lblResult.Text = "Ca Làm:";
             // 
             // dt_DateStart
             // 
@@ -203,5 +213,6 @@
         private Button btn_Add;
         private Label lblResult;
         private FlowLayoutPanel pn_ShiftItems;
+        private ComboBox cb_CaLam;
     }
 }

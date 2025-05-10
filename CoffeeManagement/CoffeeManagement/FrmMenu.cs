@@ -133,6 +133,7 @@ namespace PresentationLayer
                 LoadProduct();
             });
             pnFilter.Controls.Add(all);
+            //pnFilte
         }
         private void LoadProduct(string key = null)
         {

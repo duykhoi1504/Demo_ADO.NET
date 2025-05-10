@@ -57,6 +57,8 @@
             // 
             // panel4
             // 
+            panel4.BackColor = Color.DarkGreen;
+            panel4.BorderStyle = BorderStyle.Fixed3D;
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(lb_MonthBecome);
             panel4.Controls.Add(lb_YearBecome);
@@ -64,6 +66,7 @@
             panel4.Controls.Add(label2);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label6);
+            panel4.ForeColor = Color.DarkGreen;
             panel4.Location = new Point(408, 1);
             panel4.Name = "panel4";
             panel4.Size = new Size(375, 170);
@@ -82,6 +85,7 @@
             // lb_MonthBecome
             // 
             lb_MonthBecome.AutoSize = true;
+            lb_MonthBecome.BackColor = Color.Transparent;
             lb_MonthBecome.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lb_MonthBecome.ForeColor = Color.White;
             lb_MonthBecome.Location = new Point(241, 77);
@@ -93,6 +97,7 @@
             // lb_YearBecome
             // 
             lb_YearBecome.AutoSize = true;
+            lb_YearBecome.BackColor = Color.Transparent;
             lb_YearBecome.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lb_YearBecome.ForeColor = Color.White;
             lb_YearBecome.Location = new Point(241, 127);
@@ -104,6 +109,7 @@
             // lb_TodayBecome
             // 
             lb_TodayBecome.AutoSize = true;
+            lb_TodayBecome.BackColor = Color.Transparent;
             lb_TodayBecome.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lb_TodayBecome.ForeColor = Color.White;
             lb_TodayBecome.Location = new Point(241, 26);
@@ -115,41 +121,47 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.ForeColor = Color.White;
             label2.Location = new Point(115, 77);
             label2.Name = "label2";
-            label2.Size = new Size(109, 20);
+            label2.Size = new Size(113, 20);
             label2.TabIndex = 0;
-            label2.Text = "Year's Become";
+            label2.Text = "Year's Become:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.ForeColor = Color.White;
             label4.Location = new Point(115, 127);
             label4.Name = "label4";
-            label4.Size = new Size(109, 20);
+            label4.Size = new Size(113, 20);
             label4.TabIndex = 0;
-            label4.Text = "Year's Become";
+            label4.Text = "Year's Become:";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(115, 26);
+            label6.Location = new Point(104, 26);
             label6.Name = "label6";
-            label6.Size = new Size(120, 20);
+            label6.Size = new Size(124, 20);
             label6.TabIndex = 0;
-            label6.Text = "Today's become";
+            label6.Text = "Today's become:";
             // 
             // panel3
             // 
+            panel3.BackColor = Color.DarkGreen;
+            panel3.BorderStyle = BorderStyle.Fixed3D;
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(lb_totalBecome);
             panel3.Controls.Add(label3);
+            panel3.ForeColor = Color.DarkGreen;
             panel3.Location = new Point(830, 1);
             panel3.Name = "panel3";
             panel3.Size = new Size(357, 170);
@@ -168,6 +180,7 @@
             // lb_totalBecome
             // 
             lb_totalBecome.AutoSize = true;
+            lb_totalBecome.BackColor = Color.Transparent;
             lb_totalBecome.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lb_totalBecome.ForeColor = Color.White;
             lb_totalBecome.Location = new Point(106, 59);
@@ -179,6 +192,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label3.ForeColor = Color.White;
             label3.Location = new Point(106, 17);
@@ -189,9 +203,12 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.DarkGreen;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(lb_StaffCount);
             panel1.Controls.Add(label1);
+            panel1.ForeColor = Color.DarkGreen;
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
             panel1.Size = new Size(357, 170);
@@ -210,6 +227,7 @@
             // lb_StaffCount
             // 
             lb_StaffCount.AutoSize = true;
+            lb_StaffCount.BackColor = Color.Transparent;
             lb_StaffCount.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lb_StaffCount.ForeColor = Color.White;
             lb_StaffCount.Location = new Point(106, 59);
@@ -221,6 +239,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(106, 19);
@@ -237,7 +256,7 @@
             pictureBox1.Location = new Point(0, 177);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1199, 428);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 

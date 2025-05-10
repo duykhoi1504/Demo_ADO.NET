@@ -63,6 +63,7 @@
             // 
             // pnFilter
             // 
+            pnFilter.AutoSize = true;
             pnFilter.BackColor = Color.SeaGreen;
             pnFilter.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pnFilter.ForeColor = Color.White;

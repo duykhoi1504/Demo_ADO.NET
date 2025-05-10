@@ -141,7 +141,7 @@ namespace PresentationLayer
             }
             Account selectedAccount = (Account)cbStaff.SelectedItem;
             int selectedValue = selectedAccount.id;
-            lb_salary.Text = workdayBL.CalculateSalary(selectedValue, dt_Date.Value.Month, dt_Date.Value.Year).ToString() + "VNĐ";
+            lb_salary.Text = workdayBL.CalculateSalary(selectedValue, dt_Date.Value.Month, dt_Date.Value.Year).ToString("#,0" + " VNĐ");
         }
 
    

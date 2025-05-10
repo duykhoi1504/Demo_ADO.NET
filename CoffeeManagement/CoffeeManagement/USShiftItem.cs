@@ -20,14 +20,14 @@ namespace PresentationLayer
         ShiftBL shiftBL;
         List<Shift> Shifts;
         //Account account;
-        public USShiftItem(DateTime date)
+        public USShiftItem(DateTime date,Shift s)
         {
             InitializeComponent();
             shiftBL = new ShiftBL();
             dateTime = date;
             //this.account=account;
             Shifts = shiftBL.GetShifts();
-
+            shift = s;
         }
 
         private void USShiftItem_Load(object sender, EventArgs e)
@@ -45,7 +45,15 @@ namespace PresentationLayer
                 string m = $"{a.name}-{a.time}";
                 dcombo.Items.Add(m);
             }
-            dcombo.SelectedIndex = 0;
+            for(int i = 0; i < dcombo.Items.Count; i++)
+            {
+                if (dcombo.Items[i].ToString().Contains(shift.name))
+                {
+                    dcombo.SelectedIndex = i;
+                    break;
+                }
+            }
+           
         }
 
         private void cb_Shift_SelectedIndexChanged(object sender, EventArgs e)

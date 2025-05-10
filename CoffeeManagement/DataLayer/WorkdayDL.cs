@@ -35,6 +35,7 @@ namespace DataLayer
                     s.time = reader["time"].ToString();
 
                     s.accountID = int.Parse(reader["accountID"].ToString());
+                    s.shiftID = int.Parse(reader["shiftID"].ToString());
                     s.isChecked = reader.GetBoolean(reader.GetOrdinal("isChecked")); // Use GetBoolean for the BIT type
                     workdays.Add(s);
                 }

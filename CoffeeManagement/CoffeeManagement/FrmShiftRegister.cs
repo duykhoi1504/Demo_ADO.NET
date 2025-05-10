@@ -21,9 +21,11 @@ namespace PresentationLayer
         Account account;
         AccountBL accountBL;
         WorkdayBL workdayBL;
-        //ShiftBL shiftBL;
+        ShiftBL shiftBL;
         List<Account> Accounts;
         List<Shift> Shifts;
+        List<Workday> workDays;
+
         List<DateTime> dates;
 
         DateTime date;
@@ -36,17 +38,28 @@ namespace PresentationLayer
             Shifts = new List<Shift>();
             workdayBL = new WorkdayBL();
             dates = new List<DateTime>();
-            //shiftBL = new ShiftBL();
+            shiftBL = new ShiftBL();
             Accounts = accountBL.GetAccounts();
+            dt_DateStart.Value = DateTime.Today;
         }
 
         private void FrmShiftRegister_Load(object sender, EventArgs e)
         {
-            dt_DateStart.Value = DateTime.Now;
+            LoadCaLam();
             //Shifts = shiftBL.GetShifts();   
             LoadStaffCombox(cb_Staff);
 
 
+        }
+        private void LoadCaLam()
+        {
+
+            cb_CaLam.Items.Clear();
+            List<Shift> calam=shiftBL.GetShifts();
+
+            cb_CaLam.DataSource = calam;
+  
+            cb_CaLam.SelectedIndex = -1;
         }
 
         private void LoadStaffCombox(ComboBox dcombo)
@@ -58,7 +71,7 @@ namespace PresentationLayer
             {
                 dcombo.Items.Add(a.fullName);
             }
-            dcombo.SelectedIndex = 0;
+            dcombo.SelectedIndex = -1;
         }
 
         private void dt_DateStart_ValueChanged(object sender, EventArgs e)
@@ -67,7 +80,7 @@ namespace PresentationLayer
             DateTime selectedDate = dt_DateStart.Value;
             string dayOfWeek = selectedDate.DayOfWeek.ToString(); // Lấy thứ
             string formattedDate = selectedDate.ToString("dd-MM-yyyy"); // Định dạng ngày
-            lblResult.Text = $"Bạn đã chọn: {dayOfWeek}, {formattedDate}";
+            //lblResult.Text = $"Bạn đã chọn: {dayOfWeek}, {formattedDate}";
             date = selectedDate;
         }
         private void btn_Close_Click(object sender, EventArgs e)
@@ -86,29 +99,47 @@ namespace PresentationLayer
                 MessageBox.Show("Vui lòng chọn ngày hoặc nhân viên");
                 return;
             }
-            if(date<= DateTime.Today)
+            if(date< DateTime.Today)
             {
                 MessageBox.Show("Vui lòng chọn ngày khác");
                 return;
             }
-
-            // Kiểm tra trùng lặp ngày và ca
-            foreach (USShiftItem item in pn_ShiftItems.Controls)
+            if(cb_CaLam.SelectedItem == null)
             {
-                //đang sửa
-                Shifts.Add(item.shift);
-                //if (item.dateTime.Date == date.Date && item.shift.id == shift.id/* shift id bạn đang thêm */)
-                //{
-                //    MessageBox.Show("Nhân viên đã được đăng ký ca này vào ngày đã chọn");
-                //    return;
-                //}
+                MessageBox.Show("Vui lòng chọn ca làm");
+                return;
+            }
+            if (cb_Staff.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn nhanvien làm");
+                return;
+            }
+        
+            workDays = workdayBL.GetAllWorkdays(account.id);
+            Shift calamSelected = (Shift)cb_CaLam.SelectedItem;
+   
+            MessageBox.Show(calamSelected.id +" " + date);
+            bool isTrung = workDays.Any(w => w.shiftID == calamSelected.id 
+                                            && w.date.Month == date.Month
+                                            && w.date.Day == date.Day
+                                            && w.date.Year == date.Year
+                                            );
+            if (isTrung)
+            {
+                MessageBox.Show("Ca làm đã tồn tại vui lòng chọn ngày khác");
+                return;
+            }
+            foreach(USShiftItem a in pn_ShiftItems.Controls)
+            {
+             if(a.dateTime == date && a.shift.id== calamSelected.id)
+                {
+                    MessageBox.Show("Bạn đã chọn ca làm ngày này!!! vui lòng chọn ngày khác");
+                    return;
+                }
             }
 
-
-
-            USShiftItem usShiftItem = new USShiftItem(date);
+            USShiftItem usShiftItem = new USShiftItem(date, calamSelected);
             usShiftItem.Dock = DockStyle.Top;
-            //usShiftItem.BringToFront();
             pn_ShiftItems.Controls.Add(usShiftItem);
             usShiftItem.Show();
         }

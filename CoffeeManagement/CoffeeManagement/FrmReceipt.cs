@@ -66,7 +66,7 @@ namespace PresentationLayer
             DataGridViewImageColumn detailColumn = new DataGridViewImageColumn
             {
                 Name = "Detail",
-                Image = Properties.Resources.cat_delete,
+                Image = Properties.Resources.cat_write,
                 ImageLayout = DataGridViewImageCellLayout.Zoom
             };
             dgvReceipt.Columns.Add(detailColumn);

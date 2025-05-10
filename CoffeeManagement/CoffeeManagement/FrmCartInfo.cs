@@ -101,8 +101,8 @@ namespace PresentationLayer
             {
                 MessageBox.Show(ex.Message);
             }
-            lbTotalPrice.Text = totalPrice.ToString("#,0");
-            lbLastTotalPrice.Text = totalPrice.ToString("#,0");
+            lbTotalPrice.Text = totalPrice.ToString("#,0"+" VNĐ");
+            lbLastTotalPrice.Text = totalPrice.ToString("#,0" + " VNĐ");
 
         }
 
@@ -203,14 +203,14 @@ namespace PresentationLayer
                 {
                     MessageBox.Show("Mã giảm giá không hợp lệ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     cbCoupon.SelectedIndex = -1; // Đặt lại lựa chọn
-                    lbLastTotalPrice.Text = tempTotalPrice.ToString("#,0"); // Khôi phục giá trị tổng
+                    lbLastTotalPrice.Text = tempTotalPrice.ToString("#,0" + " VNĐ"); // Khôi phục giá trị tổng
                     totalPrice = tempTotalPrice; // Khôi phục giá trị tổng
                     return;
                 }
 
                 // Cập nhật giá trị tổng sau khi áp dụng coupon
                 float newTotalPrice = totalPrice - coupon.value;
-                lbLastTotalPrice.Text = newTotalPrice.ToString("#,0");
+                lbLastTotalPrice.Text = newTotalPrice.ToString("#,0" + " VNĐ");
                 totalPrice = newTotalPrice; // Cập nhật giá trị tổng
             }
 

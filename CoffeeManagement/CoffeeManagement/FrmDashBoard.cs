@@ -47,10 +47,10 @@ namespace PresentationLayer
             staff = accountBL.GetAccounts();
             staffCount = staff.Where(s => s.role == CONSTANT.UserRole.STAFF.ToString()).Count();
             lb_StaffCount.Text = staffCount.ToString();
-            lb_YearBecome.Text = YearBecome.ToString("#,0") + " VND";
-            lb_MonthBecome.Text = MonthBecome.ToString("#,0") + " VND";
-            lb_TodayBecome.Text = todayBecome.ToString("#,0") + " VND";
-            lb_totalBecome.Text = totalBecome.ToString("#,0") + " VND";
+            lb_YearBecome.Text = YearBecome.ToString("#,0") + " VNĐ";
+            lb_MonthBecome.Text = MonthBecome.ToString("#,0") + " VNĐ";
+            lb_TodayBecome.Text = todayBecome.ToString("#,0") + " VNĐ";
+            lb_totalBecome.Text = totalBecome.ToString("#,0") + " VNĐ";
         }
     }
 }

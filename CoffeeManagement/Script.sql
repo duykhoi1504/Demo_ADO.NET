@@ -193,11 +193,12 @@ BEGIN
 END;
 GO
 
+
 CREATE PROC GetWorkDayByAccountID
     @AccountID int
 AS
 BEGIN
-SELECT date,s.name,s.time,w.accountID, w.isChecked
+SELECT date,s.name,s.time,w.accountID,w.shiftID, w.isChecked
 from Workday w
 JOIN Shift s on w.shiftID = s.id
 Where w.accountID=@AccountID

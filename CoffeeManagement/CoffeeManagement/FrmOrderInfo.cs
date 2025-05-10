@@ -43,12 +43,12 @@ namespace PresentationLayer
                 coupon = new Coupon();
                 coupon.value = 0;
             }
-            lbLastTotal.Text = (order.totalPrice-coupon.value).ToString();
+            lbLastTotal.Text = (order.totalPrice-coupon.value).ToString("#,0" + " VNĐ");
             lbStaff.Text = order.accountID.ToString();
             lbCoupon.Text = coupon.id+"-"+ coupon.description;
             lbCreateDate.Text = order.createdDate.ToString("dd/MM/yyyy");
-            lbTotalPrice.Text = order.totalPrice.ToString();
-            lbcounterFeit.Text = order.counterfeit.ToString();
+            lbTotalPrice.Text = order.totalPrice.ToString("#,0"+" VNĐ");
+            lbcounterFeit.Text = order.counterfeit.ToString("#,0" + " VNĐ");
             try
             {
                 items = itemBL.GetItemByOrderID(order.id);
