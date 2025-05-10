@@ -16,12 +16,12 @@ namespace PresentationLayer
     public partial class FrmAddSupplier : Form
     {
         public SupplierBL supplierBL;
-     
 
-        public FrmAddSupplier()
+        string idSupplier;
+        public FrmAddSupplier(string id)
         {
             InitializeComponent();
- 
+            idSupplier = id;    
             supplierBL = new SupplierBL();
         }
 
@@ -32,10 +32,10 @@ namespace PresentationLayer
             name = txtName.Text;
             address = txtAdress.Text;
 
-            Supplier s = new Supplier(id, name, address);
             try
             {
-                supplierBL.UpdateSupplier(s);
+            Supplier s = new Supplier(id, name, address);
+                supplierBL.UpdateSupplier(idSupplier,s);
                 MessageBox.Show("Sửa nhà cung cấp thành công!");
                 //SupplierAdded?.Invoke(this, EventArgs.Empty);
                 Observer.Notify(CONSTANT.UpdateDataGridView1);
@@ -68,5 +68,9 @@ namespace PresentationLayer
             txtAdress.Text = address;
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -59,11 +59,11 @@
             // 
             panel4.BackColor = Color.DarkGreen;
             panel4.BorderStyle = BorderStyle.Fixed3D;
+            panel4.Controls.Add(label2);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(lb_MonthBecome);
             panel4.Controls.Add(lb_YearBecome);
             panel4.Controls.Add(lb_TodayBecome);
-            panel4.Controls.Add(label2);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label6);
             panel4.ForeColor = Color.DarkGreen;
@@ -124,11 +124,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(115, 77);
+            label2.Location = new Point(104, 77);
             label2.Name = "label2";
-            label2.Size = new Size(113, 20);
+            label2.Size = new Size(130, 20);
             label2.TabIndex = 0;
-            label2.Text = "Year's Become:";
+            label2.Text = "Month's Become:";
             // 
             // label4
             // 
@@ -136,7 +136,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(115, 127);
+            label4.Location = new Point(127, 127);
             label4.Name = "label4";
             label4.Size = new Size(113, 20);
             label4.TabIndex = 0;
@@ -148,7 +148,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(104, 26);
+            label6.Location = new Point(115, 26);
             label6.Name = "label6";
             label6.Size = new Size(124, 20);
             label6.TabIndex = 0;
@@ -183,7 +183,7 @@
             lb_totalBecome.BackColor = Color.Transparent;
             lb_totalBecome.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lb_totalBecome.ForeColor = Color.White;
-            lb_totalBecome.Location = new Point(106, 59);
+            lb_totalBecome.Location = new Point(106, 88);
             lb_totalBecome.Name = "lb_totalBecome";
             lb_totalBecome.Size = new Size(79, 31);
             lb_totalBecome.TabIndex = 0;
@@ -195,7 +195,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(106, 17);
+            label3.Location = new Point(106, 46);
             label3.Name = "label3";
             label3.Size = new Size(158, 31);
             label3.TabIndex = 0;
@@ -230,7 +230,7 @@
             lb_StaffCount.BackColor = Color.Transparent;
             lb_StaffCount.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lb_StaffCount.ForeColor = Color.White;
-            lb_StaffCount.Location = new Point(106, 59);
+            lb_StaffCount.Location = new Point(106, 86);
             lb_StaffCount.Name = "lb_StaffCount";
             lb_StaffCount.Size = new Size(79, 31);
             lb_StaffCount.TabIndex = 0;
@@ -242,7 +242,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(106, 19);
+            label1.Location = new Point(106, 46);
             label1.Name = "label1";
             label1.Size = new Size(124, 31);
             label1.TabIndex = 0;

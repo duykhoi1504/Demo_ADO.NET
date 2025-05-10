@@ -33,7 +33,7 @@ namespace PresentationLayer
 
         private bool InvalidFields()
         {
-            if (string.IsNullOrWhiteSpace(txtPID.Text) || string.IsNullOrWhiteSpace(txtPName.Text) || 
+            if (string.IsNullOrWhiteSpace(txtPID.Text) || string.IsNullOrWhiteSpace(txtPName.Text) ||
                 string.IsNullOrWhiteSpace(txtPPrice.Text) || string.IsNullOrWhiteSpace(txtPDiscount.Text) || cboCategory.SelectedValue == null)
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -57,7 +57,7 @@ namespace PresentationLayer
             cboCategory.ValueMember = "id";
         }
 
-        public void LoadProductForUpdate (Product p)
+        public void LoadProductForUpdate(Product p)
         {
             isUpdateProduct = true;
 
@@ -148,7 +148,7 @@ namespace PresentationLayer
                 MessageBox.Show("Please select a category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             categoryID = (int)cboCategory.SelectedValue;
 
             byte[] imageData = null;
@@ -211,6 +211,34 @@ namespace PresentationLayer
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private void txtPPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn chặn nhập ký tự không hợp lệ
+            }
+
+            // Kiểm tra xem ký tự đầu tiên có phải là dấu trừ
+            if (e.KeyChar == '-' && ((sender as TextBox).SelectionStart != 0))
+            {
+                e.Handled = true; // Ngăn chặn nhập dấu trừ nếu không phải ở đầu
+            }
+        }
+
+        private void txtPDiscount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn chặn nhập ký tự không hợp lệ
+            }
+
+            // Kiểm tra xem ký tự đầu tiên có phải là dấu trừ
+            if (e.KeyChar == '-' && ((sender as TextBox).SelectionStart != 0))
+            {
+                e.Handled = true; // Ngăn chặn nhập dấu trừ nếu không phải ở đầu
+            }
         }
     }
 }

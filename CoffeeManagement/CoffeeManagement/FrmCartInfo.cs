@@ -182,7 +182,11 @@ namespace PresentationLayer
             {
                 e.Handled = true; // Ngăn chặn nhập ký tự không hợp lệ
             }
-
+            // Kiểm tra xem ký tự đầu tiên có phải là dấu trừ
+            if (e.KeyChar == '-' && ((sender as TextBox).SelectionStart != 0))
+            {
+                e.Handled = true; // Ngăn chặn nhập dấu trừ nếu không phải ở đầu
+            }
         }
 
         private void cbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)

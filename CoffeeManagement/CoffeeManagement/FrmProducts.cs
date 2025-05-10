@@ -189,7 +189,9 @@ namespace PresentationLayer
             string s = txtSearch.Text.ToLower();
 
             var allProducts = productBL.GetProducts();
-            var sProducts = allProducts.Where(p => p.name.ToLower().Contains(s)).ToList();
+            var sProducts = allProducts.Where(p => p.name.ToLower().Contains(s)
+                                            || p.id.ToString().ToLower().Contains(s)
+                                            ).ToList();
 
             dgvProducts.DataSource = sProducts;
         }

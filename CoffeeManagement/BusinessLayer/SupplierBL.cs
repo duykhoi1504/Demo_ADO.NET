@@ -41,11 +41,11 @@ namespace BusinessLayer
                 throw ex;
             }
         }
-        public int UpdateSupplier(Supplier s)
+        public int UpdateSupplier(string key,Supplier s)
         {
             try
             {
-                return supplierDL.UpdateSupplier(s);
+                return supplierDL.UpdateSupplier(key,s);
             }
             catch (SqlException ex)
             {

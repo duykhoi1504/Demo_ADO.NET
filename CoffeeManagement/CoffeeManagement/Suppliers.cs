@@ -157,9 +157,9 @@ namespace PresentationLayer
 
                 // Lấy giá trị của ô "id" từ hàng đã chọn
                 string idValue = dataGridView1.Rows[row].Cells["id"].Value.ToString();
+                //MessageBox.Show(idValue);
 
-
-                FrmAddSupplier frmAddSupplier = new FrmAddSupplier();
+                FrmAddSupplier frmAddSupplier = new FrmAddSupplier(idValue);
                frmAddSupplier.ShowDialog();
 
             }

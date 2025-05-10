@@ -105,10 +105,10 @@ namespace DataLayer
 
         public int DeleteIngredient(string id)
         {
-            if (HasTransaction(id))
-            {
-                throw new Exception("Cannot delete ingredient that have transaction.");
-            }
+            //if (HasTransaction(id))
+            //{
+            //    throw new Exception("Cannot delete ingredient that have transaction.");
+            //}
 
             string sql = "DELETE FROM Ingredient WHERE id = '" + id + "'";
 
@@ -120,6 +120,7 @@ namespace DataLayer
             {
                 throw ex;
             }
+            
         }
 
         public List<Ingredient> GetIngredientsBySupplier(string supplierID)

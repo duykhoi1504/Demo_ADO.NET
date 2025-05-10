@@ -78,11 +78,13 @@ namespace DataLayer
             }
         }
 
-        public int UpdateSupplier(Supplier s)
+        public int UpdateSupplier(string key, Supplier s)
         {
             string sql = "uspUpdateSupplier";
 
             List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@key", key));
+
             parameters.Add(new SqlParameter("@id", s.id));
             parameters.Add(new SqlParameter("@name", s.name));
             parameters.Add(new SqlParameter("@address", s.address));

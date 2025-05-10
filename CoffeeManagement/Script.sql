@@ -30,15 +30,18 @@ BEGIN
 END
 GO
 --=================SUPPLIER==================--
+
 CREATE PROC uspUpdateSupplier
+	@key  Nchar(10),
+
 	@id  Nchar(10),
 	@name NVARCHAR(100),
 	@address NVARCHAR(max)
 AS
 BEGIN
 	UPDATE Supplier
-	SET id = @id, [name] = @name,[address] = @address
-	WHERE id = @id;
+	SET id = @id, name = @name,address = @address
+	WHERE id = @key;
 END
 GO
 --==================COUPON==================--

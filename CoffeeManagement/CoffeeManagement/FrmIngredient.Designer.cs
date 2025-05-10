@@ -270,6 +270,7 @@
             txtQuantity.Size = new Size(152, 23);
             txtQuantity.TabIndex = 65;
             txtQuantity.TextChanged += txtQuantity_TextChanged;
+            txtQuantity.KeyPress += txtQuantity_KeyPress;
             // 
             // label3
             // 

@@ -68,6 +68,10 @@ namespace BusinessLayer
 
         public int DeleteIngredient(string id)
         {
+            if (ingredientDL.HasTransaction(id))
+            {
+                throw new Exception("Cannot delete ingredient that have transaction.");
+            }
             try
             {
                 return ingredientDL.DeleteIngredient(id);
@@ -75,6 +79,9 @@ namespace BusinessLayer
             catch (SqlException ex)
             {
                 throw ex;
+            }
+            catch (Exception ex2){
+                throw ex2;
             }
         }
 

@@ -278,7 +278,12 @@ namespace PresentationLayer
             string s = txtSearch.Text.ToLower(); //Lấy giá trị tìm kiếm và chuyển thành chữ thường
 
             var allIngs = ingredientBL.GetIngredients();
-            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)).ToList();
+            var sI = allIngs.Where(i => i.name.ToLower().Contains(s)
+                                                || i.status.ToLower().Contains(s)
+                                                || i.unit.ToLower().Contains(s)
+                                                || i.supplierID.ToLower().Contains(s)
+
+                                                    ).ToList();
 
             dgvIngredients.DataSource = sI; //Cập nhật DataGridView với danh sách đã lọc
         }
@@ -334,8 +339,27 @@ namespace PresentationLayer
                         {
                             MessageBox.Show($"Error deleting ingredient: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error deleting ingredient: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+        }
+
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự nhập vào có phải là số hoặc phím Backspace không
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn chặn nhập ký tự không hợp lệ
+            }
+            // Kiểm tra xem ký tự đầu tiên có phải là dấu trừ
+            if (e.KeyChar == '-' && ((sender as System.Windows.Forms.TextBox).SelectionStart != 0))
+            {
+                e.Handled = true; // Ngăn chặn nhập dấu trừ nếu không phải ở đầu
             }
         }
     }

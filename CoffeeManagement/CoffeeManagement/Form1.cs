@@ -41,6 +41,11 @@ namespace CoffeeManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LogIn();
+        }
+
+        private void LogIn()
+        {
             this.Hide();
             this.Enabled = false;
             FrmLogin login = new FrmLogin();
@@ -60,8 +65,7 @@ namespace CoffeeManagement
                 Application.Exit();
             }
         }
-
-        
+        //private void 
         private void Supplier_Click(object sender, EventArgs e)
         {
             AddForm(new Suppliers());
@@ -113,15 +117,20 @@ namespace CoffeeManagement
 
         }
 
-        private void plMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void txt_name_Click(object sender, EventArgs e)
         {
             FrmDashBoard dashBoard = new FrmDashBoard();
             AddForm(dashBoard);
+        }
+
+        private void btn_logOut_Click(object sender, EventArgs e)
+        {
+            LogIn();
+
+        }
+        private void plMain_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }

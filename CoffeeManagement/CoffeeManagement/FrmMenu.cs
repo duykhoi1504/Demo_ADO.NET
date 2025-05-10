@@ -234,12 +234,12 @@ namespace PresentationLayer
             var filteredProducts = prods2
            .Where(p => p.name.ToLower().Contains(txtSearch.Text.ToLower()))
            .ToList();
-            string m = "";
-            foreach (var prod in filteredProducts)
-            {
-                m += prod.name + " \n";
-            }
-            MessageBox.Show(m);
+            //string m = "";
+            //foreach (var prod in filteredProducts)
+            //{
+            //    m += prod.name + " \n";
+            //}
+            //MessageBox.Show(m);
             foreach (var prod in filteredProducts)
             {
 

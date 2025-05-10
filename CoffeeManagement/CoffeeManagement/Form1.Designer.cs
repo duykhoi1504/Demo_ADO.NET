@@ -55,6 +55,7 @@
             btnProduct = new Button();
             btnWareHouse = new Button();
             Home = new Button();
+            btn_logOut = new Button();
             btnCoupon = new Button();
             Supplier = new Button();
             plMain.SuspendLayout();
@@ -262,7 +263,7 @@
             pictureBox1.Location = new Point(0, 240);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1200, 428);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -288,6 +289,7 @@
             panel2.Controls.Add(btnProduct);
             panel2.Controls.Add(btnWareHouse);
             panel2.Controls.Add(Home);
+            panel2.Controls.Add(btn_logOut);
             panel2.Controls.Add(btnCoupon);
             panel2.Controls.Add(Supplier);
             panel2.Location = new Point(6, 9);
@@ -379,6 +381,20 @@
             Home.UseVisualStyleBackColor = false;
             Home.Click += Home_Click;
             // 
+            // btn_logOut
+            // 
+            btn_logOut.BackColor = Color.White;
+            btn_logOut.Cursor = Cursors.Hand;
+            btn_logOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btn_logOut.ForeColor = Color.DarkGreen;
+            btn_logOut.Location = new Point(0, 628);
+            btn_logOut.Name = "btn_logOut";
+            btn_logOut.Size = new Size(137, 36);
+            btn_logOut.TabIndex = 1;
+            btn_logOut.Text = "Log out";
+            btn_logOut.UseVisualStyleBackColor = false;
+            btn_logOut.Click += btn_logOut_Click;
+            // 
             // btnCoupon
             // 
             btnCoupon.BackColor = Color.White;
@@ -463,5 +479,6 @@
         private Label lb_YearBecome;
         private Label label2;
         private Label label3;
+        private Button btn_logOut;
     }
 }
