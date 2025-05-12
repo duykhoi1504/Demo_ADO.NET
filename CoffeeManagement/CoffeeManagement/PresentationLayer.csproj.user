@@ -37,6 +37,9 @@
     <Compile Update="FrmWorkdayList.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Payment\FrmVietQr.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="USAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -9,6 +9,7 @@
       "BusinessLayer/1.0.0": {
         "dependencies": {
           "DataLayer": "1.0.0",
+          "RestSharp": "112.1.0",
           "System.Data.SqlClient": "4.8.6",
           "System.Drawing.Common": "9.0.4"
         },
@@ -36,6 +37,14 @@
             "assetType": "runtime",
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.425.16305"
+          }
+        }
+      },
+      "RestSharp/112.1.0": {
+        "runtime": {
+          "lib/net8.0/RestSharp.dll": {
+            "assemblyVersion": "112.1.0.0",
+            "fileVersion": "112.1.0.0"
           }
         }
       },
@@ -124,6 +133,7 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "DataLayer/1.0.0": {
         "dependencies": {
+          "RestSharp": "112.1.0",
           "System.Data.SqlClient": "4.8.6",
           "System.Drawing.Common": "9.0.4",
           "TransferObject": "1.0.0"
@@ -137,6 +147,7 @@
       },
       "TransferObject/1.0.0": {
         "dependencies": {
+          "RestSharp": "112.1.0",
           "System.Data.SqlClient": "4.8.6",
           "System.Drawing.Common": "9.0.4"
         },
@@ -175,6 +186,13 @@
       "sha512": "sha512-kHgtAkXhNEP8oGuAVe3Q5admxsdMlSdWE2rXcA9FfeGDZJQawPccmZgnOswgW3ugUPSJt7VH+TMQPz65mnhGSQ==",
       "path": "microsoft.win32.systemevents/9.0.4",
       "hashPath": "microsoft.win32.systemevents.9.0.4.nupkg.sha512"
+    },
+    "RestSharp/112.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bOUGNZqhhv/QeCXHTKEUil846yBjwWXpzPKjO67kFvaAOoF361z7jLY5BMnuZ6WD2WQRA750sNMcK7MSPCQ5Mg==",
+      "path": "restsharp/112.1.0",
+      "hashPath": "restsharp.112.1.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",

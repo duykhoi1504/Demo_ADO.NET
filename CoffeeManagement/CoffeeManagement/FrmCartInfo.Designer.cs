@@ -44,6 +44,7 @@
             groupBox1 = new GroupBox();
             panel1 = new Panel();
             label1 = new Label();
+            btnGenQr = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
@@ -181,6 +182,7 @@
             groupBox1.Controls.Add(cbCoupon);
             groupBox1.Controls.Add(cbPaymentMethod);
             groupBox1.Controls.Add(txtCounterfeit);
+            groupBox1.Controls.Add(btnGenQr);
             groupBox1.Controls.Add(btnClose);
             groupBox1.Controls.Add(btnCheckout);
             groupBox1.Controls.Add(label6);
@@ -218,6 +220,18 @@
             label1.Size = new Size(155, 48);
             label1.TabIndex = 5;
             label1.Text = "Payment";
+            // 
+            // btnGenQr
+            // 
+            btnGenQr.BackColor = Color.White;
+            btnGenQr.ForeColor = Color.DarkGreen;
+            btnGenQr.Location = new Point(425, 194);
+            btnGenQr.Name = "btnGenQr";
+            btnGenQr.Size = new Size(127, 38);
+            btnGenQr.TabIndex = 4;
+            btnGenQr.Text = "Get QR ";
+            btnGenQr.UseVisualStyleBackColor = false;
+            btnGenQr.Click += btnGenQr_Click;
             // 
             // FrmCartInfo
             // 
@@ -259,5 +273,6 @@
         private GroupBox groupBox1;
         private Panel panel1;
         private Label label1;
+        private Button btnGenQr;
     }
 }

@@ -238,3 +238,6 @@ C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\Co
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USAddSupplier.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmAddSupplier.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmDashBoard.resources
+C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Payment.FrmVietQr.resources
+C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
+C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\RestSharp.dll

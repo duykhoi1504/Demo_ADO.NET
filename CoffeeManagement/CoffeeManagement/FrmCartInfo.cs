@@ -55,7 +55,9 @@ namespace PresentationLayer
         private void LoadComBoxCoupon()
         {
             cbCoupon.Items.Clear();
+            var noCoupon = new Coupon("", "Không áp mã", 0);
             List<Coupon> coupons = couponBL.GetCoupons();
+            coupons.Insert(0, noCoupon);
             cbCoupon.DataSource = coupons;
             //foreach (var coupon in coupons)
             //{
@@ -101,7 +103,7 @@ namespace PresentationLayer
             {
                 MessageBox.Show(ex.Message);
             }
-            lbTotalPrice.Text = totalPrice.ToString("#,0"+" VNĐ");
+            lbTotalPrice.Text = totalPrice.ToString("#,0" + " VNĐ");
             lbLastTotalPrice.Text = totalPrice.ToString("#,0" + " VNĐ");
 
         }
@@ -191,11 +193,17 @@ namespace PresentationLayer
 
         private void cbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string selectedPaymentMethod = cbPaymentMethod.SelectedItem.ToString();
+            if(selectedPaymentMethod == CONSTANT.paymentMethod.CREDITCARD.ToString())
+            {
+              btnGenQr.Visible = true;
+            }
+            else
+            {
+                btnGenQr.Visible = false;
+            }
+      
         }
-
-
-
 
         private void cbCoupon_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -219,10 +227,17 @@ namespace PresentationLayer
             }
 
         }
+        private void btnGenQr_Click(object sender, EventArgs e)
+        {
+            // Hiển thị form thanh toán VietQR
+            Payment.FrmVietQr frmVietQr = new Payment.FrmVietQr(totalPrice);
+            frmVietQr.ShowDialog();
+        }
 
         private void txtCounterfeit_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
+
     }
 }
