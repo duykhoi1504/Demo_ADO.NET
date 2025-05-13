@@ -16,11 +16,11 @@ namespace PresentationLayer.Payment
 {
     public partial class FrmVietQr : Form
     {
-        float totalPrice = 0;   
+        float totalPrice = 0;
         public FrmVietQr(float total)
         {
             InitializeComponent();
-            totalPrice = total; 
+            totalPrice = total;
             //GenQr();
 
         }
@@ -101,6 +101,11 @@ namespace PresentationLayer.Payment
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,91 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FrmAccount.cs">
+    <Compile Update="Account\FrmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmAddSupplier.cs">
+    <Compile Update="Supplier\FrmAddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmAllTransaction.cs">
+    <Compile Update="WareHouse\FrmAllTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmChart.cs">
+    <Compile Update="Statitics\FrmChart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmCoupons.cs">
+    <Compile Update="Coupon\FrmCoupons.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmIngredient.cs">
+    <Compile Update="WareHouse\FrmIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmOrderInfo.cs">
+    <Compile Update="Order\FrmOrderInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmReceipt.cs">
+    <Compile Update="Order\FrmReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmShiftConfirm.cs">
+    <Compile Update="Workday\FrmShiftConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmShiftRegister.cs">
+    <Compile Update="Workday\FrmShiftRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmWorkdayList.cs">
+    <Compile Update="Workday\FrmWorkdayList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Payment\FrmVietQr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="USAddProduct.cs">
+    <Compile Update="Product\USAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USAddSupplier.cs">
+    <Compile Update="Supplier\USAddSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USCategoryButton.cs">
+    <Compile Update="Product\USCategoryButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmCartInfo.cs">
+    <Compile Update="Order\FrmCartInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmMenu.cs">
+    <Compile Update="Order\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmProducts.cs">
+    <Compile Update="Product\FrmProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Suppliers.cs">
+    <Compile Update="Supplier\Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="USCartItem.cs">
+    <Compile Update="Order\USCartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USIngredientDetail.cs">
+    <Compile Update="WareHouse\USIngredientDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USProdItem.cs">
+    <Compile Update="Order\USProdItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USShiftItem.cs">
+    <Compile Update="Workday\USShiftItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USUpdateAccount.cs">
+    <Compile Update="Account\USUpdateAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USUpdateCoupon.cs">
+    <Compile Update="Coupon\USUpdateCoupon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="USUpdateTransaction.cs">
+    <Compile Update="WareHouse\USUpdateTransaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

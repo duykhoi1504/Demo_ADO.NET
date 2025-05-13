@@ -84,7 +84,6 @@ C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-w
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\TransferObject.pdb
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\DataLayer.pdb
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.csproj.AssemblyReference.cache
-C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.AddSupplier.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\CoffeeManagement.Form1.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmMenu.resources
 C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Properties.Resources.resources
@@ -241,3 +240,10 @@ C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\Co
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Payment.FrmVietQr.resources
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
 C:\Users\MR KHOI\Documents\GitHub\TestNHanhKhoi\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\RestSharp.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\Newtonsoft.Json.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\bin\Debug\net9.0-windows\RestSharp.dll
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmAddSupplier.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmDashBoard.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.FrmWorkdayList.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.Payment.FrmVietQr.resources
+C:\Users\hoain\Demo_ADO.NET\CoffeeManagement\CoffeeManagement\obj\Debug\net9.0-windows\PresentationLayer.USAddSupplier.resources
